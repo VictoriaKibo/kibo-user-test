@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Health story — Your DNA</title>
+<link rel="icon" href="assets/31ab7d337ef4e9aaa04f6a3f352fa0d7.png">
+<style>html:not(.dc-ready) body{visibility:hidden}</style>
+<script src="kibo-runtime.js"></script>
+</head>
+<body>
+<template id="dc-tpl">
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600&amp;family=Montserrat:wght@300;400&amp;display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'Coolvetica';src:url('assets/c7e1abd965315a39fe1d300a4e97a8e3.woff2') format('woff2');font-weight:200;font-style:normal;font-display:swap}
+@font-face{font-family:'Coolvetica';src:url('assets/654425c7b27c5cc2f38fa329cb5d17c3.woff2') format('woff2');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'Coolvetica';src:url('assets/ea0d9ab126027978416ea277f45193bb.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Coolvetica';src:url('assets/37f1af1b8c27ad26029ed3c809859265.woff2') format('woff2');font-weight:500 700;font-style:normal;font-display:swap}
+:root{--blue:#0432FF;--blue-hover:#0329D6;--ink:#1A1A2E;--ink2:#3A3F58;--muted:#7A7F99;--bg:#F8F9FD;--line:#E4E7F0;--tint:#E6EBFF;
+  --head:'Coolvetica',Montserrat,'Helvetica Neue',Arial,sans-serif;--body:'Fira Sans','Helvetica Neue',Arial,sans-serif;color-scheme:light}
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;background:var(--bg)}
+body{color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:var(--blue)}
+.hs{position:relative;min-height:100vh;overflow:hidden;background:var(--bg);padding-bottom:72px}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55;pointer-events:none}
+.b1{width:620px;height:620px;left:-260px;top:-160px;background:#DCE3FF}
+.b2{width:560px;height:560px;right:-220px;top:80px;background:#E8E2FF}
+.b3{width:760px;height:760px;left:50%;bottom:-520px;transform:translateX(-50%);background:#DDE4FF}
+.nav{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;height:80px;padding:0 72px}
+.nav img{height:30px;width:auto;display:block}
+.nav .lbl{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#6E7393}
+.col{position:relative;z-index:1;width:min(640px,calc(100% - 32px));margin:0 auto}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin:0}
+h1{font-family:var(--head);font-weight:300;font-size:40px;line-height:1.15;letter-spacing:-.01em;margin:10px 0 0;color:var(--ink)}
+.lede{font-size:17px;line-height:1.6;color:var(--ink2);margin:14px 0 0}
+.btn{display:flex;align-items:center;justify-content:center;height:52px;border-radius:999px;background:var(--blue);color:#fff;font-weight:500;font-size:16px;text-decoration:none;transition:background .15s}
+.btn:hover{background:var(--blue-hover)}
+.btn:focus-visible,.later:focus-visible,.back:focus-visible{outline:none;box-shadow:0 0 0 3px #fff,0 0 0 5px var(--blue)}
+.later{display:block;width:max-content;margin:18px auto 0;font-size:15px;color:var(--blue);text-decoration:underline;text-underline-offset:3px}
+/* overview */
+.ov-hero{display:flex;flex-direction:column;align-items:center;text-align:center;padding-top:40px}
+.ov-badge{position:relative;width:96px;height:96px;border-radius:28px;background:linear-gradient(145deg,#2C55FF,#0432FF);display:grid;place-items:center;color:#fff;box-shadow:0 18px 40px rgba(4,50,255,.22)}
+.ov-badge svg{width:46px;height:46px}
+.ov-meta{display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:7px 14px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:14px;color:var(--ink2)}
+.ov-meta svg{color:var(--blue)}
+.list{list-style:none;margin:36px 0 0;padding:8px 0;background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:0 10px 30px rgba(26,26,46,.05)}
+.list li{display:grid;grid-template-columns:52px 1fr auto;gap:18px;align-items:center;padding:18px 26px}
+.list li + li{border-top:1px solid var(--line)}
+.tile{width:52px;height:52px;border-radius:16px;background:var(--tint);color:var(--blue);display:grid;place-items:center}
+.list h3{font-family:var(--head);font-weight:400;font-size:20px;line-height:1.25;margin:0;color:var(--ink)}
+.list p{margin:4px 0 0;font-size:15px;line-height:1.5;color:var(--muted)}
+.mins{font-size:13px;color:var(--muted);white-space:nowrap}
+.note{display:flex;gap:12px;align-items:flex-start;margin:22px 4px 0;font-size:14px;line-height:1.55;color:var(--muted)}
+.note svg{flex:none;color:var(--ink2);margin-top:1px}
+.cta{margin-top:30px}
+/* category intro */
+.ci{display:flex;flex-direction:column;align-items:center;text-align:center;padding-top:12px}
+.steps{display:flex;gap:6px;width:100%;max-width:420px;margin:0 auto}
+.steps span{flex:1;height:6px;border-radius:99px;background:#DDE2F3}
+.steps span.on{background:var(--blue)}
+.steps span.now{background:linear-gradient(90deg,var(--blue) 18%,#DDE2F3 18%)}
+.ci-top{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:420px;margin:14px auto 0;font-size:14px;color:var(--muted)}
+.back{display:inline-flex;align-items:center;gap:6px;color:var(--ink2);text-decoration:none}
+.back:hover{color:var(--blue)}
+.ph{width:440px;height:440px;max-width:86vw;max-height:86vw;margin-top:28px;border-radius:50%;background-size:cover;
+  -webkit-mask-image:radial-gradient(circle at 50% 50%,#000 48%,rgba(0,0,0,.6) 60%,transparent 70%);
+  mask-image:radial-gradient(circle at 50% 50%,#000 48%,rgba(0,0,0,.6) 60%,transparent 70%);
+  animation:ph-in .9s cubic-bezier(.2,.7,.2,1) both}
+@keyframes ph-in{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
+.ci .tile{margin-top:-6px;width:44px;height:44px;border-radius:14px}
+.ci h1{margin-top:16px}
+.ci .lede{max-width:480px}
+.ci .cta{width:100%;max-width:420px}
+@media (max-width:900px){
+  .nav{padding:0 16px;height:64px}.nav img{height:24px}
+  h1{font-size:30px}.ov-hero{padding-top:20px}
+  .list li{grid-template-columns:44px 1fr;gap:14px;padding:16px 18px}.list .tile{width:44px;height:44px;border-radius:14px}
+  .mins{grid-column:2;margin-top:-6px}
+  .ph{width:300px;height:300px}
+}
+@media (prefers-reduced-motion:reduce){.ph{animation:none}}
+
+
+.kp-menu{position:fixed;right:16px;bottom:16px;z-index:2147483000;font-family:"Fira Sans","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.kp-menu>summary{list-style:none;display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px;border-radius:20px;background:#FFFFFF;color:#1A1A2E;font-size:14px;font-weight:600;cursor:pointer;border:1px solid #E3E6EF;box-shadow:0 6px 20px rgba(20,22,60,.14);user-select:none}
+.kp-menu>summary::-webkit-details-marker{display:none}
+.kp-menu>summary:hover{border-color:#C0CCFF}
+.kp-menu>summary:focus-visible{outline:2px solid #0432FF;outline-offset:2px}
+.kp-menu[open]>summary{background:#1A1A2E;color:#FFFFFF;border-color:#1A1A2E}
+.kp-panel{position:absolute;right:0;bottom:52px;width:288px;max-height:min(640px,calc(100vh - 96px));overflow:auto;box-sizing:border-box;padding:8px;border-radius:18px;background:#FFFFFF;border:1px solid #E3E6EF;box-shadow:0 24px 60px -12px rgba(20,22,60,.28)}
+.kp-h{display:flex;align-items:center;justify-content:space-between;padding:10px 12px 8px;font-size:14px;color:#1A1A2E}
+.kp-h span{font-size:13px;color:#8A8FA8}
+.kp-g{margin:8px 12px 4px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#8A8FA8}
+.kp-panel a{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:36px;padding:0 12px;border-radius:10px;font-size:14px;color:#22222B!important;text-decoration:none!important}
+.kp-panel a:hover{background:#F3F5FF;color:#0432FF!important}
+.kp-panel a.on{background:#E6EBFF;color:#0432FF!important;font-weight:600}
+.kp-panel a.on::after{content:"";width:6px;height:6px;border-radius:3px;background:#0432FF}
+.kp-panel a.kp-all{margin-top:6px;border-top:1px solid #ECEEF4;border-radius:0 0 10px 10px;color:#0432FF!important;font-weight:600}
+</style>
+</helmet>
+<div class="hs"><span class="blob b1" aria-hidden="true"></span><span class="blob b2" aria-hidden="true"></span><span class="blob b3" aria-hidden="true"></span>
+<header class="nav"><a href="LandingB.dc.html" aria-label="kibo.health home"><img src="assets/31ab7d337ef4e9aaa04f6a3f352fa0d7.png" alt="kibo.health"></a><span class="lbl">Your health story</span></header>
+<main class="col ci">
+<div class="steps" role="progressbar" aria-valuemin="0" aria-valuemax="5" aria-valuenow="3" aria-label="Part 4 of 5"><span class="on"></span><span class="on"></span><span class="on"></span><span class="now"></span><span class=""></span></div>
+<div class="ci-top"><a class="back" href="HealthStoryTreatmentQ4.dc.html"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 3 5 8l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Back</a><span>Part 4 of 5</span></div>
+<div class="ph" aria-hidden="true" style="background-image:url('assets/a86e843d70795a612d18469160a57c01.jpg');background-position:50% 40%"></div>
+<p class="eyebrow" style="margin-top:22px">Your DNA</p>
+<h1>The DNA you were born with</h1>
+<p class="lede">Your DNA can shape how your body handles everyday things, like caffeine and iron. Share what you know, or skip ahead.</p>
+<div class="cta"><a class="btn" href="HealthStoryGeneticsQ1.dc.html">Next</a></div>
+</main>
+</div>
+</template>
+<script>window.__DCProps = "{\"$preview\":{\"width\":1440,\"height\":1100}}";
+window.__DCComponent = (function () {
+
+class Component extends DCLogic {
+  componentDidMount() {
+  }
+  componentWillUnmount() { clearInterval(this.iv); }
+  renderVals() { return {}; }
+}
+
+return Component;
+})();</script>
+<script src="kibo-extras.js"></script>
+</body>
+</html>

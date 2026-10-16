@@ -1,0 +1,798 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Check-in · Started or stopped ongoing cancer medicine · takes it now</title>
+<link rel="icon" href="assets/31ab7d337ef4e9aaa04f6a3f352fa0d7.png">
+<style>html:not(.dc-ready) body{visibility:hidden}</style>
+<script src="kibo-runtime.js"></script>
+</head>
+<body>
+<template id="dc-tpl">
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600&amp;family=Montserrat:wght@200;300;500&amp;display=swap" rel="stylesheet">
+<style>
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.sbi:hover{background:#F4F6FF}
+.stp-a{transition:transform .25s ease, box-shadow .25s ease}
+.stp-a:hover{transform:translateY(-2px);box-shadow:0 20px 44px rgba(4,50,255,0.16) !important}
+.bk-ph{width:184px;height:184px;border-radius:50%;background-size:cover;background-position:50% 18%;-webkit-mask-image:radial-gradient(circle at 50% 50%,#000 48%,rgba(0,0,0,.6) 60%,transparent 70%);mask-image:radial-gradient(circle at 50% 50%,#000 48%,rgba(0,0,0,.6) 60%,transparent 70%);animation:bkin .7s cubic-bezier(.2,.7,.2,1) both}
+.bk-ok{width:76px;height:76px;border-radius:50%;background:#39C684;display:grid;place-items:center;box-shadow:0 0 0 10px #EAF8F1;animation:bkpop .5s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes bkin{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}
+@keyframes bkpop{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:none}}
+.bk-btn{transition:transform .2s ease}
+.rb{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;will-change:transform}
+.rb1{width:460px;height:460px;left:-140px;top:-160px;background:#2246D6;opacity:.9;animation:rbA 9s ease-in-out infinite alternate}
+.rb2{width:420px;height:420px;right:-150px;top:10%;background:#A8B4EC;opacity:.7;animation:rbB 11s ease-in-out infinite alternate}
+.rb3{width:500px;height:500px;left:10%;bottom:-260px;background:#9670E6;opacity:.9;animation:rbC 10s ease-in-out infinite alternate}
+.rb4{width:300px;height:300px;left:45%;top:30%;background:#5F78E2;opacity:.8;animation:rbD 7s ease-in-out infinite alternate}
+.rb5{width:280px;height:280px;left:-60px;top:40%;background:#2E50D8;opacity:.85;animation:rbE 8s ease-in-out infinite alternate}
+.rb6{width:320px;height:320px;right:-80px;bottom:-60px;background:#A37DEA;opacity:.85;animation:rbF 9.5s ease-in-out infinite alternate}
+.flow{position:absolute;left:-40px;top:-40px;width:calc(100% + 80px);height:calc(100% + 80px);pointer-events:none;filter:blur(22px)}
+.d-panel .grain{opacity:1!important;mix-blend-mode:soft-light}
+.d-panel .grain::after{content:"";position:absolute;inset:0;background:inherit;opacity:.55;mix-blend-mode:overlay}
+.grain{position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.62;mix-blend-mode:overlay;pointer-events:none}
+@keyframes rbE{0%{transform:translate(0,0) scale(1)}100%{transform:translate(-200px,260px) scale(1.3)}}
+@keyframes rbF{0%{transform:translate(0,0) scale(1.2)}100%{transform:translate(240px,-200px) scale(.9)}}
+@keyframes rbA{0%{transform:translate(0,0) scale(1)}100%{transform:translate(260px,200px) scale(1.2)}}
+@keyframes rbB{0%{transform:translate(0,0) scale(1)}100%{transform:translate(-280px,180px) scale(1.15)}}
+@keyframes rbC{0%{transform:translate(0,0) scale(1.1)}100%{transform:translate(220px,-240px) scale(.9)}}
+@keyframes rbD{0%{transform:translate(0,0) scale(1)}100%{transform:translate(-240px,-160px) scale(1.35)}}
+@media (prefers-reduced-motion: reduce){.rb{animation:none}.flow{display:none}}
+.rad h2,.rad p,.rad li{text-shadow:0 1px 12px rgba(20,20,80,0.22)}
+
+.bk-btn:hover{transform:translateY(-1px)}
+.stp-a:focus-visible{outline:3px solid #0432FF;outline-offset:3px}
+.sbi[aria-current="page"]:hover{background:#ECEEF8}
+@font-face{font-family:'Coolvetica';src:url('assets/c7e1abd965315a39fe1d300a4e97a8e3.woff2') format('woff2');font-weight:200;font-style:normal;font-display:swap}
+@font-face{font-family:'Coolvetica';src:url('assets/654425c7b27c5cc2f38fa329cb5d17c3.woff2') format('woff2');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'Coolvetica';src:url('assets/ea0d9ab126027978416ea277f45193bb.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Coolvetica';src:url('assets/37f1af1b8c27ad26029ed3c809859265.woff2') format('woff2');font-weight:500 700;font-style:normal;font-display:swap}
+@font-face{font-family:'Coolvetica Book';src:url('assets/ea0d9ab126027978416ea277f45193bb.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:'Coolvetica Light';src:url('assets/654425c7b27c5cc2f38fa329cb5d17c3.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+
+body{margin:0}
+
+/* responsive dashboard */
+@media (max-width:1180px){.d-steps{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))!important}.d-steps span{white-space:normal!important}}
+@media (max-width:1100px){.d-flower{flex-direction:column!important}.d-panel{flex:1 1 auto!important}}
+@media (max-width:700px){main{padding:24px 16px 48px!important}.d-panel{padding:40px 24px!important}}
+.rtoast{position:fixed;left:50%;top:24px;z-index:80;display:flex;align-items:flex-start;gap:12px;width:min(440px,calc(100% - 32px));box-sizing:border-box;padding:16px 18px;border:1px solid #96D9BA;border-radius:10px;background:#EFF5F2;color:#278157;font-size:15px;line-height:1.5;box-shadow:0 12px 30px -16px rgba(26,26,46,.25);transform:translateX(-50%);animation:rtin .4s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rtin{from{opacity:0;transform:translate(-50%,-16px)}to{opacity:1;transform:translate(-50%,0)}}
+.ci-opt{transition:border-color .15s,background .15s}
+.ci-opt:hover{border-color:#C0CCFF!important}
+@media (prefers-reduced-motion:reduce){.rtoast{animation:none}}
+
+
+.kp-menu{position:fixed;right:16px;bottom:16px;z-index:2147483000;font-family:"Fira Sans","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.kp-menu>summary{list-style:none;display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px;border-radius:20px;background:#FFFFFF;color:#1A1A2E;font-size:14px;font-weight:600;cursor:pointer;border:1px solid #E3E6EF;box-shadow:0 6px 20px rgba(20,22,60,.14);user-select:none}
+.kp-menu>summary::-webkit-details-marker{display:none}
+.kp-menu>summary:hover{border-color:#C0CCFF}
+.kp-menu>summary:focus-visible{outline:2px solid #0432FF;outline-offset:2px}
+.kp-menu[open]>summary{background:#1A1A2E;color:#FFFFFF;border-color:#1A1A2E}
+.kp-panel{position:absolute;right:0;bottom:52px;width:288px;max-height:min(640px,calc(100vh - 96px));overflow:auto;box-sizing:border-box;padding:8px;border-radius:18px;background:#FFFFFF;border:1px solid #E3E6EF;box-shadow:0 24px 60px -12px rgba(20,22,60,.28)}
+.kp-h{display:flex;align-items:center;justify-content:space-between;padding:10px 12px 8px;font-size:14px;color:#1A1A2E}
+.kp-h span{font-size:13px;color:#8A8FA8}
+.kp-g{margin:8px 12px 4px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#8A8FA8}
+.kp-panel a{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:36px;padding:0 12px;border-radius:10px;font-size:14px;color:#22222B!important;text-decoration:none!important}
+.kp-panel a:hover{background:#F3F5FF;color:#0432FF!important}
+.kp-panel a.on{background:#E6EBFF;color:#0432FF!important;font-weight:600}
+.kp-panel a.on::after{content:"";width:6px;height:6px;border-radius:3px;background:#0432FF}
+.kp-panel a.kp-all{margin-top:6px;border-top:1px solid #ECEEF4;border-radius:0 0 10px 10px;color:#0432FF!important;font-weight:600}
+</style>
+</helmet>
+<div style="position: relative; width: 100%; min-height: 100vh; box-sizing: border-box; background: #FBFCFF; color: #22222B; font-family: 'Fira Sans', 'Helvetica Neue', sans-serif; overflow-x: clip">
+
+  <div style="display: flex; align-items: flex-start; min-height: 100vh">
+  <sc-if value="{{navOpen}}" hint-placeholder-val="{{ true }}"><aside aria-label="Main menu" style="flex: none; width: 256px; box-sizing: border-box; background: #FFFFFF; border-right: 1px solid #ECEEF6; padding: 10px 16px 24px; display: flex; flex-direction: column; position: sticky; top: 0; height: 100vh; overflow-y: auto" class="d-side"><div style="display: flex; flex-direction: column; flex: 1 1 auto; min-height: 0"><div style="display: flex; align-items: center; justify-content: space-between; height: 64px"><a href="LandingB.dc.html" aria-label="kibo.health home"><img src="assets/31ab7d337ef4e9aaa04f6a3f352fa0d7.png" alt="kibo.health" style="height: 26px; width: auto; display: block"></a><button type="button" onClick="{{toggleNav}}" aria-label="Collapse menu" title="Collapse menu" style="width: 36px; height: 36px; border: 0; border-radius: 10px; background: transparent; color: #9DA3BC; cursor: pointer; display: grid; place-items: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4" width="17" height="16" rx="3"/><path d="M9 4v16"/></svg></button></div><nav aria-label="Main" style="display: flex; flex-direction: column; gap: 16px; margin-top: 40px"><a href="#" aria-current="page" title="Home" class="sbi" style="display: flex; align-items: center; gap: 12px; height: 50px; border-radius: 14px; text-decoration: none; font-family: Coolvetica, Montserrat, sans-serif; font-weight: 300; font-size: 16px; background: #ECEEF8; color: #0432FF; padding: 0 24px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5V19a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 19z"/><path d="M9.5 15c1.4 1.3 3.6 1.3 5 0"/></svg><span>Home</span></a><a href="#" title="Your Results" class="sbi" style="display: flex; align-items: center; gap: 12px; height: 50px; border-radius: 14px; text-decoration: none; font-family: Coolvetica, Montserrat, sans-serif; font-weight: 300; font-size: 16px; color: #7A7F99; padding: 0 24px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-4.8-8-10.4A4.4 4.4 0 0 1 12 7a4.4 4.4 0 0 1 8 2.6C20 15.2 12 20 12 20z"/><path d="M12 10.5v5M9.5 13h5"/></svg><span>Your Results</span></a><a href="#" title="Your Action Plan" class="sbi" style="display: flex; align-items: center; gap: 12px; height: 50px; border-radius: 14px; text-decoration: none; font-family: Coolvetica, Montserrat, sans-serif; font-weight: 300; font-size: 16px; color: #7A7F99; padding: 0 24px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 16v-4M12 16V9M15 16v-6"/></svg><span>Your Action Plan</span></a><a href="#" title="Your Labs" class="sbi" style="display: flex; align-items: center; gap: 12px; height: 50px; border-radius: 14px; text-decoration: none; font-family: Coolvetica, Montserrat, sans-serif; font-weight: 300; font-size: 16px; color: #7A7F99; padding: 0 24px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 13.5c-1.6 1.9-2.5 3.2-2.5 4.3a2.5 2.5 0 0 0 5 0c0-1.1-.9-2.4-2.5-4.3z"/><path d="M14 4h6M15 4v12.5a2 2 0 0 0 4 0V4M15 11h4"/></svg><span>Your Labs</span></a><a href="DashboardStory.dc.html" title="Your Health Story" class="sbi" style="display: flex; align-items: center; gap: 12px; height: 50px; border-radius: 14px; text-decoration: none; font-family: Coolvetica, Montserrat, sans-serif; font-weight: 300; font-size: 16px; color: #7A7F99; padding: 0 24px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6M9 9h2"/></svg><span>Your Health Story</span></a></nav><div style="margin-top: auto; border-top: 1px solid #ECEEF6; padding-top: 22px"><div style="display: flex; align-items: center; gap: 16px; padding: 0 16px"><span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 50%; background: #E6EBFF; color: #0432FF; display: grid; place-items: center; font-size: 18px; font-weight: 500">{{userInitial}}</span><span style="font-size: 16px; color: #22222B; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{userName}}</span></div></div></div></aside></sc-if>
+  <sc-if value="{{navClosed}}" hint-placeholder-val="{{ false }}"><aside aria-label="Main menu" style="flex: none; width: 100px; box-sizing: border-box; background: #FFFFFF; border-right: 1px solid #ECEEF6; padding: 21px 0 24px; display: flex; flex-direction: column; position: sticky; top: 0; height: 100vh; overflow-y: auto" class="d-side"><div style="display: flex; flex-direction: column; flex: 1 1 auto; min-height: 0"><button type="button" onClick="{{toggleNav}}" aria-label="Expand menu" title="Expand menu" style="align-self: center; border: 0; background: transparent; cursor: pointer; font-family: Coolvetica, Montserrat, sans-serif; font-weight: 600; font-size: 52px; line-height: 1; color: #0432FF; letter-spacing: -0.02em; padding: 0 6px">k.</button><nav aria-label="Main" style="display: flex; flex-direction: column; gap: 16px; margin-top: 40px; padding: 0 20px"><a href="#" aria-current="page" title="Home" class="sbi" style="display: flex; align-items: center; gap: 12px; height: 50px; border-radius: 14px; text-decoration: none; font-family: Coolvetica, Montserrat, sans-serif; font-weight: 300; font-size: 16px; background: #ECEEF8; color: #0432FF; justify-content: center; padding: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5 12 4l8 6.5V19a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 19z"/><path d="M9.5 15c1.4 1.3 3.6 1.3 5 0"/></svg><span class="sr">Home</span></a><a href="#" title="Your Results" class="sbi" style="display: flex; align-items: center; gap: 12px; height: 50px; border-radius: 14px; text-decoration: none; font-family: Coolvetica, Montserrat, sans-serif; font-weight: 300; font-size: 16px; color: #7A7F99; justify-content: center; padding: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-8-4.8-8-10.4A4.4 4.4 0 0 1 12 7a4.4 4.4 0 0 1 8 2.6C20 15.2 12 20 12 20z"/><path d="M12 10.5v5M9.5 13h5"/></svg><span class="sr">Your Results</span></a><a href="#" title="Your Action Plan" class="sbi" style="display: flex; align-items: center; gap: 12px; height: 50px; border-radius: 14px; text-decoration: none; font-family: Coolvetica, Montserrat, sans-serif; font-weight: 300; font-size: 16px; color: #7A7F99; justify-content: center; padding: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 16v-4M12 16V9M15 16v-6"/></svg><span class="sr">Your Action Plan</span></a><a href="#" title="Your Labs" class="sbi" style="display: flex; align-items: center; gap: 12px; height: 50px; border-radius: 14px; text-decoration: none; font-family: Coolvetica, Montserrat, sans-serif; font-weight: 300; font-size: 16px; color: #7A7F99; justify-content: center; padding: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 13.5c-1.6 1.9-2.5 3.2-2.5 4.3a2.5 2.5 0 0 0 5 0c0-1.1-.9-2.4-2.5-4.3z"/><path d="M14 4h6M15 4v12.5a2 2 0 0 0 4 0V4M15 11h4"/></svg><span class="sr">Your Labs</span></a><a href="DashboardStory.dc.html" title="Your Health Story" class="sbi" style="display: flex; align-items: center; gap: 12px; height: 50px; border-radius: 14px; text-decoration: none; font-family: Coolvetica, Montserrat, sans-serif; font-weight: 300; font-size: 16px; color: #7A7F99; justify-content: center; padding: 0;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6M9 9h2"/></svg><span class="sr">Your Health Story</span></a></nav><div style="margin-top: auto; border-top: 1px solid #ECEEF6; margin-left: 5px; margin-right: 5px; padding-top: 22px"><div style="display: flex; justify-content: center"><span title="{{userName}}" style="width: 40px; height: 40px; border-radius: 50%; background: #E6EBFF; color: #0432FF; display: grid; place-items: center; font-size: 18px; font-weight: 500">{{userInitial}}</span></div></div></div></aside></sc-if>
+  <div style="flex: 1 1 auto; min-width: 0">
+
+  <main style="max-width: 1280px; margin: 0 auto; padding: 36px 32px 64px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px">
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <span style="font-size: 16px; color: #595978">{{greeting}}</span>
+      <h1 style="margin: 0; font-family: Coolvetica, Montserrat, sans-serif; font-weight: 300; font-size: 32px; line-height: 1.15; letter-spacing: -0.015em">{{headline}}</h1>
+    </div>
+
+
+    <sc-if value="{{pre}}" hint-placeholder-val="{{ true }}">
+    <section aria-label="Your next steps" class="d-steps" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px">
+      <div style="position: relative; min-height: 200px; border-radius: 28px; padding: 24px 26px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; text-align: left; background: #FFFFFF; border: 1px solid #E6E6EA">
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; height: 88px">
+          <span style="display: inline-flex; align-items: center; gap: 8px; height: 28px; padding: 0 12px 0 4px; border-radius: 14px; background: #EAF8F1; font-size: 13px; font-weight: 500; color: #1F7A50"><span style="width: 20px; height: 20px; border-radius: 10px; background: #39C684; display: grid; place-items: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Completed</span>
+          <span style="flex: none; width: 88px; height: 88px; border-radius: 22px; display: grid; place-items: center; overflow: hidden; background: #F6F7FA"><svg width="78" height="84" viewBox="0 0 104 112" aria-hidden="true"><rect x="14" y="10" width="70" height="88" rx="12" fill="#FFFFFF" stroke="#E6E6EA" transform="rotate(6 49 54)"/><rect x="10" y="8" width="70" height="88" rx="12" fill="#FFFFFF" stroke="#E1E3EC"/><rect x="22" y="26" width="34" height="5" rx="2.5" fill="#E3E6F0"/><rect x="22" y="40" width="46" height="4" rx="2" fill="#EEF0F6"/><rect x="22" y="51" width="40" height="4" rx="2" fill="#EEF0F6"/><rect x="22" y="62" width="44" height="4" rx="2" fill="#EEF0F6"/><circle cx="78" cy="86" r="17" fill="#39C684"/><path d="M70.5 86.5l5 5 10-10.5" fill="none" stroke="#FFFFFF" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px">
+          <span style="font-family: Coolvetica, Montserrat, sans-serif; font-weight: 300; font-size: 24px; line-height: 1.15; color: #22222B; white-space: nowrap">Your health story</span>
+          <span style="font-size: 15px; line-height: 1.4; color: #7A7F99; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">All five parts shared</span>
+        </div>
+      </div>
+
+      <sc-if value="{{notReady}}" hint-placeholder-val="{{ true }}"><button type="button" onClick="{{stepAct}}" class="stp-a" aria-label="{{drawCard.aria}}" style="position: relative; min-height: 200px; border-radius: 28px; padding: 24px 26px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; text-align: left; border: 2px solid transparent; background: linear-gradient(#FFFFFF, #FFFFFF) padding-box, linear-gradient(120deg, #0432FF 0%, #7B5CFF 45%, #FF8A65 100%) border-box; box-shadow: 0 14px 36px rgba(4,50,255,0.10); font: inherit; color: #22222B; cursor: pointer; padding: 23px 25px">
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; height: 88px">
+          <span style="display: inline-flex; align-items: center; gap: 8px; height: 28px; font-size: 13px; font-weight: 500; color: {{drawCard.kickInk}}"><span style="width: 8px; height: 8px; border-radius: 4px; background: {{drawCard.kickInk}}"></span>{{drawCard.kicker}}</span>
+          <span style="flex: none; width: 88px; height: 88px; border-radius: 22px; display: grid; place-items: center; overflow: hidden; background: #ECEFF6"><img src="assets/2ff4a30a67d7928e272c48a471ad73d2.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 10%; display: block"></span>
+        </div>
+        <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 12px">
+          <div style="min-width: 0; display: flex; flex-direction: column; gap: 6px">
+            <span style="font-family: Coolvetica, Montserrat, sans-serif; font-weight: 300; font-size: 24px; line-height: 1.15; color: #22222B; white-space: nowrap">{{drawCard.title}}</span>
+            <span style="font-size: 15px; line-height: 1.4; color: #7A7F99; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{drawCard.sub}}</span>
+          </div>
+          <span aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 16px; background: #0432FF; display: grid; place-items: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span>
+        </div>
+      </button></sc-if><sc-if value="{{ready}}" hint-placeholder-val="{{ false }}"><a href="DashboardCheckin.dc.html" class="stp-a" aria-label="{{drawCard.aria}}" style="position: relative; min-height: 200px; border-radius: 28px; padding: 24px 26px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; text-align: left; border: 2px solid transparent; background: linear-gradient(#FFFFFF, #FFFFFF) padding-box, linear-gradient(120deg, #0432FF 0%, #7B5CFF 45%, #FF8A65 100%) border-box; box-shadow: 0 14px 36px rgba(4,50,255,0.10); font: inherit; color: #22222B; cursor: pointer; text-decoration: none; padding: 23px 25px">
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; height: 88px">
+          <span style="display: inline-flex; align-items: center; gap: 8px; height: 28px; font-size: 13px; font-weight: 500; color: {{drawCard.kickInk}}"><span style="width: 8px; height: 8px; border-radius: 4px; background: {{drawCard.kickInk}}"></span>{{drawCard.kicker}}</span>
+          <span style="flex: none; width: 88px; height: 88px; border-radius: 22px; display: grid; place-items: center; overflow: hidden; background: #ECEFF6"><img src="assets/2ff4a30a67d7928e272c48a471ad73d2.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 10%; display: block"></span>
+        </div>
+        <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 12px">
+          <div style="min-width: 0; display: flex; flex-direction: column; gap: 6px">
+            <span style="font-family: Coolvetica, Montserrat, sans-serif; font-weight: 300; font-size: 24px; line-height: 1.15; color: #22222B; white-space: nowrap">{{drawCard.title}}</span>
+            <span style="font-size: 15px; line-height: 1.4; color: #7A7F99; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{drawCard.sub}}</span>
+          </div>
+          <span aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 16px; background: #0432FF; display: grid; place-items: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span>
+        </div>
+      </a></sc-if>
+
+      <div style="position: relative; min-height: 200px; border-radius: 28px; padding: 24px 26px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; text-align: left; background: #F1F2F6">
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; height: 88px">
+          <span style="display: inline-flex; align-items: center; height: 28px; font-size: 13px; font-weight: 500; color: #7A7F99">After your draw</span>
+          <span style="flex: none; width: 88px; height: 88px; border-radius: 22px; display: grid; place-items: center; overflow: hidden; background: #FFFFFF"><svg width="84" height="84" viewBox="-196 -196 392 392" aria-hidden="true"><path d="M0,0 C 24,-16 34,-60 29,-98 C 25,-123 12,-138 0,-140 C -12,-138 -25,-123 -29,-98 C -34,-60 -24,-16 0,0 Z" fill="#F8F8F9" stroke="#C0CCFF" stroke-width="3.6" stroke-dasharray="9 9" transform="rotate(0) translate(0 -50)"/><path d="M0,0 C 24,-16 34,-60 29,-98 C 25,-123 12,-138 0,-140 C -12,-138 -25,-123 -29,-98 C -34,-60 -24,-16 0,0 Z" fill="#F8F8F9" stroke="#C0CCFF" stroke-width="3.6" stroke-dasharray="9 9" transform="rotate(36) translate(0 -50)"/><path d="M0,0 C 24,-16 34,-60 29,-98 C 25,-123 12,-138 0,-140 C -12,-138 -25,-123 -29,-98 C -34,-60 -24,-16 0,0 Z" fill="#F8F8F9" stroke="#C0CCFF" stroke-width="3.6" stroke-dasharray="9 9" transform="rotate(72) translate(0 -50)"/><path d="M0,0 C 24,-16 34,-60 29,-98 C 25,-123 12,-138 0,-140 C -12,-138 -25,-123 -29,-98 C -34,-60 -24,-16 0,0 Z" fill="#F8F8F9" stroke="#C0CCFF" stroke-width="3.6" stroke-dasharray="9 9" transform="rotate(108) translate(0 -50)"/><path d="M0,0 C 24,-16 34,-60 29,-98 C 25,-123 12,-138 0,-140 C -12,-138 -25,-123 -29,-98 C -34,-60 -24,-16 0,0 Z" fill="#F8F8F9" stroke="#C0CCFF" stroke-width="3.6" stroke-dasharray="9 9" transform="rotate(144) translate(0 -50)"/><path d="M0,0 C 24,-16 34,-60 29,-98 C 25,-123 12,-138 0,-140 C -12,-138 -25,-123 -29,-98 C -34,-60 -24,-16 0,0 Z" fill="#F8F8F9" stroke="#C0CCFF" stroke-width="3.6" stroke-dasharray="9 9" transform="rotate(180) translate(0 -50)"/><path d="M0,0 C 24,-16 34,-60 29,-98 C 25,-123 12,-138 0,-140 C -12,-138 -25,-123 -29,-98 C -34,-60 -24,-16 0,0 Z" fill="#F8F8F9" stroke="#C0CCFF" stroke-width="3.6" stroke-dasharray="9 9" transform="rotate(216) translate(0 -50)"/><path d="M0,0 C 24,-16 34,-60 29,-98 C 25,-123 12,-138 0,-140 C -12,-138 -25,-123 -29,-98 C -34,-60 -24,-16 0,0 Z" fill="#F8F8F9" stroke="#C0CCFF" stroke-width="3.6" stroke-dasharray="9 9" transform="rotate(252) translate(0 -50)"/><path d="M0,0 C 24,-16 34,-60 29,-98 C 25,-123 12,-138 0,-140 C -12,-138 -25,-123 -29,-98 C -34,-60 -24,-16 0,0 Z" fill="#F8F8F9" stroke="#C0CCFF" stroke-width="3.6" stroke-dasharray="9 9" transform="rotate(288) translate(0 -50)"/><path d="M0,0 C 24,-16 34,-60 29,-98 C 25,-123 12,-138 0,-140 C -12,-138 -25,-123 -29,-98 C -34,-60 -24,-16 0,0 Z" fill="#F8F8F9" stroke="#C0CCFF" stroke-width="3.6" stroke-dasharray="9 9" transform="rotate(324) translate(0 -50)"/><circle r="12" fill="#FFFFFF" stroke="#E6E6EA"/></svg></span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px">
+          <span style="font-family: Coolvetica, Montserrat, sans-serif; font-weight: 300; font-size: 24px; line-height: 1.15; color: #22222B; white-space: nowrap">Your flower and plan</span>
+          <span style="font-size: 15px; line-height: 1.4; color: #7A7F99; white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{card3sub}}</span>
+        </div>
+      </div>
+    </section>
+    </sc-if>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: stretch">
+
+      <section aria-label="Your ten areas" class="d-flower" style="flex: 1 1 640px; min-width: 0; background: #FFFFFF; border: 1px solid #E6E6EA; border-radius: 28px; padding: {{fcard.pad}}; box-sizing: border-box; display: flex; flex-direction: {{fcard.dir}}; gap: {{fcard.gap}}; overflow: hidden">
+
+<sc-if value="{{post}}" hint-placeholder-val="{{ false }}"><div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; padding: 0 8px"></div></sc-if>
+        <div style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; justify-content: center; gap: 16px; padding: {{fcard.lpad}}">
+        <div style="overflow-x: auto">
+          <div style="width: {{fcard.box}}px; height: {{fcard.box}}px; margin: 0 auto"><div style="position: relative; width: 480px; height: 480px; transform: scale({{fcard.scale}}); transform-origin: 0 0">
+            <div aria-hidden="true" style="position: absolute; left: 10px; top: 10px; width: 460px; height: 460px; border-radius: 50%; background: radial-gradient(circle, #F3F5FF 0%, #F3F5FF 46%, rgba(243,245,255,0) 72%)"></div>
+            <sc-for list="{{areas}}" as="a" hint-placeholder-count="10">
+              <button type="button" onClick="{{a.open}}" aria-disabled="{{a.dis}}" onMouseEnter="{{a.hover}}" onMouseLeave="{{unhover}}" aria-label="{{a.aria}}" style="position: absolute; left: 202px; top: 100px; width: 76px; height: 140px; padding: 0; border: 0; background: transparent; transform-origin: 50% 100%; transform: rotate({{a.deg}}deg) translateY(-50px) scale({{a.scale}}); opacity: {{a.opacity}}; transition: opacity 0.3s, transform 0.3s; cursor: {{a.cursor}}">
+                <svg width="76" height="140" viewBox="-38 -140 76 140" aria-hidden="true" style="display: block; overflow: visible">
+                  <defs><linearGradient id="{{a.gid}}" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="{{a.c0}}"></stop><stop offset="0.75" stop-color="{{a.c1}}"></stop></linearGradient></defs>
+                  <path d="{{a.petalD}}" fill="{{a.trk}}" stroke="{{a.tstroke}}" stroke-width="{{a.sw}}" stroke-dasharray="{{a.dash}}"></path>
+                  <path d="{{a.petalD}}" fill="{{a.gfill}}" stroke="none" style="transform: scale({{a.k}}); transition: transform 1.4s cubic-bezier(0.2, 0.8, 0.2, 1) {{a.delay}}s"></path>
+                  <path d="{{a.veinD}}" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.4" stroke-linecap="round"></path>
+                </svg>
+              </button>
+            </sc-for>
+            <sc-for list="{{areas}}" as="a" hint-placeholder-count="10">
+              <button type="button" onClick="{{a.open}}" aria-disabled="{{a.dis}}" onMouseEnter="{{a.hover}}" onMouseLeave="{{unhover}}" aria-label="{{a.aria}}" style="position: absolute; left: {{a.ix}}px; top: {{a.iy}}px; width: 38px; height: 38px; border-radius: 19px; border: {{a.ringBorder}}; background: {{a.ringBg}}; color: #16358B; padding: 0; cursor: {{a.cursor}}; display: flex; align-items: center; justify-content: center; opacity: {{a.opacity}}; transition: opacity 0.3s; box-shadow: 0 1px 3px rgba(34,34,43,0.10)">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{a.icon}}"></path></svg>
+              </button>
+            </sc-for>
+            <span aria-hidden="true" style="position: absolute; left: 170px; top: 170px; width: 140px; height: 140px; border-radius: 70px; background: radial-gradient(circle, #DDE4FF 0%, #EEF1FF 60%, rgba(238,241,255,0) 100%)"></span>
+            <button type="button" onClick="{{centerAct}}" aria-label="{{center.aria}}" style="position: absolute; left: 184px; top: 184px; width: 112px; height: 112px; border-radius: 56px; border: 1px solid #E6E6EA; background: #FFFFFF; box-shadow: 0 8px 28px rgba(4,50,255,0.12); color: #22222B; font: inherit; cursor: {{centerCursor}}; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; padding: 8px; text-align: center">
+              <span style="font-size: 11px; font-weight: 600; color: #595978">{{center.top}}</span>
+              <span style="font-family: Coolvetica, Montserrat, sans-serif; font-weight: 300; font-size: {{center.size}}px; line-height: 1.05">{{center.main}}</span>
+              <span style="font-size: 11px; color: #595978">{{center.sub}}</span>
+            </button>
+          </div></div>
+        </div>
+
+        <sc-if value="{{post}}" hint-placeholder-val="{{ true }}">
+          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; font-size: 13px; color: #595978">
+            <span style="display: flex; align-items: center; gap: 6px"><span style="width: 10px; height: 10px; border-radius: 5px; background: #39C684"></span>8–10</span>
+            <span style="display: flex; align-items: center; gap: 6px"><span style="width: 10px; height: 10px; border-radius: 5px; background: #EC9C13"></span>6–7</span>
+            <span style="display: flex; align-items: center; gap: 6px"><span style="width: 10px; height: 10px; border-radius: 5px; background: #E4572E"></span>0–5</span>
+            <span>Longer means a higher score</span>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{pre}}" hint-placeholder-val="{{ true }}"><p style="margin: 0; font-size: 16px; line-height: 1.5; color: #595978; text-align: center">Your Kibo Score appears once your blood work is in.</p></sc-if>
+        <p style="margin: 0; padding: 0 8px; font-size: {{fcard.discSize}}px; line-height: 1.5; color: #595978; text-align: center">Your Kibo Score is a wellness score. It is not a medical test or a measure of your health status.</p>
+        </div>
+        <sc-if value="{{pre}}" hint-placeholder-val="{{ true }}">
+        <div class="rad d-panel" style="position: relative; flex: 0 0 50%; min-width: 0; overflow: hidden; background: radial-gradient(45% 35% at 92% 8%, rgba(103,72,216,0.6) 0%, rgba(103,72,216,0) 100%), radial-gradient(40% 35% at 6% 96%, rgba(75,54,194,0.65) 0%, rgba(75,54,194,0) 100%), linear-gradient(160deg, #0432FF 0%, #0432FF 45%, #1A3AE6 66%, #3A3BD0 86%, #5240CC 100%); color: #FFFFFF; padding: 64px 56px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center">
+          <svg aria-hidden="true" class="flow" viewBox="0 0 640 760" preserveAspectRatio="xMidYMid slice"><g><g><animateTransform attributeName="transform" type="translate" values="0 0;50 40;0 0" dur="9.1s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/><path d="M-80,120 C 120,60 220,260 420,180 S 700,120 760,40" fill="none" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="95" stroke-linecap="round"><animate attributeName="d" values="M-80,120 C 120,60 220,260 420,180 S 700,120 760,40;M-80,160 C 140,20 240,300 420,140 S 680,180 760,70;M-80,120 C 120,60 220,260 420,180 S 700,120 760,40" dur="7s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/></path></g><g><animateTransform attributeName="transform" type="translate" values="0 0;-50 40;0 0" dur="10.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/><path d="M-100,330 C 80,260 200,420 380,360 S 640,300 760,240" fill="none" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="75" stroke-linecap="round"><animate attributeName="d" values="M-100,330 C 80,260 200,420 380,360 S 640,300 760,240;M-100,290 C 100,380 220,300 380,400 S 620,250 760,280;M-100,330 C 80,260 200,420 380,360 S 640,300 760,240" dur="8s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/></path></g><g><animateTransform attributeName="transform" type="translate" values="0 0;60 -40;0 0" dur="9.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/><path d="M-60,560 C 140,500 260,640 440,560 S 700,470 780,430" fill="none" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="105" stroke-linecap="round"><animate attributeName="d" values="M-60,560 C 140,500 260,640 440,560 S 700,470 780,430;M-60,600 C 160,460 280,680 440,520 S 680,520 780,470;M-60,560 C 140,500 260,640 440,560 S 700,470 780,430" dur="7.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/></path></g><g><animateTransform attributeName="transform" type="translate" values="0 0;40 30;0 0" dur="11.7s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/><path d="M120,-60 C 60,140 260,240 200,420 S 300,700 260,800" fill="none" stroke="#FFFFFF" stroke-opacity="0.1" stroke-width="85" stroke-linecap="round"><animate attributeName="d" values="M120,-60 C 60,140 260,240 200,420 S 300,700 260,800;M160,-60 C 40,180 300,220 180,440 S 340,660 240,800;M120,-60 C 60,140 260,240 200,420 S 300,700 260,800" dur="9s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/></path></g><g><animateTransform attributeName="transform" type="translate" values="0 0;-50 20;0 0" dur="11.1s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/><path d="M480,-80 C 420,120 600,260 520,460 S 600,700 560,820" fill="none" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="90" stroke-linecap="round"><animate attributeName="d" values="M480,-80 C 420,120 600,260 520,460 S 600,700 560,820;M440,-80 C 470,140 560,240 560,470 S 560,690 590,820;M480,-80 C 420,120 600,260 520,460 S 600,700 560,820" dur="8.5s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/></path></g></g></svg><span aria-hidden="true" class="grain"></span>
+          <div style="position: relative; z-index: 1; display: flex; flex-direction: column; gap: 24px; max-width: 480px">
+            <span style="font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.9)">{{panel.kicker}}</span>
+            <h2 style="margin: 0; font-family: Coolvetica, Montserrat, sans-serif; font-weight: 300; font-size: 32px; line-height: 1.12; letter-spacing: -0.01em; color: #FFFFFF">{{panel.title}}</h2>
+            <p style="margin: 0; font-size: 17px; line-height: 1.6; color: rgba(255,255,255,0.92)">{{panel.body}}</p>
+            <sc-if value="{{panel.list}}" hint-placeholder-val="{{ true }}"><ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px"><li style="display: flex; align-items: center; gap: 14px; font-size: 17px; color: #FFFFFF"><span style="flex: none; width: 28px; height: 28px; border-radius: 14px; background: rgba(255,255,255,0.24); display: grid; place-items: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Two blood draws a year, included</li><li style="display: flex; align-items: center; gap: 14px; font-size: 17px; color: #FFFFFF"><span style="flex: none; width: 28px; height: 28px; border-radius: 14px; background: rgba(255,255,255,0.24); display: grid; place-items: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Pick a time that suits you</li><li style="display: flex; align-items: center; gap: 14px; font-size: 17px; color: #FFFFFF"><span style="flex: none; width: 28px; height: 28px; border-radius: 14px; background: rgba(255,255,255,0.24); display: grid; place-items: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Results in a few days</li></ul></sc-if>
+            <sc-if value="{{notReady}}" hint-placeholder-val="{{ true }}"><button type="button" onClick="{{panelAct}}" class="bk-btn" style="align-self: flex-start; margin-top: 4px; height: 58px; padding: 0 34px; border: 0; border-radius: 29px; background: #FFFFFF; color: #0432FF; font: inherit; font-size: 17px; font-weight: 600; cursor: pointer; box-shadow: 0 12px 28px rgba(15,20,90,0.25)">{{panel.cta}}</button></sc-if><sc-if value="{{ready}}" hint-placeholder-val="{{ false }}"><a href="DashboardCheckin.dc.html" class="bk-btn" style="align-self: flex-start; margin-top: 4px; height: 58px; padding: 0 34px; border: 0; border-radius: 29px; background: #FFFFFF; color: #0432FF; font: inherit; font-size: 17px; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; box-shadow: 0 12px 28px rgba(15,20,90,0.25)">{{panel.cta}}</a></sc-if>
+          </div>
+        </div>
+        </sc-if><sc-if value="{{post}}" hint-placeholder-val="{{ true }}"><span style="font-size: 14px; color: #595978; text-align: start">{{avgText}}</span><div style="position: relative; height: 8px; border-radius: 4px; background: #F1F1F3">
+                <div style="position: absolute; left: 0; top: 0; bottom: 0; width: {{scoreNum}}%; border-radius: 4px; background: #0432FF"></div>
+                <div style="position: absolute; left: 60%; top: -4px; width: 2px; height: 16px; background: #22222B"></div>
+              </div></sc-if><sc-if value="{{post}}" hint-placeholder-val="{{ false }}"><div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 4px 16px; border-top: 1px solid #E6E6EA; padding-top: 14px">
+          <sc-for list="{{areas}}" as="a" hint-placeholder-count="10">
+            <button type="button" onClick="{{a.open}}" aria-disabled="{{a.dis}}" onMouseEnter="{{a.hover}}" onMouseLeave="{{unhover}}" aria-label="{{a.aria}}" style="width: 100%; min-height: 52px; padding: 6px 10px; border-radius: 14px; border: {{a.rowBorder}}; background: {{a.rowBg}}; font: inherit; color: #22222B; text-align: left; cursor: {{a.cursor}}; display: flex; align-items: center; gap: 12px; opacity: {{a.opacity}}; transition: background 0.2s, opacity 0.3s">
+              <span style="width: 34px; height: 34px; border-radius: 17px; background: {{a.ringBg}}; color: #16358B; display: flex; align-items: center; justify-content: center; flex: none">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{a.icon}}"></path></svg>
+              </span>
+              <span style="flex: 1; min-width: 0; font-size: 15px; font-weight: 500">{{a.name}}</span>
+              <span style="flex: none; display: flex; align-items: center; gap: 6px; font-size: {{a.scoreSize}}px; font-weight: 600; color: {{a.scoreInk}}"><span style="width: 10px; height: 10px; border-radius: 5px; background: {{a.dot}}"></span>{{a.scoreLabel}}</span>
+            </button>
+          </sc-for>
+        </div></sc-if>
+      </section>
+
+      <div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 20px; align-self: flex-start; display: {{colDisp}}">
+<sc-if value="{{pre}}" hint-placeholder-val="{{ true }}">
+        
+        
+        </sc-if>
+        <sc-if value="{{post}}" hint-placeholder-val="{{ false }}">
+          <sc-if value="{{note.show}}" hint-placeholder-val="{{ false }}">
+          <section aria-label="Plan update" style="background: {{note.bg}}; border: 1px solid {{note.border}}; border-radius: 28px; padding: 22px 24px; display: flex; gap: 14px; align-items: flex-start">
+            <span aria-hidden="true" style="flex: none; width: 36px; height: 36px; border-radius: 12px; background: #FFFFFF; color: {{note.ink}}; display: grid; place-items: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="{{note.icon}}"/></svg></span>
+            <div style="display: flex; flex-direction: column; gap: 4px">
+              <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: {{note.ink}}">Plan updated with your answer</span>
+              <span style="font-size: 17px; font-weight: 600; line-height: 1.35; color: #22222B">{{note.title}}</span>
+              <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #595978">{{note.body}}</p>
+            </div>
+          </section>
+          </sc-if>
+                <section style="background: #FFFFFF; border: 1px solid #E6E6EA; border-radius: 28px; padding: 26px; display: flex; flex-direction: column; gap: 12px">
+          <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: #0432FF">{{intro.kicker}}</span>
+          <span style="font-family: Coolvetica, Montserrat, sans-serif; font-weight: 300; font-size: 26px; line-height: 1.2">{{intro.title}}</span>
+          <p style="margin: 0; font-size: 15px; line-height: 1.55; color: #595978">{{intro.body}}</p>
+          <sc-if value="{{post}}" hint-placeholder-val="{{ true }}">
+            <button type="button" onClick="{{openFocus}}" style="align-self: flex-start; height: 46px; padding: 0 24px; border: 0; border-radius: 23px; background: #0432FF; color: #FFFFFF; font: inherit; font-weight: 600; font-size: 15px; cursor: pointer">Start with Heart Health</button>
+          </sc-if>
+        </section>
+        </sc-if>
+
+        <sc-if value="{{post}}" hint-placeholder-val="{{ true }}">
+          <section aria-label="This week’s actions" style="background: #FFFFFF; border: 1px solid #E6E6EA; border-radius: 28px; padding: 22px 24px; display: flex; flex-direction: column; gap: 10px">
+            <h2 style="margin: 0; font-size: 17px; font-weight: 600; line-height: 1.35">Your three actions this week reach 7 of your ten areas</h2>
+            <span style="font-size: 13px; color: #595978">Select one to see what it reaches on your flower</span>
+            <sc-for list="{{actions}}" as="x" hint-placeholder-count="3">
+              <button type="button" onClick="{{x.pick}}" aria-pressed="{{x.pressed}}" style="width: 100%; min-height: 60px; padding: 12px 14px; border-radius: 16px; border: {{x.border}}; background: {{x.bg}}; font: inherit; color: #22222B; text-align: left; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 12px">
+                <span style="font-size: 15px; font-weight: 600">{{x.t}}</span>
+                <span style="flex: none; font-size: 13px; font-weight: 600; color: #0432FF; background: #E6EBFF; border-radius: 12px; padding: 4px 10px">{{x.reach}}</span>
+              </button>
+            </sc-for>
+          </section>
+        </sc-if>
+      </div>
+    </div>
+  </main>
+  </div>
+  </div>
+
+
+  <sc-if value="{{bookOpen}}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{closeBook}}" aria-hidden="true" style="position: absolute; inset: 0; z-index: 40; background: rgba(20,22,40,0.30); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px)"></div>
+    <div role="dialog" aria-modal="true" aria-labelledby="bk-title" style="position: absolute; z-index: 41; left: 50%; top: 120px; transform: translateX(-50%); width: 560px; max-width: calc(100% - 48px); background: #FFFFFF; border-radius: 28px; box-shadow: 0 30px 80px rgba(20,22,40,0.24); overflow: hidden">
+      <div style="position: relative; padding-top: 28px; display: flex; justify-content: center">
+        <sc-if value="{{bk.photo}}" hint-placeholder-val="{{ true }}"><div class="bk-ph" role="img" aria-label="A kibo.health blood collection tube" style="background-image: url('assets/2ff4a30a67d7928e272c48a471ad73d2.jpg')"></div></sc-if>
+        <sc-if value="{{bk.done}}" hint-placeholder-val="{{ false }}"><div class="bk-ok" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div></sc-if>
+        <button type="button" onClick="{{closeBook}}" aria-label="Close" style="position: absolute; top: 16px; right: 16px; width: 36px; height: 36px; border: 0; border-radius: 18px; background: #F1F2F6; color: #22222B; cursor: pointer; display: grid; place-items: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+      <sc-if value="{{bk.picking}}" hint-placeholder-val="{{ true }}">
+      <div style="padding: 26px 32px 30px; display: flex; flex-direction: column; gap: 20px">
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <h2 id="bk-title" style="margin: 0; font-family: Coolvetica, Montserrat, sans-serif; font-weight: 300; font-size: 30px; line-height: 1.15">Your blood work is included</h2>
+          <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #7A7F99">Your membership includes two blood draws a year. Pick a time for your first. Visit a lab nearby, or a phlebotomist can come to you for an extra $100.</p>
+        </div>
+        <div role="group" aria-label="Where" style="display: flex; gap: 4px; padding: 4px; border-radius: 14px; background: #F1F2F6"><button type="button" onClick="{{bk.lab}}" aria-pressed="{{bk.labOn}}" style="flex: 1; height: 40px; border: 0; border-radius: 11px; font: inherit; font-size: 15px; font-weight: 500; cursor: pointer; background: {{bk.labBg}}; color: #22222B; box-shadow: {{bk.labSh}}">At a lab nearby</button><button type="button" onClick="{{bk.home}}" aria-pressed="{{bk.homeOn}}" style="flex: 1; height: 40px; border: 0; border-radius: 11px; font: inherit; font-size: 15px; font-weight: 500; cursor: pointer; background: {{bk.homeBg}}; color: #22222B; box-shadow: {{bk.homeSh}}">At home <span style="font-weight: 400; color: #595978">(+$100)</span></button></div>
+        <sc-if value="{{bk.isLab}}" hint-placeholder-val="{{ true }}">
+        <div style="display: flex; flex-direction: column; gap: 8px">
+          <label for="bk-state" style="font-size: 14px; font-weight: 500; color: #595978">Which state are you in?</label>
+          <div style="position: relative"><select id="bk-state" onChange="{{bk.pickState}}" value="{{bk.stateVal}}" style="width: 100%; height: 50px; padding: 0 44px 0 16px; border-radius: 14px; border: 1px solid #E6E6EA; background: #FFFFFF; font: inherit; font-size: 15px; color: {{bk.stateInk}}; appearance: none; -webkit-appearance: none; cursor: pointer"><option value="">Choose your state</option><sc-for list="{{bk.states}}" as="o" hint-placeholder-count="3"><option value="{{o.v}}" selected="{{o.sel}}">{{o.n}}</option></sc-for></select><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7A7F99" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position: absolute; right: 16px; top: 50%; transform: translateY(-50%); pointer-events: none"><path d="M6 9l6 6 6-6"/></svg></div>
+        </div>
+        <sc-if value="{{bk.hasState}}" hint-placeholder-val="{{ true }}">
+        <div role="radiogroup" aria-labelledby="bk-labs" style="display: flex; flex-direction: column; gap: 8px">
+          <span id="bk-labs" style="font-size: 14px; font-weight: 500; color: #595978">Partner labs in {{bk.stateName}}</span>
+          <sc-for list="{{bk.labs}}" as="l" hint-placeholder-count="3"><button type="button" role="radio" aria-checked="{{l.on}}" onClick="{{l.pick}}" style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 16px; border: {{l.border}}; background: {{l.bg}}; font: inherit; color: #22222B; text-align: left; cursor: pointer"><span style="flex: none; width: 36px; height: 36px; border-radius: 12px; background: #EEF1FF; color: #0432FF; display: grid; place-items: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><span style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 500">{{l.n}}</span><span style="font-size: 13px; line-height: 1.4; color: #7A7F99">{{l.a}} · {{l.h}}</span></span></button></sc-for>
+        </div>
+        </sc-if>
+        </sc-if>
+        <sc-if value="{{bk.showWhen}}" hint-placeholder-val="{{ true }}">
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <span style="font-size: 14px; font-weight: 500; color: #595978">Pick a date and time · October</span>
+          <div role="group" aria-label="Day" style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px">
+            <sc-for list="{{bk.days}}" as="d" hint-placeholder-count="4"><button type="button" onClick="{{d.pick}}" aria-pressed="{{d.on}}" style="height: 68px; border-radius: 16px; border: {{d.border}}; background: {{d.bg}}; font: inherit; color: #22222B; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px"><span style="font-size: 13px; color: #7A7F99">{{d.dow}}</span><span style="font-size: 20px; font-weight: 500">{{d.n}}</span></button></sc-for>
+          </div>
+          <div role="group" aria-label="Time" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+            <sc-for list="{{bk.times}}" as="t" hint-placeholder-count="3"><button type="button" onClick="{{t.pick}}" aria-pressed="{{t.on}}" style="height: 48px; border-radius: 14px; border: {{t.border}}; background: {{t.bg}}; font: inherit; font-size: 15px; color: #22222B; cursor: pointer">{{t.l}}</button></sc-for>
+          </div>
+        </div>
+        </sc-if>
+        <sc-if value="{{bk.dna}}" hint-placeholder-val="{{ false }}">
+          <div style="display: flex; gap: 12px; align-items: flex-start; padding: 14px 16px; border-radius: 16px; background: #F3F5FF; font-size: 14px; line-height: 1.45; color: #22222B"><span style="flex: none; color: #0432FF; margin-top: 1px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v13.5a2 2 0 0 0 4 0V3M10 10h4"/></svg></span><span><strong style="font-weight: 500">Your DNA test kit is on its way.</strong> We’ll mail it to your home. The [FEE] charge is added to your card on file at this draw.</span></div>
+        </sc-if>
+        <button type="button" onClick="{{bk.confirm}}" aria-disabled="{{bk.disabled}}" style="height: 54px; border: 0; border-radius: 27px; background: #0432FF; color: #FFFFFF; font: inherit; font-size: 16px; font-weight: 500; cursor: pointer; opacity: {{bk.op}}; transition: opacity 0.2s">Book my draw</button>
+        <button type="button" style="align-self: center; height: 36px; border: 0; background: transparent; font: inherit; font-size: 14px; color: #7A7F99; cursor: pointer">I have recent labs to upload</button>
+      </div>
+      </sc-if>
+      <sc-if value="{{bk.done}}" hint-placeholder-val="{{ false }}">
+      <div style="padding: 20px 32px 30px; display: flex; flex-direction: column; gap: 20px">
+        <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px">
+          <h2 id="bk-title" style="margin: 0; font-family: Coolvetica, Montserrat, sans-serif; font-weight: 300; font-size: 30px; line-height: 1.15">Your blood draw is booked</h2>
+          <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #22222B">{{bk.when}} · {{bk.whereShort}}</p>
+          <p style="margin: 0; max-width: 420px; font-size: 14px; line-height: 1.5; color: #7A7F99">{{bk.whereText}}</p>
+        </div>
+        <div style="border-radius: 20px; background: #F6F7FB; padding: 20px 20px 22px; display: flex; flex-direction: column; gap: 16px; text-align: left">
+          <span style="font-size: 16px; font-weight: 500; color: #22222B">How to prepare</span>
+          <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px"><li style="display: flex; gap: 14px; align-items: flex-start"><span style="flex: none; width: 36px; height: 36px; border-radius: 12px; background: #EEF1FF; color: #0432FF; display: grid; place-items: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c3.5 4.5 6 7.7 6 11a6 6 0 0 1-12 0c0-3.3 2.5-6.5 6-11z"/></svg></span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 500; color: #22222B">Drink plenty of water</span><span style="font-size: 14px; line-height: 1.45; color: #7A7F99">The day before and the morning of your draw. It makes the draw quicker and easier.</span></span></li><li style="display: flex; gap: 14px; align-items: flex-start"><span style="flex: none; width: 36px; height: 36px; border-radius: 12px; background: #EEF1FF; color: #0432FF; display: grid; place-items: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3v8a2 2 0 0 0 2 2v8M5 3v5M9 3v5M16 21V3c-2 1.5-3 4-3 7h3"/></svg></span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 500; color: #22222B">Skip food for 8 to 10 hours</span><span style="font-size: 14px; line-height: 1.45; color: #7A7F99">Water is fine. If your oncology team has told you not to fast, follow their advice and let us know.</span></span></li><li style="display: flex; gap: 14px; align-items: flex-start"><span style="flex: none; width: 36px; height: 36px; border-radius: 12px; background: #EEF1FF; color: #0432FF; display: grid; place-items: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.5 20.5 3.5 13.5a5 5 0 0 1 7-7l7 7a5 5 0 0 1-7 7zM7 10l7 7"/></svg></span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 500; color: #22222B">Pause biotin for 2 days</span><span style="font-size: 14px; line-height: 1.45; color: #7A7F99">Biotin, often in hair and nail supplements, can affect some results.</span></span></li><li style="display: flex; gap: 14px; align-items: flex-start"><span style="flex: none; width: 36px; height: 36px; border-radius: 12px; background: #EEF1FF; color: #0432FF; display: grid; place-items: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4l-5 3 2 4 3-1v10h8V10l3 1 2-4-5-3a4 4 0 0 1-8 0z"/></svg></span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 500; color: #22222B">Wear a loose or short sleeve</span><span style="font-size: 14px; line-height: 1.45; color: #7A7F99">So your arm is easy to reach. Have a photo ID ready.</span></span></li></ul>
+        </div>
+        <sc-if value="{{bk.prep}}" hint-placeholder-val="{{ false }}"><button type="button" onClick="{{bk.doneAct}}" style="height: 54px; border: 0; border-radius: 27px; background: #0432FF; color: #FFFFFF; font: inherit; font-size: 16px; font-weight: 500; cursor: pointer">Done</button></sc-if><sc-if value="{{bk.toBooked}}" hint-placeholder-val="{{ true }}"><a href="DashboardBooked.dc.html" onClick="{{bk.goBooked}}" style="height: 54px; border: 0; border-radius: 27px; background: #0432FF; color: #FFFFFF; font: inherit; font-size: 16px; font-weight: 500; cursor: pointer; text-decoration: none; display: flex; align-items: center; justify-content: center">Done</a></sc-if>
+      </div>
+      </sc-if>
+    </div>
+  </sc-if>
+  <a href="DashboardReady.dc.html" ref="{{goReadyRef}}" aria-hidden="true" tabindex="-1" style="display: none">Results ready</a>
+  <sc-if value="{{rtoast}}" hint-placeholder-val="{{ false }}">
+    <div class="rtoast" role="status"><span aria-hidden="true" style="flex: none; width: 22px; height: 22px; margin-top: 1px; border-radius: 11px; background: #39C684; display: grid; place-items: center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span style="display: flex; flex-direction: column; gap: 2px"><strong style="font-weight: 600">Your results are ready</strong><span>Your blood work is back. See your flower and plan.</span></span></div>
+  </sc-if>
+  <sc-if value="{{ciOpen}}" hint-placeholder-val="{{ false }}">
+    <div aria-hidden="true" style="position: fixed; inset: 0; z-index: 40; background: rgba(20,22,40,0.30); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px)"></div>
+    <div style="position: fixed; inset: 0; z-index: 41; display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box; overflow-y: auto">
+    <div role="dialog" aria-modal="true" aria-labelledby="ci-title" style="position: relative; margin: auto; width: 560px; max-width: 100%; background: #FFFFFF; border-radius: 28px; box-shadow: 0 30px 80px rgba(20,22,40,0.24); overflow: hidden; animation: bkin .3s ease both">
+      <div style="position: relative; padding: 28px 32px 30px; display: flex; flex-direction: column; gap: 20px">
+        <a href="DashboardReady.dc.html" aria-label="Close" style="position: absolute; top: 16px; right: 16px; width: 36px; height: 36px; border: 0; border-radius: 18px; background: #F1F2F6; color: #22222B; cursor: pointer; text-decoration: none; display: grid; place-items: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></a>
+        <div style="display: flex; flex-direction: column; gap: 10px; padding-right: 36px">
+          <span style="align-self: flex-start; height: 28px; padding: 0 12px; border-radius: 14px; background: #E6EBFF; color: #0432FF; font-size: 13px; font-weight: 600; display: inline-flex; align-items: center">New results are in</span>
+          <h2 id="ci-title" style="margin: 0; font-family: Coolvetica, Montserrat, sans-serif; font-weight: 300; font-size: 30px; line-height: 1.15">Has anything changed in your treatment since you shared your health story?</h2>
+          <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #7A7F99">We use your answer to keep your plan safe and right for you.</p>
+        </div>
+        <div role="radiogroup" aria-labelledby="ci-title" style="display: flex; flex-direction: column; gap: 10px">
+          <sc-for list="{{ci.opts}}" as="o" hint-placeholder-count="3">
+            <button type="button" role="radio" class="ci-opt" onClick="{{o.pick}}" aria-checked="{{o.on}}" style="width: 100%; min-height: 58px; padding: 14px 18px; border-radius: 16px; border: {{o.border}}; background: {{o.bg}}; font: inherit; font-size: 16px; line-height: 1.4; color: #22222B; text-align: left; cursor: pointer; display: flex; align-items: center; gap: 14px"><span aria-hidden="true" style="flex: none; width: 22px; height: 22px; border-radius: 11px; border: 2px solid {{o.ring}}; box-sizing: border-box; display: grid; place-items: center"><span style="width: 10px; height: 10px; border-radius: 5px; background: {{o.dot}}"></span></span><span>{{o.l}}</span></button>
+          </sc-for>
+        </div>
+        <sc-if value="{{ci.mtShow}}" hint-placeholder-val="{{ false }}">
+          <div style="display: flex; flex-direction: column; gap: 10px; padding: 16px 18px; border-radius: 16px; background: #F6F7FB">
+            <span id="ci-mt" style="font-size: 15px; font-weight: 500; color: #22222B">Do you take ongoing cancer medicine now?</span>
+            <div role="radiogroup" aria-labelledby="ci-mt" style="display: flex; gap: 10px">
+              <sc-for list="{{ci.mtOpts}}" as="o" hint-placeholder-count="2">
+                <button type="button" role="radio" class="ci-opt" onClick="{{o.pick}}" aria-checked="{{o.on}}" style="flex: 1; height: 48px; border-radius: 14px; border: {{o.border}}; background: {{o.bg}}; font: inherit; font-size: 15px; font-weight: 500; color: #22222B; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px"><span aria-hidden="true" style="flex: none; width: 22px; height: 22px; border-radius: 11px; border: 2px solid {{o.ring}}; box-sizing: border-box; display: grid; place-items: center"><span style="width: 10px; height: 10px; border-radius: 5px; background: {{o.dot}}"></span></span>{{o.l}}</button>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ci.can}}" hint-placeholder-val="{{ false }}"><a href="DashboardReveal.dc.html" onClick="{{ci.save}}" style="height: 54px; border: 0; border-radius: 27px; background: #0432FF; color: #FFFFFF; font: inherit; font-size: 16px; font-weight: 500; cursor: pointer; text-decoration: none; display: flex; align-items: center; justify-content: center; transition: opacity 0.2s">See my results</a></sc-if><sc-if value="{{ci.cannot}}" hint-placeholder-val="{{ true }}"><button type="button" disabled aria-disabled="true" style="height: 54px; border: 0; border-radius: 27px; background: #0432FF; color: #FFFFFF; font: inherit; font-size: 16px; font-weight: 500; cursor: not-allowed; opacity: 0.35; transition: opacity 0.2s">See my results</button></sc-if>
+      </div>
+    </div>
+    </div>
+  </sc-if>
+  <sc-if value="{{drawer}}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{close}}" aria-hidden="true" style="position: absolute; inset: 0; background: rgba(34,34,43,0.32)"></div>
+    <aside role="dialog" aria-modal="true" aria-label="{{sel.name}}" style="position: absolute; top: 0; right: 0; bottom: 0; width: 600px; max-width: 100%; box-sizing: border-box; background: #FFFFFF; box-shadow: -12px 0 40px rgba(34,34,43,0.18); overflow-y: auto; padding: 28px 32px 40px; display: flex; flex-direction: column; gap: 22px">
+
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+        <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: #0432FF">{{sel.kicker}}</span>
+        <button type="button" onClick="{{close}}" aria-label="Close" style="width: 44px; height: 44px; border-radius: 22px; border: 1px solid #E6E6EA; background: #FFFFFF; color: #22222B; cursor: pointer; display: flex; align-items: center; justify-content: center">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+        </button>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 16px">
+        <span style="width: 64px; height: 64px; border-radius: 32px; background: {{sel.chipBg}}; color: {{sel.chipInk}}; display: flex; align-items: center; justify-content: center; flex: none">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{sel.icon}}"></path></svg>
+        </span>
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 4px">
+          <span style="font-family: Coolvetica, Montserrat, sans-serif; font-weight: 300; font-size: 34px; line-height: 1.1">{{sel.name}}</span>
+          <span style="font-size: 15px; color: #595978">{{sel.desc}}</span>
+        </div>
+      </div>
+
+      <sc-if value="{{post}}" hint-placeholder-val="{{ true }}">
+        <div style="display: flex; align-items: center; gap: 16px">
+          <span style="display: flex; align-items: center; gap: 8px; flex: none"><span style="width: 14px; height: 14px; border-radius: 7px; background: {{sel.color}}"></span><span style="font-size: 26px; font-weight: 600">{{sel.s}}/10</span></span>
+          <div style="flex: 1; display: flex; gap: 4px" aria-hidden="true">
+            <sc-for list="{{sel.cells}}" as="c" hint-placeholder-count="10">
+              <span style="flex: 1; height: 12px; border-radius: 3px; background: {{c.bg}}"></span>
+            </sc-for>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{sel.isHeart}}" hint-placeholder-val="{{ false }}">
+        <p style="margin: 0; font-size: 16px; font-weight: 600; color: #16358B; background: #E6EBFF; border-radius: 14px; padding: 14px 16px">We’ve prioritized your heart health.</p>
+      </sc-if>
+
+      <div style="display: flex; flex-direction: column; gap: 6px; background: #F8F8F9; border-radius: 16px; padding: 18px">
+        <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: #595978">You told us</span>
+        <span style="font-size: 17px; line-height: 1.45">{{sel.told}}</span>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: #595978">{{sel.bloodLabel}}</span>
+        <sc-if value="{{sel.noMarkers}}" hint-placeholder-val="{{ false }}">
+          <span style="font-size: 15px; color: #595978">{{sel.noMarkerText}}</span>
+        </sc-if>
+        <sc-for list="{{sel.markers}}" as="m" hint-placeholder-count="2">
+          <div style="display: flex; flex-direction: column; gap: 8px; border: 1px solid #E6E6EA; border-radius: 14px; padding: 14px 16px">
+            <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px">
+              <span style="font-size: 15px; font-weight: 500">{{m.n}}</span>
+              <span style="font-size: 16px; font-weight: 600">{{m.val}}</span>
+            </div>
+            <sc-if value="{{m.scaled}}" hint-placeholder-val="{{ true }}">
+              <div role="img" aria-label="Where your result sits on the range" style="position: relative; height: 8px; border-radius: 4px; background: linear-gradient(to right, rgb(57,198,132) 0%, rgb(236,156,19) 50%, rgb(228,87,46) 80%, rgb(198,57,64) 100%)">
+                <span style="position: absolute; left: {{m.p}}%; top: -4px; width: 16px; height: 16px; margin-left: -8px; border-radius: 8px; background: #FFFFFF; border: 2px solid #22222B; box-sizing: border-box"></span>
+              </div>
+            </sc-if>
+            <sc-if value="{{m.plain}}" hint-placeholder-val="{{ false }}">
+              <span style="font-size: 13px; color: #595978">As reported by the lab</span>
+            </sc-if>
+            <sc-if value="{{m.urgent}}" hint-placeholder-val="{{ false }}">
+              <span style="font-size: 14px; color: #595978">A physician may contact you about this result.</span>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 4px">
+        <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: #595978">Why this area matters</span>
+        <span style="font-size: 15px; line-height: 1.55; color: #595978">{{sel.claim}}</span>
+        <span style="font-size: 12px; color: #595978">{{sel.src}}</span>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 12px; border-top: 1px solid #E6E6EA; padding-top: 20px">
+        <span style="font-family: Coolvetica, Montserrat, sans-serif; font-weight: 300; font-size: 24px">{{sel.planTitle}}</span>
+        <sc-if value="{{pre}}" hint-placeholder-val="{{ false }}">
+          <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #595978">Your actions for this area arrive with your results, a few days after your draw.</p>
+          <button type="button" style="align-self: flex-start; height: 48px; padding: 0 28px; border: 0; border-radius: 24px; background: #0432FF; color: #FFFFFF; font: inherit; font-weight: 600; font-size: 15px; cursor: pointer">Book my draw</button>
+        </sc-if>
+        <sc-if value="{{post}}" hint-placeholder-val="{{ true }}">
+          <sc-for list="{{sel.plan}}" as="p" hint-placeholder-count="2">
+            <div style="display: flex; flex-direction: column; gap: 8px; border: {{p.border}}; border-radius: 16px; padding: 16px">
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+                <span style="font-size: 16px; font-weight: 600">{{p.t}}</span>
+                <span style="flex: none; font-size: 12px; font-weight: 600; border-radius: 10px; padding: 4px 10px; background: {{p.tagBg}}; color: {{p.tagInk}}">{{p.tag}}</span>
+              </div>
+              <span style="font-size: 14px; line-height: 1.45; color: #595978">{{p.line}}</span>
+              <span style="font-size: 13px; color: #595978">{{p.reach}}</span>
+            </div>
+          </sc-for>
+          <div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 4px">
+            <a href="#" style="height: 48px; padding: 0 26px; border-radius: 24px; background: #0432FF; color: #FFFFFF; font-weight: 600; font-size: 15px; text-decoration: none; display: flex; align-items: center">See my full plan</a>
+            <button type="button" onClick="{{close}}" style="height: 48px; padding: 0 22px; border-radius: 24px; border: 1.5px solid #C0CCFF; background: #FFFFFF; color: #0432FF; font: inherit; font-weight: 600; font-size: 15px; cursor: pointer">Back to my flower</button>
+          </div>
+        </sc-if>
+      </div>
+    </aside>
+  </sc-if>
+</div>
+</template>
+<script>window.__DCProps = "{\"stage\":{\"editor\":\"enum\",\"options\":[\"results\",\"pre\",\"full\"],\"default\":\"pre\"},\"firstName\":{\"editor\":\"text\",\"default\":\"Dana\"},\"pick\":{\"editor\":\"enum\",\"options\":[\"unset\",\"none\",\"active\",\"mtYes\",\"mtNo\"],\"default\":\"mtYes\"},\"view\":{\"editor\":\"enum\",\"options\":[\"none\",\"book\",\"booked\",\"ready\",\"checkin\",\"reveal\"],\"default\":\"checkin\"},\"ci\":{\"editor\":\"enum\",\"options\":[\"saved\",\"none\",\"active\",\"mtYes\",\"mtNo\"],\"default\":\"saved\"},\"$preview\":{\"width\":1440,\"height\":1460}}";
+window.__DCComponent = (function () {
+
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = this.initState(props); }
+  initState(props) {
+    const s = { sel: null, hov: null, act: null, seen: {}, navCollapsed: this.state && this.state.navCollapsed || false, bookOpen: false, bkDone: false, prepOnly: false, where: 'lab', day: null, time: null, booked: null, resultsIn: false, ready: false, ciOpen: false, ci: null, mtNow: null, rtoast: false, rvN: 0, rvOn: true };
+    const v = props.view || 'none';
+    if (v === 'book') s.bookOpen = true;
+    if (v === 'ready' || v === 'checkin') Object.assign(s, { ready: true, ciOpen: v === 'checkin' });
+    if (v === 'booked' || v === 'ready' || v === 'checkin') Object.assign(s, { where: 'lab', day: 1, time: 1, booked: { short: 'Wed, Oct 14 · 8:30 am', when: 'Wednesday, October 14 at 8:30 am', whereShort: 'At a lab nearby', where: 'lab' } });
+    return s;
+  }
+  // Prototype links: each artboard keeps its own look on the canvas; Play moves between artboards.
+  ls(k, v) { try { if (v === undefined) return window.localStorage.getItem(k); if (v === null) window.localStorage.removeItem(k); else window.localStorage.setItem(k, v); } catch (e) { return null; } return null; }
+  playReveal() {
+    clearInterval(this.cIv); this.setState({ rvOn: false, rvN: 0 });
+    setTimeout(() => { this.setState({ rvOn: true }); const t0 = Date.now() + 700; this.cIv = setInterval(() => { const p = Math.min(1, (Date.now() - t0) / 1600); if (p < 0) return; this.setState({ rvN: Math.round((1 - Math.pow(1 - p, 3)) * 68) }); if (p >= 1) clearInterval(this.cIv); }, 40); }, 60);
+  }
+  componentDidMount() { { const PK = this.props.pick; if (PK && PK !== 'unset') this.setState({ ci: PK === 'none' ? 'none' : PK === 'active' ? 'active' : 'mt', mtNow: PK === 'mtYes' ? true : PK === 'mtNo' ? false : null }); }
+    if ((this.props.stage ?? 'results') === 'pre' && (this.props.view || 'none') === 'none') { ['kibo-live', 'kibo-live-st', 'kibo-meals', 'kibo-ci'].forEach(k => this.ls(k, null)); }
+    this.onRs = () => { const narrow = window.innerWidth < 1100; if (narrow !== this.wasNarrow) { this.wasNarrow = narrow; this.setState({ navCollapsed: narrow }); } };
+    this.onRs(); window.addEventListener('resize', this.onRs);
+    // Prototype: 60 seconds after a draw is booked in Play, move to the results-ready artboard
+    const view = this.props.view || 'none';
+    if (view === 'reveal') this.playReveal();
+    this.rdIv = setInterval(() => {
+      const at = this.ls('kibo-draw-at');
+      if (false && view === 'booked' && at && Date.now() - Number(at) >= 60000 && !this.state.bookOpen && this.goReadyEl) { this.ls('kibo-draw-at', null); this.ls('kibo-ready-toast', '1'); this.goReadyEl.click(); }
+      if (view === 'ready' && this.ls('kibo-ready-toast')) { this.ls('kibo-ready-toast', null); this.setState({ rtoast: true }); clearTimeout(this.rtT); this.rtT = setTimeout(() => this.setState({ rtoast: false }), 5000); }
+      if (view === 'reveal' && this.ls('kibo-reveal-go')) { this.ls('kibo-reveal-go', null); this.playReveal(); }
+      const ci = this.ls('kibo-ci'); if (ci !== this.lastCi) { this.lastCi = ci; this.forceUpdate(); }
+    }, 1000);
+    const read = () => { try { return window.localStorage.getItem('kibo-ca-fn') || ''; } catch (e) { return ''; } };
+    this.lastFn = read();
+    this.fnIv = setInterval(() => { const v = read(); if (v !== this.lastFn) { this.lastFn = v; this.setState({ fnTick: Date.now() }); } }, 500);
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this.onRs); clearInterval(this.fnIv); clearInterval(this.rdIv); clearTimeout(this.rtT); clearInterval(this.cIv); }
+  renderVals() {
+    const pre = (this.props.stage ?? 'pre') === 'pre' && !this.state.resultsIn;
+    const full = (this.props.stage ?? 'pre') === 'full';
+    const score = full ? 100 : 68;
+    const nm = (() => { try { return window.localStorage.getItem('kibo-ca-fn') || null; } catch (e) { return null; } })() || this.props.firstName || 'Dana';
+    const C = { g: '#39C684', y: '#EC9C13', o: '#E4572E' };
+    const col = s => s >= 8 ? C.g : s >= 6 ? C.y : C.o;
+    const I = {
+      heart: 'M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10zM7.5 11.5h2.3l1.2-2 1.6 4 1.2-2h2.7',
+      infl: 'M12 21c-3.9 0-6.5-2.6-6.5-6.1 0-3.4 2.4-5.2 3.6-8.4.4 1.9 1.4 3 2.6 3.5C11.3 7 12.6 4.6 15 3c-.5 3 1.6 4.8 2.8 6.7.7 1.2 1.2 2.6 1.2 4.2 0 4-3 7.1-7 7.1zM12 21c-1.7 0-3-1.2-3-3 0-1.6 1.5-2.6 2-4.4 1 1.2 4 2.4 4 4.6 0 1.6-1.3 2.8-3 2.8z',
+      nutr: 'M12 7.5c-1.5-1-4.5-1.3-6 .8-1.6 2.2-.9 6.4 1.2 9.2 1.3 1.7 2.6 2.2 3.6 1.8.6-.2.9-.3 1.2-.3s.6.1 1.2.3c1 .4 2.3-.1 3.6-1.8 2.1-2.8 2.8-7 1.2-9.2-1.5-2.1-4.5-1.8-6-.8zM12 7.5c0-1.8.8-3.4 2.6-4.3',
+      metab: 'M12 3c3.5 4.5 6 7.7 6 11a6 6 0 0 1-12 0c0-3.3 2.5-6.5 6-11zM8.5 14.5h1.8l1.2-2.2 1.6 3.6 1.1-1.4h1.3',
+      gut: 'M9 3v3c0 1.5-1 2.5-2.5 3.5C5 10.6 4 12 4 14.5 4 18.1 7 21 11 21h1c3.9 0 7-3.1 7-7v-1.5c0-3-2.5-4.5-4.5-4-1.5.5-2 2-3.5 2-1.2 0-1.5-.9-1.5-2',
+      energy: 'M3 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zM21 10.5v3M11.5 8.5L9 12h3.5L10 15.5',
+      mind: 'M15 21v-3.2c2.4-1.2 4-3.6 4-6.3C19 7.4 15.9 4 12 4S5 7 5 10.6c0 .9-.6 1.7-1.2 2.6l1.7.8v2.5c0 1 .8 1.8 1.8 1.8H9v2.7M12 7.5l.7 1.6 1.6.7-1.6.7-.7 1.6-.7-1.6-1.6-.7 1.6-.7z',
+      immu: 'M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6zM9 12l2 2 4-4',
+      env: 'M3 11l9-7 9 7M5 9.5V20h14V9.5M12 11c1.6 2 2.5 3.3 2.5 4.5a2.5 2.5 0 0 1-5 0c0-1.2.9-2.5 2.5-4.5z',
+      horm: 'M3 12a9 9 0 1 0 18 0a9 9 0 1 0-18 0M3.5 12c2.8-3 5.7-3 8.5 0s5.7 3 8.5 0'
+    };
+    const MK = {
+      ldl: { n: 'LDL cholesterol', val: '140 mg/dL', p: 74 },
+      hdl: { n: 'HDL cholesterol', val: '58 mg/dL', p: 22 },
+      k: { n: 'Potassium', val: '6.8 mmol/L', p: 97, urgent: true },
+      a1c: { n: 'HbA1c', val: '5.5 %', p: 46 },
+      ins: { n: 'Fasting insulin', val: '12 µIU/mL', p: 52 },
+      vitd: { n: 'Vitamin D', val: '24 ng/mL', p: 48 },
+      crp: { n: 'hs-CRP', val: '3.4 mg/L', p: 72 },
+      nlr: { n: 'White-cell balance (NLR)', val: '2.1', plain: true },
+      ldh: { n: 'LDH', val: '180 U/L', plain: true }
+    };
+    const A = [
+      ['heart', 'Heart Health', 7, 'Cholesterol, heart health and circulation', 'You’re active 2–3 days a week and like to cook at home.', ['ldl', 'hdl', 'k'], '', 'Regular activity and a diet rich in vegetables, fruit and fiber are linked with better heart health.', 'American Heart Association'],
+      ['infl', 'Inflammation', 5, 'Your body’s overall level of ongoing inflammation', 'You eat 1–2 servings of vegetables on most days.', ['crp'], '', 'Eating patterns rich in vegetables, fruit and whole grains are linked with lower markers of inflammation.', '[Pubrica to confirm source]'],
+      ['nutr', 'Nutrient Status', 6, 'Whether your body has enough key vitamins and minerals', 'You don’t take any supplements right now.', ['vitd'], '', 'A varied diet is the best way to meet most vitamin and mineral needs.', 'Dietary Guidelines for Americans'],
+      ['metab', 'Metabolic Signals', 6, 'Insulin, growth signaling and blood sugar control', 'You’re active 2–3 days a week.', ['a1c', 'ins'], '', 'Fiber, regular activity and short walks after meals may help support healthy blood sugar.', 'Dietary Guidelines for Americans; Sports Medicine, 2022'],
+      ['gut', 'Gut Health', 6, 'Digestive health and comfort', 'You rarely eat fermented foods, and you’ve had bloating sometimes.', [], 'Not measured in blood. This area comes from your health story.', 'Fiber and fermented foods support a healthy, diverse gut.', '[Pubrica to confirm source]'],
+      ['energy', 'Mitochondrial Health', 7, 'The energy your body runs on, day to day', 'You’ve sometimes felt tired after light activity.', ['ldh'], '', 'Regular physical activity supports how your cells make energy.', '[Pubrica to confirm source]'],
+      ['mind', 'Mental Wellbeing', 7, 'Mood, focus, stress and how rested you feel', 'You sleep under 6 hours 1–2 nights a week, and sometimes feel overwhelmed.', [], 'Not measured in blood. This area comes from your health story.', 'Adults should aim for 7 or more hours of sleep, which supports mood and focus.', 'American Academy of Sleep Medicine'],
+      ['immu', 'Immune Defense', 8, 'How well your immune system detects and responds', 'You sleep under 6 hours 1–2 nights a week.', ['nlr'], '', 'Sleep, activity and a balanced diet support normal immune function.', '[Pubrica to confirm source]'],
+      ['env', 'Toxin Load', 8, 'Everyday exposures and your body’s ability to clear them', 'You drink filtered tap water, and your DNA shows you process alcohol slowly.', [], 'Not measured in blood. This area comes from your health story and DNA.', 'Filtering drinking water and limiting chemical exposure at home can reduce everyday exposures.', '[Pubrica to confirm source]'],
+      ['horm', 'Hormone Balance', 8, 'Balance of sex, thyroid and stress hormones', 'You’re after menopause, with hot flashes sometimes, and sleep under 6 hours 1–2 nights a week.', [], 'Not measured in this panel. This area comes from your health story.', 'Sleep, activity and body weight all influence hormone balance.', '[Pubrica to confirm source]']
+    ];
+    const ACTS = [
+      { id: 'h1', t: 'Build up to 150 minutes of activity a week', week: true, line: 'Your plan: After work, I’ll take a brisk walk 3 times this week.', areas: ['heart', 'metab', 'mind', 'energy'] },
+      { id: 'h2', t: 'Fill half your plate with vegetables', week: true, line: 'Your plan: At lunch and dinner, 5 days this week.', areas: ['infl', 'gut', 'nutr', 'heart'] },
+      { id: 'h5', t: 'Eat salmon or sardines twice a week', week: true, line: 'Your plan: When I plan my meals, for two meals this week.', areas: ['nutr', 'heart', 'infl'] },
+      { id: 'h3', t: 'Add 10 g of fiber a day', week: false, line: 'Oats with berries at breakfast, lentil soup at lunch, a bean side at dinner.', areas: ['gut', 'metab', 'heart'] },
+      { id: 'h4', t: 'Walk after dinner', week: false, line: 'Build up to 20 minutes, within an hour of finishing your meal.', areas: ['metab', 'heart'] },
+      { id: 'h6', t: 'Aim for 7 or more hours of sleep', week: false, line: 'Keep the same wake-up time every day, weekends too.', areas: ['mind', 'metab', 'immu', 'horm'] },
+      { id: 'p1', t: 'Skip alcohol', week: false, personal: true, line: 'Try sparkling water, kombucha or alcohol-free options.', areas: ['env', 'mind'] }
+    ];
+    const st = this.state;
+    const focusId = st.hov || st.sel;
+    const actOn = st.act ? ACTS.find(x => x.id === st.act) : null;
+    const cx = 380, cy = 270, R = 222;
+    const nameOf = id => A.find(r => r[0] === id)[1];
+    const areas = A.map(([id, name, s0, desc, told, mks, noMk, claim, src], i) => {
+      const s = full ? 10 : s0;
+      const deg = i * 36, t = deg * Math.PI / 180, sn = Math.sin(t);
+      const on = focusId === id;
+      const dim = (focusId && !on) || (actOn && !actOn.areas.includes(id));
+      const lit = on || (actOn && actOn.areas.includes(id));
+      const k = pre ? '#C0CCFF' : col(s);
+      const len = pre ? 0 : Math.round(s * 11.4);
+      const lx = Math.round(cx + R * sn), ly = Math.round(cy - R * Math.cos(t));
+      return {
+        id, name, s, desc, told, mks, noMk, claim, src, icon: I[id], color: col(s),
+        deg, len, vein: Math.max(0, len - 26),
+        petalD: 'M0,0 C 24,-16 34,-60 29,-98 C 25,-123 12,-138 0,-140 C -12,-138 -25,-123 -29,-98 C -34,-60 -24,-16 0,0 Z', k: pre ? 0 : s / 10, gid: 'pg-' + id + (pre ? '-pre' : ''),
+        c0: k + '73', c1: k, gfill: 'url(#pg-' + id + (pre ? '-pre' : '') + ')',
+        veinD: pre ? 'M0,0 L0,0' : 'M0,-8 L0,' + (-Math.round(s * 12.4)),
+        trk: pre ? '#F8F8F9' : col(s) + '1A',
+        tstroke: lit ? '#0432FF' : (pre ? '#C0CCFF' : 'none'), sw: lit ? 3 : 1.5, dash: pre && !lit ? '5 5' : 'none',
+        scale: on ? 1.06 : 1,
+        track: pre ? '#F8F8F9' : col(s) + '1A',
+        trackBorder: pre ? '1.5px dashed #C0CCFF' : '0',
+        fill: 'linear-gradient(to top, ' + k + '66 0%, ' + k + ' 70%)',
+        opacity: dim ? 0.3 : 1,
+        glow: lit ? '0 0 0 3px #FFFFFF, 0 0 0 5px #0432FF' : 'none',
+        lx, ly,
+        ix: Math.round(240 + 214 * Math.sin(t) - 19),
+        iy: Math.round(240 - 214 * Math.cos(t) - 19),
+        ringBg: pre ? '#EEF1FA' : col(s) + '2E',
+        ringBorder: lit ? '2px solid #0432FF' : '1px solid #FFFFFF',
+        rowBg: lit ? '#F3F5FF' : '#FFFFFF',
+        rowBorder: lit ? '1.5px solid #C0CCFF' : '1.5px solid transparent',
+        dot: pre ? '#C0CCFF' : col(s),
+        scoreLabel: pre ? 'Soon' : s + '/10',
+        scoreInk: pre ? '#595978' : '#22222B',
+        scoreSize: pre ? 13 : 15,
+        lt: sn > 0.3 ? 'translate(0, -50%)' : sn < -0.3 ? 'translate(-100%, -50%)' : 'translate(-50%, -50%)',
+        pillBg: st.sel === id ? '#0432FF' : '#FFFFFF',
+        pillInk: st.sel === id ? '#FFFFFF' : '#22222B',
+        pillBorder: st.sel === id ? '1px solid #0432FF' : (lit ? '1.5px solid #0432FF' : '1px solid #E6E6EA'),
+        chipBg: st.sel === id ? 'rgba(255,255,255,0.18)' : (pre ? '#EEF1FA' : col(s) + '26'),
+        chipInk: st.sel === id ? '#FFFFFF' : '#16358B',
+        delay: pre ? 0 : (i * 0.08).toFixed(2),
+        rvDelay: (0.35 + i * 0.11).toFixed(2), rvVein: (1.2 + i * 0.11).toFixed(2), rvIcon: (0.5 + i * 0.11).toFixed(2),
+        aria: pre ? name + ', fills in after your blood draw' : name + ', ' + s + ' out of 10. Open details',
+        open: () => { if (pre) return; this.setState({ sel: id, act: null, hov: null, seen: { ...st.seen, [id]: true } }); },
+        hover: () => { if (pre) return; this.setState({ hov: id }); },
+        cursor: pre ? 'default' : 'pointer', dis: pre ? 'true' : 'false'
+      };
+    });
+    const selA = st.sel ? areas.find(a => a.id === st.sel) : null;
+    const hovA = st.hov ? areas.find(a => a.id === st.hov) : null;
+    const center = hovA
+      ? { top: pre ? 'Fills in soon' : hovA.s + '/10', main: hovA.name, sub: 'Click to open', size: hovA.name.length > 14 ? 13 : 15, aria: 'Open ' + hovA.name }
+      : actOn
+        ? { top: 'This action reaches', main: actOn.areas.length + ' areas', sub: 'of your ten', size: 22, aria: 'Show the whole flower' }
+        : { top: '', main: pre ? '—' : String(score), sub: 'Your Kibo Score', size: 40, aria: 'Your Kibo Score' };
+    const empty = { name: '', s: 0, color: '#FFFFFF', desc: '', icon: '', claim: '', src: '', chipBg: '#FFFFFF', chipInk: '#16358B', isHeart: false, told: '', bloodLabel: '', markers: [], noMarkers: false, noMarkerText: '', planTitle: '', plan: [], kicker: '', cells: [] };
+    let sel = empty;
+    if (selA) {
+      const plan = ACTS.filter(x => x.areas.includes(selA.id)).sort((a, b) => (b.week ? 1 : 0) - (a.week ? 1 : 0)).map(x => ({
+        t: x.t, line: x.line,
+        tag: x.week ? 'This week' : (x.personal ? 'Personal to you' : 'When you’re ready'),
+        tagBg: x.week ? '#E6EBFF' : '#F1F1F3', tagInk: x.week ? '#0432FF' : '#595978',
+        border: x.week ? '1.5px solid #C0CCFF' : '1px solid #E6E6EA',
+        reach: 'Also supports: ' + x.areas.filter(a => a !== selA.id).map(nameOf).join(', ')
+      }));
+      sel = {
+        name: selA.name, s: selA.s, color: selA.color, desc: selA.desc, icon: selA.icon, claim: selA.claim, src: selA.src,
+        chipBg: pre ? '#EEF1FA' : selA.color + '26', chipInk: '#16358B',
+        isHeart: selA.id === 'heart' && !pre,
+        told: selA.told,
+        kicker: pre ? 'Your area · fills in after your draw' : 'Your area',
+        bloodLabel: pre ? 'Coming with your blood work' : 'From your blood work',
+        markers: pre ? [] : selA.mks.map(id => { const m = MK[id]; return { n: m.n, val: m.val, p: m.p || 0, scaled: !m.plain, plain: !!m.plain, urgent: !!m.urgent }; }),
+        noMarkers: pre || selA.mks.length === 0,
+        noMarkerText: pre ? (selA.mks.length ? selA.mks.map(id => MK[id].n).join(' · ') : selA.noMk) : selA.noMk,
+        planTitle: 'Your plan for ' + selA.name,
+        plan,
+        cells: Array.from({ length: 10 }, (_, i) => ({ bg: i < selA.s ? selA.color : '#F1F1F3' }))
+      };
+    }
+    const seenN = Object.keys(st.seen).length;
+    const actions = ACTS.filter(x => x.week).map(x => ({
+      t: x.t, reach: 'Reaches ' + x.areas.length,
+      pressed: st.act === x.id ? 'true' : 'false',
+      border: st.act === x.id ? '2px solid #0432FF' : '1px solid #E6E6EA',
+      bg: st.act === x.id ? '#F3F5FF' : '#FFFFFF',
+      pick: () => this.setState({ act: st.act === x.id ? null : x.id, sel: null, hov: null })
+    }));
+    const DAYS = [['Tue', '13', 'Tuesday'], ['Wed', '14', 'Wednesday'], ['Thu', '15', 'Thursday'], ['Fri', '16', 'Friday']];
+    const TIMES = ['7:00 am', '8:30 am', '10:00 am'];
+    const bkd = st.booked;
+    const hsA = (() => { try { return JSON.parse(window.localStorage.getItem('kibo-hs') || '{}'); } catch (e) { return {}; } })();
+    const canBook = st.day !== null && st.time !== null && (st.where === 'home' || st.bkLab != null);
+    const BK_ST = [['AL','Alabama','Birmingham','Huntsville','Montgomery'],['AK','Alaska','Anchorage','Fairbanks','Juneau'],['AZ','Arizona','Phoenix','Tucson','Scottsdale'],['AR','Arkansas','Little Rock','Fayetteville','Fort Smith'],['CA','California','Los Angeles','San Francisco','San Diego'],['CO','Colorado','Denver','Boulder','Colorado Springs'],['CT','Connecticut','Hartford','New Haven','Stamford'],['DE','Delaware','Wilmington','Dover','Newark'],['DC','District of Columbia','Capitol Hill','Georgetown','Dupont Circle'],['FL','Florida','Miami','Orlando','Tampa'],['GA','Georgia','Atlanta','Savannah','Augusta'],['HI','Hawaii','Honolulu','Hilo','Kailua'],['ID','Idaho','Boise','Idaho Falls','Coeur d’Alene'],['IL','Illinois','Chicago','Naperville','Springfield'],['IN','Indiana','Indianapolis','Fort Wayne','Bloomington'],['IA','Iowa','Des Moines','Cedar Rapids','Iowa City'],['KS','Kansas','Wichita','Overland Park','Topeka'],['KY','Kentucky','Louisville','Lexington','Bowling Green'],['LA','Louisiana','New Orleans','Baton Rouge','Shreveport'],['ME','Maine','Portland','Bangor','Augusta'],['MD','Maryland','Baltimore','Bethesda','Annapolis'],['MA','Massachusetts','Boston','Cambridge','Worcester'],['MI','Michigan','Detroit','Ann Arbor','Grand Rapids'],['MN','Minnesota','Minneapolis','St. Paul','Rochester'],['MS','Mississippi','Jackson','Gulfport','Oxford'],['MO','Missouri','St. Louis','Kansas City','Columbia'],['MT','Montana','Billings','Missoula','Bozeman'],['NE','Nebraska','Omaha','Lincoln','Grand Island'],['NV','Nevada','Las Vegas','Reno','Henderson'],['NH','New Hampshire','Manchester','Nashua','Concord'],['NJ','New Jersey','Newark','Jersey City','Princeton'],['NM','New Mexico','Albuquerque','Santa Fe','Las Cruces'],['NY','New York','Manhattan','Brooklyn','Albany'],['NC','North Carolina','Charlotte','Raleigh','Durham'],['ND','North Dakota','Fargo','Bismarck','Grand Forks'],['OH','Ohio','Columbus','Cleveland','Cincinnati'],['OK','Oklahoma','Oklahoma City','Tulsa','Norman'],['OR','Oregon','Portland','Eugene','Salem'],['PA','Pennsylvania','Philadelphia','Pittsburgh','Harrisburg'],['RI','Rhode Island','Providence','Warwick','Newport'],['SC','South Carolina','Charleston','Columbia','Greenville'],['SD','South Dakota','Sioux Falls','Rapid City','Pierre'],['TN','Tennessee','Nashville','Memphis','Knoxville'],['TX','Texas','Houston','Austin','Dallas'],['UT','Utah','Salt Lake City','Provo','Park City'],['VT','Vermont','Burlington','Montpelier','Rutland'],['VA','Virginia','Richmond','Arlington','Virginia Beach'],['WA','Washington','Seattle','Spokane','Tacoma'],['WV','West Virginia','Charleston','Morgantown','Huntington'],['WI','Wisconsin','Milwaukee','Madison','Green Bay'],['WY','Wyoming','Cheyenne','Casper','Jackson']];
+    const bkS = BK_ST.find(x => x[0] === st.bkState) || null;
+    const BK_ADDR = ['1200 Main St', '455 Oak Ave, Suite 110', '88 Park Blvd'], BK_DIST = ['1.8 mi', '3.4 mi', '6.9 mi'], BK_HRS = ['Opens 6:30 am', 'Opens 7:00 am', 'Opens 7:30 am'];
+    const bkLabs = bkS ? [bkS[2] + ' Diagnostic Lab', bkS[3] + ' Patient Service Center', bkS[4] + ' Health Lab'].map((n, i) => ({ n, a: BK_ADDR[i] + ', ' + bkS[2 + i] + ', ' + bkS[0], d: BK_DIST[i], h: BK_HRS[i] })) : [];
+    const bkL = st.bkLab != null ? bkLabs[st.bkLab] : null;
+    const segOn = v => st.where === v;
+    const bk = {
+      picking: !st.bkDone, done: !!st.bkDone,
+      home: () => this.setState({ where: 'home' }), lab: () => this.setState({ where: 'lab' }),
+      isLab: st.where === 'lab', photo: !st.bkDone && !(st.where === 'lab' && bkS), hasState: !!bkS, stateName: bkS ? bkS[1] : '', stateVal: st.bkState || '', stateInk: bkS ? '#22222B' : '#7A7F99',
+      states: BK_ST.map(x => ({ v: x[0], n: x[1], sel: st.bkState === x[0] ? true : undefined })),
+      pickState: (e) => { const v = e && e.target ? e.target.value : ''; this.setState({ bkState: v || null, bkLab: null }); },
+      labs: bkLabs.map((l, i) => ({ ...l, on: st.bkLab === i ? 'true' : 'false', bg: st.bkLab === i ? '#F3F5FF' : '#FFFFFF', border: st.bkLab === i ? '2px solid #0432FF' : '1px solid #E6E6EA', pick: () => this.setState({ bkLab: i }) })),
+      showWhen: st.where === 'home' || st.bkLab != null,
+      homeOn: segOn('home') ? 'true' : 'false', labOn: segOn('lab') ? 'true' : 'false',
+      homeBg: segOn('home') ? '#FFFFFF' : 'transparent', labBg: segOn('lab') ? '#FFFFFF' : 'transparent',
+      homeSh: segOn('home') ? '0 1px 4px rgba(20,22,40,0.12)' : 'none', labSh: segOn('lab') ? '0 1px 4px rgba(20,22,40,0.12)' : 'none',
+      days: DAYS.map((d, i) => ({ dow: d[0], n: d[1], on: st.day === i ? 'true' : 'false', bg: st.day === i ? '#F3F5FF' : '#FFFFFF', border: st.day === i ? '2px solid #0432FF' : '1px solid #E6E6EA', pick: () => this.setState({ day: i }) })),
+      times: TIMES.map((t, i) => ({ l: t, on: st.time === i ? 'true' : 'false', bg: st.time === i ? '#F3F5FF' : '#FFFFFF', border: st.time === i ? '2px solid #0432FF' : '1px solid #E6E6EA', pick: () => this.setState({ time: i }) })),
+      dna: hsA.dna === 2,
+      disabled: canBook ? 'false' : 'true', op: canBook ? 1 : 0.35,
+      confirm: () => { if (!canBook) return; const d = DAYS[st.day]; this.setState({ bkDone: true, booked: { short: d[0] + ', Oct ' + d[1] + ' · ' + TIMES[st.time], when: d[2] + ', October ' + d[1] + ' at ' + TIMES[st.time], whereShort: st.where === 'home' ? 'At home' : (bkL ? bkL.n : 'At a lab nearby'), where: st.where, labAddr: bkL ? bkL.a : '' } }); },
+      doneAct: () => this.setState({ bookOpen: false }),
+      prep: !!st.prepOnly, toBooked: !st.prepOnly,
+      goBooked: () => { this.ls('kibo-draw-at', String(Date.now())); setTimeout(() => this.setState(this.initState(this.props)), 400); },
+      when: bkd ? bkd.when : '', whereShort: bkd ? bkd.whereShort : '',
+      whereText: bkd ? (bkd.where === 'home' ? 'A phlebotomist will come to your home. We’ll send you a reminder the day before.' : (bkd.labAddr ? bkd.labAddr + '. We’ll send you directions and a reminder the day before.' : 'We’ll send you the lab address and a reminder the day before.')) : ''
+    };
+    const ln = (() => { try { return window.localStorage.getItem('kibo-ca-ln') || ''; } catch (e) { return ''; } })();
+    const fullName = [nm, ln].filter(Boolean).join(' ');
+    return {
+      navOpen: !this.state.navCollapsed, navClosed: !!this.state.navCollapsed,
+      toggleNav: () => this.setState({ navCollapsed: !this.state.navCollapsed }),
+      userName: fullName, userInitial: (nm || 'K').trim().charAt(0).toUpperCase(),
+      pre, post: !pre, areas, sel, center, actions,
+      drawer: !!selA,
+      scoreText: pre ? '—' : String(score),
+      scoreNum: score,
+      avgText: 'You’re at ' + score + '. Kibo members average 60.',
+      scoreSub: pre ? 'Appears after your blood draw' : 'Built from your ten areas',
+      greeting: pre ? 'Welcome, ' + nm : 'Good morning, ' + nm,
+      headline: pre ? (st.ready ? 'Your results are ready.' : bkd ? 'You’re all set for your draw.' : 'You’re one step away.') : nm + ', this is your Kibo flower',
+      shared: ['About you', 'Your cancer diagnosis', 'Your treatment and medicines', 'Your genetics', 'Lifestyle and environment'],
+      flowerPill: bkd ? 'Fills in a few days after your draw' : 'Fills in after your blood draw',
+      drawCard: st.ready
+        ? { kicker: 'New results', kickInk: '#0432FF', title: 'Your results are ready', sub: 'From your draw on ' + bkd.short.split(' · ')[0], cta: 'See my results', aria: 'Your results are ready. See my results' }
+        : bkd
+        ? { kicker: 'Booked', kickInk: '#1F9D63', title: 'Blood draw booked', sub: bkd.short, cta: 'See how to prepare', aria: 'Blood draw booked for ' + bkd.when + '. See how to prepare' }
+        : { kicker: 'Next step', kickInk: '#0432FF', title: 'Book your blood draw', sub: 'At a lab nearby or at home', cta: 'Choose a time', aria: 'Next step: book your blood draw' },
+      tl: {
+        t1: bkd ? 'Your draw is booked' : 'Book your draw', s1: bkd ? bkd.when + ' · ' + bkd.whereShort : 'At a lab nearby or at home',
+        bg1: bkd ? '#39C684' : '#0432FF', ink1: '#FFFFFF', ring1: bkd ? 'none' : '0 0 0 6px #E6EBFF', pb1: 26,
+        bg2: bkd ? '#0432FF' : '#F3F5FF', ink2: bkd ? '#FFFFFF' : '#16358B', ring2: bkd ? '0 0 0 6px #E6EBFF' : 'none', pb2: 26,
+        bg3: '#F3F5FF', ink3: '#16358B', ring3: 'none', pb3: 0
+      },
+      colDisp: pre ? 'none' : 'flex',
+      fcard: pre
+        ? { pad: '0', dir: 'row', gap: '0', lpad: '48px 40px 40px', box: 500, scale: 500 / 480, discSize: 12 }
+        : { pad: '24px', dir: 'column', gap: '16px', lpad: '0', box: 624, scale: 1.3, discSize: 13 },
+      panel: st.ready
+        ? { kicker: 'New results are in', title: 'Your results are ready', body: 'Your blood work from ' + bkd.when.split(' at ')[0] + ' is back. Answer one quick question, then see your flower and plan.', cta: 'See my results', list: false }
+        : bkd
+        ? { kicker: 'You’re booked', title: 'See you ' + bkd.when.split(' at ')[0].split(', ')[0], body: bkd.when + ' · ' + bkd.whereShort + '. Your flower fills in a few days after your draw.', cta: 'See how to prepare', list: false }
+        : { kicker: 'Next step', list: true, title: 'Book your first blood draw', body: 'At a lab nearby or at home. Your results complete your picture across all ten areas, and your first actions follow.', cta: 'Book my draw' },
+      notReady: !st.ready, ready: !!st.ready,
+      goReadyRef: (el) => { this.goReadyEl = el; },
+      stepAct: () => st.ready ? this.setState({ ciOpen: true }) : this.setState({ bookOpen: true, bkDone: !!st.booked, prepOnly: !!st.booked }),
+      panelAct: () => st.ready ? this.setState({ ciOpen: true }) : this.setState({ bookOpen: true, bkDone: !!st.booked, prepOnly: !!st.booked }),
+      card3sub: st.ready ? 'Ready to see now' : 'Ready a few days after your draw',
+      rtoast: !!st.rtoast,
+      ciOpen: !!st.ciOpen,
+      closeCi: () => this.setState({ ciOpen: false }),
+      ci: (() => {
+        const canSave = !!st.ci && (st.ci !== 'mt' || st.mtNow !== null);
+        const o = (on, l, pick) => ({ l, pick, on: on ? 'true' : 'false', border: on ? '2px solid #0432FF' : '1px solid #E6E6EA', bg: on ? '#F3F5FF' : '#FFFFFF', ring: on ? '#0432FF' : '#B9BCCB', dot: on ? '#0432FF' : 'transparent' });
+        return {
+          opts: [['none', 'No changes'], ['active', 'I’ve started active treatment again, such as chemotherapy, radiation or surgery'], ['mt', 'I started or stopped ongoing cancer medicine']]
+            .map(([id, l]) => o(st.ci === id, l, () => this.setState({ ci: id, mtNow: id === 'mt' ? st.mtNow : null }))),
+          mtShow: st.ci === 'mt',
+          mtOpts: [[true, 'Yes'], [false, 'No']].map(([v, l]) => o(st.mtNow === v, l, () => this.setState({ mtNow: v }))),
+          disabled: canSave ? 'false' : 'true', op: canSave ? 1 : 0.35,
+          can: canSave, cannot: !canSave,
+          save: () => { this.ls('kibo-live', '1'); this.ls('kibo-live-st', null); this.ls('kibo-meals', null); this.ls('kibo-ci', st.ci === 'active' ? 'active' : st.ci === 'mt' ? (st.mtNow ? 'mtYes' : 'mtNo') : 'none'); this.ls('kibo-reveal-go', '1'); setTimeout(() => this.setState({ ci: null, mtNow: null }), 400); }
+        };
+      })(),
+      note: (() => {
+        const pause = 'M12 3l9 16H3zM12 10v4M12 17.2v.1', info = 'M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18M12 11v5M12 7.8v.1', ok = 'M5 12.5l4.5 4.5L19 7.5';
+        const N = {
+          active: { bg: '#FFF7EB', border: '#F3D9A4', ink: '#9A5B00', icon: pause, title: 'Supplement and fasting guidance paused', body: 'Because your treatment has changed, we’ve paused supplement and fasting guidance. Please talk with your oncology team before continuing any supplements or fasting. Your everyday actions continue.' },
+          mtYes: { bg: '#F3F5FF', border: '#C0CCFF', ink: '#0432FF', icon: info, title: 'Ask your oncology team about supplements', body: 'Because you take ongoing cancer medicine, your plan won’t suggest supplement doses. Ask your oncology team whether a supplement is right for you. Your everyday actions continue.' },
+          mtNo: { bg: '#F3F5FF', border: '#C0CCFF', ink: '#0432FF', icon: info, title: 'Supplement guidance updated', body: 'You’ve stopped ongoing cancer medicine, so your supplement guidance includes standard ranges again. Check with your physician before starting any supplement.' },
+          none: { bg: '#EFF5F2', border: '#96D9BA', ink: '#278157', icon: ok, title: 'Your plan is up to date', body: 'No changes to your treatment, so your plan is built from your new results as usual.' }
+        };
+        const pn = this.props.ci && this.props.ci !== 'saved' ? this.props.ci : this.ls('kibo-ci'); const n = !pre && pn && N[pn] ? N[pn] : null;
+        return n ? Object.assign({ show: true }, n) : { show: false };
+      })(),
+      rv: (() => {
+        const hs = (() => { try { return JSON.parse(this.ls('kibo-hs') || 'null'); } catch (e) { return null; } })();
+        const CAN = ['breast cancer', 'prostate cancer', 'colorectal cancer', 'lung cancer', 'ovarian cancer', 'kidney cancer', 'thyroid cancer', 'cervical cancer', 'pancreatic cancer', 'lymphoma', 'leukemia', 'melanoma'];
+        const MON = { Jan: 'January', Feb: 'February', Mar: 'March', Apr: 'April', May: 'May', Jun: 'June', Jul: 'July', Aug: 'August', Sep: 'September', Oct: 'October', Nov: 'November', Dec: 'December' };
+        const sample = !hs;
+        const h = hs || { type: 0, fin_m: 'Mar', fin_y: '2023' };
+        const t = Number(h.type);
+        const cancer = h.type === undefined || h.type === null || h.type === '' ? 'your cancer' : t === 12 ? ((h.type_other || '').trim() ? (h.type_other || '').trim() : 'your cancer') : (CAN[t] || 'your cancer');
+        const fin = h.fin_m && h.fin_y ? (MON[h.fin_m] || h.fin_m) + ' ' + h.fin_y : '';
+        const join = xs => xs.length < 2 ? xs.join('') : xs.slice(0, -1).join(', ') + ' and ' + xs[xs.length - 1];
+        const strong = areas.filter(a => a.s >= 8).map(a => a.name);
+        const low = areas.slice().sort((a, b) => a.s - b.s)[0];
+        const pn = this.props.ci && this.props.ci !== 'saved' ? this.props.ci : this.ls('kibo-ci');
+        const PN = {
+          active: 'Because your treatment has changed, we’ve paused supplement and fasting guidance in your plan for now. Your everyday actions continue.',
+          mtYes: 'Because you take ongoing cancer medicine, your plan checks with your oncology team before any supplement.',
+          mtNo: 'Now that you’ve stopped ongoing cancer medicine, your supplement guidance is updated too.'
+        };
+        return {
+          on: !!st.rvOn, off: !st.rvOn, score: String(st.rvN || 0), kicker: 'Your results are in, ' + nm,
+          story: 'This flower is yours. It grew from your blood work and everything you shared with us: your ' + cancer + ', your treatment, and how you live today.' + (fin ? ' You finished treatment in ' + fin + '. This is about what comes next.' : ''),
+          strongT: join(strong) + (strong.length > 1 ? ' are' : ' is') + ' already at 8 out of 10 or higher. Keep doing what you’re doing.',
+          lowT: low.name + ', at ' + low.s + ' out of 10. Your first actions were chosen with it in mind.',
+          note: pn && PN[pn] ? PN[pn] : '', hasNote: !!(pn && PN[pn]),
+          goNone: !pn || !PN[pn], goActive: pn === 'active', goYes: pn === 'mtYes', goNo: pn === 'mtNo',
+          replay: () => this.playReveal()
+        };
+      })(),
+      bookOpen: !!st.bookOpen,
+      openBook: () => this.setState({ bookOpen: true, bkDone: !!st.booked, prepOnly: !!st.booked }),
+      changeBook: () => this.setState({ bkDone: false }),
+      closeBook: () => this.setState({ bookOpen: false }),
+      showResults: () => this.setState({ bookOpen: false, resultsIn: true }),
+      bk,
+      intro: pre
+        ? { kicker: 'Your health story is in', title: 'Every area already has your answers behind it', body: 'Click any area to see what you told us and what your blood work will add. Your flower fills in a few days after your draw.' }
+        : { kicker: 'Your ten areas, one system', title: 'Each area is shaped by your own story', body: 'Your flower brings together your blood work, health story and DNA. Click any area to see what shapes it and your plan for it.' },
+      unhover: () => this.setState({ hov: null }),
+      close: () => this.setState({ sel: null }),
+      openFocus: () => this.setState({ sel: 'heart', act: null, seen: { ...st.seen, heart: true } }),
+      centerCursor: pre ? 'default' : 'pointer',
+      centerAct: () => { if (pre) return; if (st.hov) { this.setState({ sel: st.hov, seen: { ...st.seen, [st.hov]: true } }); } else { this.setState({ act: null, sel: null }); } }
+    };
+  }
+}
+
+return Component;
+})();</script>
+<script src="kibo-extras.js"></script>
+</body>
+</html>

@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your flower — results reveal</title>
+<link rel="icon" href="assets/31ab7d337ef4e9aaa04f6a3f352fa0d7.png">
+<style>html:not(.dc-ready) body{visibility:hidden}</style>
+<script src="kibo-runtime.js"></script>
+</head>
+<body>
+<template id="dc-tpl">
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600&amp;family=Montserrat:wght@200;300;500&amp;display=swap" rel="stylesheet">
+<style>
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.sbi:hover{background:#F4F6FF}
+.stp-a{transition:transform .25s ease, box-shadow .25s ease}
+.stp-a:hover{transform:translateY(-2px);box-shadow:0 20px 44px rgba(4,50,255,0.16) !important}
+.bk-ph{width:184px;height:184px;border-radius:50%;background-size:cover;background-position:50% 18%;-webkit-mask-image:radial-gradient(circle at 50% 50%,#000 48%,rgba(0,0,0,.6) 60%,transparent 70%);mask-image:radial-gradient(circle at 50% 50%,#000 48%,rgba(0,0,0,.6) 60%,transparent 70%);animation:bkin .7s cubic-bezier(.2,.7,.2,1) both}
+.bk-ok{width:76px;height:76px;border-radius:50%;background:#39C684;display:grid;place-items:center;box-shadow:0 0 0 10px #EAF8F1;animation:bkpop .5s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes bkin{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}
+@keyframes bkpop{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:none}}
+.bk-btn{transition:transform .2s ease}
+.rb{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;will-change:transform}
+.rb1{width:460px;height:460px;left:-140px;top:-160px;background:#2246D6;opacity:.9;animation:rbA 9s ease-in-out infinite alternate}
+.rb2{width:420px;height:420px;right:-150px;top:10%;background:#A8B4EC;opacity:.7;animation:rbB 11s ease-in-out infinite alternate}
+.rb3{width:500px;height:500px;left:10%;bottom:-260px;background:#9670E6;opacity:.9;animation:rbC 10s ease-in-out infinite alternate}
+.rb4{width:300px;height:300px;left:45%;top:30%;background:#5F78E2;opacity:.8;animation:rbD 7s ease-in-out infinite alternate}
+.rb5{width:280px;height:280px;left:-60px;top:40%;background:#2E50D8;opacity:.85;animation:rbE 8s ease-in-out infinite alternate}
+.rb6{width:320px;height:320px;right:-80px;bottom:-60px;background:#A37DEA;opacity:.85;animation:rbF 9.5s ease-in-out infinite alternate}
+.flow{position:absolute;left:-40px;top:-40px;width:calc(100% + 80px);height:calc(100% + 80px);pointer-events:none;filter:blur(22px)}
+.grain{position:absolute;inset:0;background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.62;mix-blend-mode:overlay;pointer-events:none}
+@keyframes rbE{0%{transform:translate(0,0) scale(1)}100%{transform:translate(-200px,260px) scale(1.3)}}
+@keyframes rbF{0%{transform:translate(0,0) scale(1.2)}100%{transform:translate(240px,-200px) scale(.9)}}
+@keyframes rbA{0%{transform:translate(0,0) scale(1)}100%{transform:translate(260px,200px) scale(1.2)}}
+@keyframes rbB{0%{transform:translate(0,0) scale(1)}100%{transform:translate(-280px,180px) scale(1.15)}}
+@keyframes rbC{0%{transform:translate(0,0) scale(1.1)}100%{transform:translate(220px,-240px) scale(.9)}}
+@keyframes rbD{0%{transform:translate(0,0) scale(1)}100%{transform:translate(-240px,-160px) scale(1.35)}}
+@media (prefers-reduced-motion: reduce){.rb{animation:none}.flow{display:none}}
+.rad h2,.rad p,.rad li{text-shadow:0 1px 12px rgba(20,20,80,0.22)}
+
+.bk-btn:hover{transform:translateY(-1px)}
+.stp-a:focus-visible{outline:3px solid #0432FF;outline-offset:3px}
+.sbi[aria-current="page"]:hover{background:#ECEEF8}
+@font-face{font-family:'Coolvetica';src:url('assets/c7e1abd965315a39fe1d300a4e97a8e3.woff2') format('woff2');font-weight:200;font-style:normal;font-display:swap}
+@font-face{font-family:'Coolvetica';src:url('assets/654425c7b27c5cc2f38fa329cb5d17c3.woff2') format('woff2');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'Coolvetica';src:url('assets/ea0d9ab126027978416ea277f45193bb.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Coolvetica';src:url('assets/37f1af1b8c27ad26029ed3c809859265.woff2') format('woff2');font-weight:500 700;font-style:normal;font-display:swap}
+@font-face{font-family:'Coolvetica Book';src:url('assets/ea0d9ab126027978416ea277f45193bb.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:'Coolvetica Light';src:url('assets/654425c7b27c5cc2f38fa329cb5d17c3.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+
+body{margin:0}
+
+/* responsive dashboard */
+@media (max-width:1180px){.d-steps{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))!important}.d-steps span{white-space:normal!important}}
+@media (max-width:1100px){.d-flower{flex-direction:column!important}.d-panel{flex:1 1 auto!important}}
+@media (max-width:700px){main{padding:24px 16px 48px!important}.d-panel{padding:40px 24px!important}}
+.rtoast{position:fixed;left:50%;top:24px;z-index:80;display:flex;align-items:flex-start;gap:12px;width:min(440px,calc(100% - 32px));box-sizing:border-box;padding:16px 18px;border:1px solid #96D9BA;border-radius:10px;background:#EFF5F2;color:#278157;font-size:15px;line-height:1.5;box-shadow:0 12px 30px -16px rgba(26,26,46,.25);transform:translateX(-50%);animation:rtin .4s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rtin{from{opacity:0;transform:translate(-50%,-16px)}to{opacity:1;transform:translate(-50%,0)}}
+.ci-opt{transition:border-color .15s,background .15s}
+.ci-opt:hover{border-color:#C0CCFF!important}
+@media (prefers-reduced-motion:reduce){.rtoast{animation:none}}
+.rv-p{animation:rvgrow 1.4s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rvgrow{from{transform:scale(0)}}
+.rv-i{animation:rvfade .6s ease both}
+@keyframes rvfade{from{opacity:0}}
+.rv-f{animation:rvup .8s cubic-bezier(.2,.8,.2,1) both}
+@keyframes rvup{from{opacity:0;transform:translateY(12px)}}
+.rv-c{animation:rvpop .9s cubic-bezier(.2,1.3,.4,1) both}
+@keyframes rvpop{from{opacity:0;transform:scale(.6)}}
+.rv-glow{animation:rvdrift 16s ease-in-out infinite alternate}
+@keyframes rvdrift{to{transform:translate(60px,40px) scale(1.15)}}
+.rv-cta{transition:transform .2s ease, box-shadow .2s ease}
+.rv-cta:hover{transform:translateY(-1px);box-shadow:0 16px 34px rgba(4,50,255,.28)!important}
+.rv-cta:focus-visible,.rv-rp:focus-visible{outline:3px solid #0432FF;outline-offset:3px}
+@media (max-width:1000px){.rv-grid{grid-template-columns:minmax(0,1fr)!important;gap:24px!important}.rv-tx{align-items:center;text-align:center}.rv-cards{text-align:left}.rv-cta{align-self:center!important}.rv-grid{padding:36px 28px!important}}
+@media (max-width:600px){.rv-grid{padding:24px 16px!important;border-radius:24px!important}.rv-fl{zoom:.85}.rv-main{padding:8px 16px 48px!important}}
+@media (prefers-reduced-motion:reduce){.rv-p,.rv-i,.rv-f,.rv-c,.rv-glow{animation:none}}
+
+
+.kp-menu{position:fixed;right:16px;bottom:16px;z-index:2147483000;font-family:"Fira Sans","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.kp-menu>summary{list-style:none;display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px;border-radius:20px;background:#FFFFFF;color:#1A1A2E;font-size:14px;font-weight:600;cursor:pointer;border:1px solid #E3E6EF;box-shadow:0 6px 20px rgba(20,22,60,.14);user-select:none}
+.kp-menu>summary::-webkit-details-marker{display:none}
+.kp-menu>summary:hover{border-color:#C0CCFF}
+.kp-menu>summary:focus-visible{outline:2px solid #0432FF;outline-offset:2px}
+.kp-menu[open]>summary{background:#1A1A2E;color:#FFFFFF;border-color:#1A1A2E}
+.kp-panel{position:absolute;right:0;bottom:52px;width:288px;max-height:min(640px,calc(100vh - 96px));overflow:auto;box-sizing:border-box;padding:8px;border-radius:18px;background:#FFFFFF;border:1px solid #E3E6EF;box-shadow:0 24px 60px -12px rgba(20,22,60,.28)}
+.kp-h{display:flex;align-items:center;justify-content:space-between;padding:10px 12px 8px;font-size:14px;color:#1A1A2E}
+.kp-h span{font-size:13px;color:#8A8FA8}
+.kp-g{margin:8px 12px 4px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#8A8FA8}
+.kp-panel a{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:36px;padding:0 12px;border-radius:10px;font-size:14px;color:#22222B!important;text-decoration:none!important}
+.kp-panel a:hover{background:#F3F5FF;color:#0432FF!important}
+.kp-panel a.on{background:#E6EBFF;color:#0432FF!important;font-weight:600}
+.kp-panel a.on::after{content:"";width:6px;height:6px;border-radius:3px;background:#0432FF}
+.kp-panel a.kp-all{margin-top:6px;border-top:1px solid #ECEEF4;border-radius:0 0 10px 10px;color:#0432FF!important;font-weight:600}
+</style>
+</helmet>
+<div style="position: relative; width: 100%; height: 100vh; min-height: 560px; box-sizing: border-box; background: #FBFCFF; color: #22222B; font-family: 'Fira Sans', 'Helvetica Neue', sans-serif; overflow: hidden; display: flex; flex-direction: column">
+  <span aria-hidden="true" class="rv-glow" style="position: absolute; left: -120px; top: 80px; width: 720px; height: 720px; border-radius: 50%; background: radial-gradient(circle, rgba(192,204,255,0.55) 0%, rgba(192,204,255,0) 65%); pointer-events: none"></span>
+  <span aria-hidden="true" class="rv-glow" style="position: absolute; right: -160px; top: -120px; width: 640px; height: 640px; border-radius: 50%; background: radial-gradient(circle, rgba(170,150,245,0.30) 0%, rgba(170,150,245,0) 65%); animation-delay: -6s; pointer-events: none"></span>
+  <header style="position: relative; flex: none; padding: 28px 40px; display: flex; align-items: center; justify-content: space-between">
+    <img src="assets/31ab7d337ef4e9aaa04f6a3f352fa0d7.png" alt="kibo.health" style="height: 26px; width: auto; display: block">
+    <button type="button" class="rv-rp" onClick="{{rv.replay}}" style="height: 36px; padding: 0 14px; border: 1px solid #E6E6EA; border-radius: 18px; background: #FFFFFF; font: inherit; font-size: 13px; color: #595978; cursor: pointer; display: inline-flex; align-items: center; gap: 6px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7M3 4v5h5"></path></svg>Replay</button>
+  </header>
+  <main class="rv-main" style="position: relative; flex: 1 1 auto; min-height: 0; width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 40px 40px; box-sizing: border-box; display: flex; align-items: center; flex-direction: column">
+  <sc-if value="{{rv.on}}" hint-placeholder-val="{{ true }}">
+    <div class="rv-grid" style="flex: 0 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: #C0CCFF transparent; width: 100%; box-sizing: border-box; display: grid; grid-template-columns: minmax(0, 1fr); justify-items: center; gap: 28px; background: #FFFFFF; border: 1px solid #E6E6EA; border-radius: 32px; padding: 40px 56px 48px; max-width: 880px; margin: 0 auto; box-shadow: 0 24px 60px -30px rgba(22,53,139,0.18)">
+      <div style="display: flex; justify-content: center">
+        <div class="rv-fl" style="position: relative; width: 340px; height: 340px; flex: none">
+          <div style="position: relative; width: 480px; height: 480px; transform: scale(0.7083); transform-origin: 0 0">
+            <div aria-hidden="true" class="rv-i" style="position: absolute; left: 10px; top: 10px; width: 460px; height: 460px; border-radius: 50%; background: radial-gradient(circle, #EEF1FF 0%, #F3F5FF 46%, rgba(243,245,255,0) 72%)"></div>
+            <sc-for list="{{areas}}" as="a" hint-placeholder-count="10">
+              <div aria-hidden="true" style="position: absolute; left: 202px; top: 100px; width: 76px; height: 140px; transform-origin: 50% 100%; transform: rotate({{a.deg}}deg) translateY(-50px)">
+                <svg width="76" height="140" viewBox="-38 -140 76 140" style="display: block; overflow: visible">
+                  <defs><linearGradient id="{{a.gid}}" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="{{a.c0}}"></stop><stop offset="0.75" stop-color="{{a.c1}}"></stop></linearGradient></defs>
+                  <path class="rv-i" d="{{a.petalD}}" fill="{{a.trk}}" style="animation-delay: {{a.rvDelay}}s"></path>
+                  <path class="rv-p" d="{{a.petalD}}" fill="{{a.gfill}}" stroke="none" style="transform: scale({{a.k}}); animation-delay: {{a.rvDelay}}s"></path>
+                  <path class="rv-i" d="{{a.veinD}}" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1.4" stroke-linecap="round" style="animation-delay: {{a.rvVein}}s"></path>
+                </svg>
+              </div>
+            </sc-for>
+            <sc-for list="{{areas}}" as="a" hint-placeholder-count="10">
+              <span class="rv-i" title="{{a.name}}" style="position: absolute; left: {{a.ix}}px; top: {{a.iy}}px; width: 38px; height: 38px; border-radius: 19px; border: 1px solid #FFFFFF; background: {{a.ringBg}}; color: #16358B; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(34,34,43,0.10); animation-delay: {{a.rvIcon}}s">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{a.icon}}"></path></svg>
+              </span>
+            </sc-for>
+            <span aria-hidden="true" style="position: absolute; left: 170px; top: 170px; width: 140px; height: 140px; border-radius: 70px; background: radial-gradient(circle, #DDE4FF 0%, #EEF1FF 60%, rgba(238,241,255,0) 100%)"></span>
+            <div class="rv-c" role="img" aria-label="Your Kibo Score is 68" style="position: absolute; left: 184px; top: 184px; width: 112px; height: 112px; border-radius: 56px; border: 1px solid #E6E6EA; background: #FFFFFF; box-shadow: 0 8px 28px rgba(4,50,255,0.14); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; animation-delay: 0.2s">
+              <span style="font-family: Coolvetica, Montserrat, sans-serif; font-weight: 300; font-size: 40px; line-height: 1.05">{{rv.score}}</span>
+              <span style="font-size: 11px; color: #595978">Your Kibo Score</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rv-tx" style="display: flex; flex-direction: column; align-items: center; gap: 20px; max-width: 640px; text-align: center">
+        <span class="rv-f" style="animation-delay: 1.2s; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #0432FF">{{rv.kicker}}</span>
+        <h1 class="rv-f" style="animation-delay: 1.35s; margin: 0; font-family: Coolvetica, Montserrat, sans-serif; font-weight: 300; font-size: 32px; line-height: 1.15; letter-spacing: -0.01em">Here’s your starting point.</h1>
+        <p class="rv-f" style="animation-delay: 1.5s; margin: 0; font-size: 18px; line-height: 1.6; color: #3A3F58">{{rv.story}}</p>
+        <p class="rv-f" style="animation-delay: 1.65s; margin: 0; font-size: 18px; line-height: 1.6; color: #3A3F58">Every journey starts somewhere. Yours begins with three small actions that reach 7 of your 10 areas.</p>
+        <div class="rv-cards" style="align-self: stretch; display: flex; flex-direction: column; gap: 10px; text-align: left">
+          <div class="rv-f" style="animation-delay: 1.85s; display: flex; gap: 14px; align-items: flex-start; padding: 16px 18px; border-radius: 18px; background: #F6F7FB; border: 1px solid transparent"><span aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 10px; background: #EAF8F1; display: grid; place-items: center"><span style="width: 10px; height: 10px; border-radius: 5px; background: #39C684"></span></span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 600; color: #22222B">Already strong</span><span style="font-size: 15px; line-height: 1.5; color: #595978">{{rv.strongT}}</span></span></div>
+          <div class="rv-f" style="animation-delay: 2.0s; display: flex; gap: 14px; align-items: flex-start; padding: 16px 18px; border-radius: 18px; background: #F6F7FB; border: 1px solid transparent"><span aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 10px; background: #FDECE6; display: grid; place-items: center"><span style="width: 10px; height: 10px; border-radius: 5px; background: #E4572E"></span></span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 600; color: #22222B">Where you can grow most</span><span style="font-size: 15px; line-height: 1.5; color: #595978">{{rv.lowT}}</span></span></div>
+          <div class="rv-f" style="animation-delay: 2.15s; display: flex; gap: 14px; align-items: flex-start; padding: 16px 18px; border-radius: 18px; background: #F6F7FB; border: 1px solid transparent"><span aria-hidden="true" style="flex: none; width: 32px; height: 32px; border-radius: 10px; background: #E6EBFF; display: grid; place-items: center"><span style="width: 10px; height: 10px; border-radius: 5px; background: #0432FF"></span></span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 15px; font-weight: 600; color: #22222B">Watch it bloom</span><span style="font-size: 15px; line-height: 1.5; color: #595978">Each action you keep helps your petals grow. Your next blood draw, in about three months, shows how far you’ve come.</span></span></div>
+        </div>
+        <sc-if value="{{rv.hasNote}}" hint-placeholder-val="{{ false }}"><p class="rv-f" style="animation-delay: 2.3s; margin: 0; font-size: 14px; line-height: 1.5; color: #595978">{{rv.note}}</p></sc-if>
+        <div class="rv-f" style="animation-delay: 2.4s; display: flex; flex-direction: column; align-items: center; gap: 14px">
+          <sc-if value="{{rv.goNone}}" hint-placeholder-val="{{ true }}"><a href="DashboardResults.dc.html" onClick="{{rv.go}}" class="rv-cta" style="align-self: center; height: 58px; padding: 0 34px; border-radius: 29px; background: #0432FF; color: #FFFFFF; font-size: 17px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 12px 28px rgba(4,50,255,0.22)">Plan my first action<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></sc-if><sc-if value="{{rv.goActive}}" hint-placeholder-val="{{ false }}"><a href="DashboardResultsActive.dc.html" onClick="{{rv.go}}" class="rv-cta" style="align-self: center; height: 58px; padding: 0 34px; border-radius: 29px; background: #0432FF; color: #FFFFFF; font-size: 17px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 12px 28px rgba(4,50,255,0.22)">Plan my first action<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></sc-if><sc-if value="{{rv.goYes}}" hint-placeholder-val="{{ false }}"><a href="DashboardResultsMedYes.dc.html" onClick="{{rv.go}}" class="rv-cta" style="align-self: center; height: 58px; padding: 0 34px; border-radius: 29px; background: #0432FF; color: #FFFFFF; font-size: 17px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 12px 28px rgba(4,50,255,0.22)">Plan my first action<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></sc-if><sc-if value="{{rv.goNo}}" hint-placeholder-val="{{ false }}"><a href="DashboardResultsMedNo.dc.html" onClick="{{rv.go}}" class="rv-cta" style="align-self: center; height: 58px; padding: 0 34px; border-radius: 29px; background: #0432FF; color: #FFFFFF; font-size: 17px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 12px 28px rgba(4,50,255,0.22)">Plan my first action<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></sc-if>
+          <p style="margin: 0; font-size: 12px; line-height: 1.5; color: #7A7F99">Your Kibo Score is a wellness score. It is not a medical test or a measure of your health status.</p>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+  <sc-if value="{{rv.off}}" hint-placeholder-val="{{ false }}"><div style="flex: 1"></div></sc-if>
+  </main>
+</div>
+</template>
+<script>window.__DCProps = "{\"stage\":{\"editor\":\"enum\",\"options\":[\"results\",\"pre\",\"full\"],\"default\":\"results\"},\"firstName\":{\"editor\":\"text\",\"default\":\"Dana\"},\"pick\":{\"editor\":\"enum\",\"options\":[\"unset\",\"none\",\"active\",\"mtYes\",\"mtNo\"],\"default\":\"unset\"},\"view\":{\"editor\":\"enum\",\"options\":[\"none\",\"book\",\"booked\",\"ready\",\"checkin\",\"reveal\"],\"default\":\"reveal\"},\"ci\":{\"editor\":\"enum\",\"options\":[\"saved\",\"none\",\"active\",\"mtYes\",\"mtNo\"],\"default\":\"saved\"},\"$preview\":{\"width\":1440,\"height\":1460}}";
+window.__DCComponent = (function () {
+
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = this.initState(props); }
+  initState(props) {
+    const s = { sel: null, hov: null, act: null, seen: {}, navCollapsed: this.state && this.state.navCollapsed || false, bookOpen: false, bkDone: false, prepOnly: false, where: 'home', day: null, time: null, booked: null, resultsIn: false, ready: false, ciOpen: false, ci: null, mtNow: null, rtoast: false, rvN: 0, rvOn: true };
+    const v = props.view || 'none';
+    if (v === 'book') s.bookOpen = true;
+    if (v === 'ready' || v === 'checkin') Object.assign(s, { ready: true, ciOpen: v === 'checkin' });
+    if (v === 'booked' || v === 'ready' || v === 'checkin') Object.assign(s, { where: 'home', day: 1, time: 1, booked: { short: 'Wed, Oct 14 · 8:30 am', when: 'Wednesday, October 14 at 8:30 am', whereShort: 'At home', where: 'home' } });
+    return s;
+  }
+  // Prototype links: each artboard keeps its own look on the canvas; Play moves between artboards.
+  ls(k, v) { try { if (v === undefined) return window.localStorage.getItem(k); if (v === null) window.localStorage.removeItem(k); else window.localStorage.setItem(k, v); } catch (e) { return null; } return null; }
+  playReveal() {
+    clearInterval(this.cIv); this.setState({ rvOn: false, rvN: 0 });
+    setTimeout(() => { this.setState({ rvOn: true }); const t0 = Date.now() + 700; this.cIv = setInterval(() => { const p = Math.min(1, (Date.now() - t0) / 1600); if (p < 0) return; this.setState({ rvN: Math.round((1 - Math.pow(1 - p, 3)) * 68) }); if (p >= 1) clearInterval(this.cIv); }, 40); }, 60);
+  }
+  componentDidMount() { { const PK = this.props.pick; if (PK && PK !== 'unset') this.setState({ ci: PK === 'none' ? 'none' : PK === 'active' ? 'active' : 'mt', mtNow: PK === 'mtYes' ? true : PK === 'mtNo' ? false : null }); }
+    if ((this.props.stage ?? 'results') === 'pre' && (this.props.view || 'none') === 'none') { ['kibo-live', 'kibo-live-st', 'kibo-meals', 'kibo-ci'].forEach(k => this.ls(k, null)); }
+    this.onRs = () => { const narrow = window.innerWidth < 1100; if (narrow !== this.wasNarrow) { this.wasNarrow = narrow; this.setState({ navCollapsed: narrow }); } };
+    this.onRs(); window.addEventListener('resize', this.onRs);
+    // Prototype: 60 seconds after a draw is booked in Play, move to the results-ready artboard
+    const view = this.props.view || 'none';
+    if (view === 'reveal') this.playReveal();
+    this.rdIv = setInterval(() => {
+      const at = this.ls('kibo-draw-at');
+      if (false && view === 'booked' && at && Date.now() - Number(at) >= 60000 && !this.state.bookOpen && this.goReadyEl) { this.ls('kibo-draw-at', null); this.ls('kibo-ready-toast', '1'); this.goReadyEl.click(); }
+      if (view === 'ready' && this.ls('kibo-ready-toast')) { this.ls('kibo-ready-toast', null); this.setState({ rtoast: true }); clearTimeout(this.rtT); this.rtT = setTimeout(() => this.setState({ rtoast: false }), 5000); }
+      if (view === 'reveal' && this.ls('kibo-reveal-go')) { this.ls('kibo-reveal-go', null); this.playReveal(); }
+      const ci = this.ls('kibo-ci'); if (ci !== this.lastCi) { this.lastCi = ci; this.forceUpdate(); }
+    }, 1000);
+    const read = () => { try { return window.localStorage.getItem('kibo-ca-fn') || ''; } catch (e) { return ''; } };
+    this.lastFn = read();
+    this.fnIv = setInterval(() => { const v = read(); if (v !== this.lastFn) { this.lastFn = v; this.setState({ fnTick: Date.now() }); } }, 500);
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this.onRs); clearInterval(this.fnIv); clearInterval(this.rdIv); clearTimeout(this.rtT); clearInterval(this.cIv); }
+  renderVals() {
+    const pre = (this.props.stage ?? 'results') === 'pre' && !this.state.resultsIn;
+    const full = (this.props.stage ?? 'results') === 'full';
+    const score = full ? 100 : 68;
+    const nm = (() => { try { return window.localStorage.getItem('kibo-ca-fn') || null; } catch (e) { return null; } })() || this.props.firstName || 'Dana';
+    const C = { g: '#39C684', y: '#EC9C13', o: '#E4572E' };
+    const col = s => s >= 8 ? C.g : s >= 6 ? C.y : C.o;
+    const I = {
+      heart: 'M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10zM7.5 11.5h2.3l1.2-2 1.6 4 1.2-2h2.7',
+      infl: 'M12 21c-3.9 0-6.5-2.6-6.5-6.1 0-3.4 2.4-5.2 3.6-8.4.4 1.9 1.4 3 2.6 3.5C11.3 7 12.6 4.6 15 3c-.5 3 1.6 4.8 2.8 6.7.7 1.2 1.2 2.6 1.2 4.2 0 4-3 7.1-7 7.1zM12 21c-1.7 0-3-1.2-3-3 0-1.6 1.5-2.6 2-4.4 1 1.2 4 2.4 4 4.6 0 1.6-1.3 2.8-3 2.8z',
+      nutr: 'M12 7.5c-1.5-1-4.5-1.3-6 .8-1.6 2.2-.9 6.4 1.2 9.2 1.3 1.7 2.6 2.2 3.6 1.8.6-.2.9-.3 1.2-.3s.6.1 1.2.3c1 .4 2.3-.1 3.6-1.8 2.1-2.8 2.8-7 1.2-9.2-1.5-2.1-4.5-1.8-6-.8zM12 7.5c0-1.8.8-3.4 2.6-4.3',
+      metab: 'M12 3c3.5 4.5 6 7.7 6 11a6 6 0 0 1-12 0c0-3.3 2.5-6.5 6-11zM8.5 14.5h1.8l1.2-2.2 1.6 3.6 1.1-1.4h1.3',
+      gut: 'M9 3v3c0 1.5-1 2.5-2.5 3.5C5 10.6 4 12 4 14.5 4 18.1 7 21 11 21h1c3.9 0 7-3.1 7-7v-1.5c0-3-2.5-4.5-4.5-4-1.5.5-2 2-3.5 2-1.2 0-1.5-.9-1.5-2',
+      energy: 'M3 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zM21 10.5v3M11.5 8.5L9 12h3.5L10 15.5',
+      mind: 'M15 21v-3.2c2.4-1.2 4-3.6 4-6.3C19 7.4 15.9 4 12 4S5 7 5 10.6c0 .9-.6 1.7-1.2 2.6l1.7.8v2.5c0 1 .8 1.8 1.8 1.8H9v2.7M12 7.5l.7 1.6 1.6.7-1.6.7-.7 1.6-.7-1.6-1.6-.7 1.6-.7z',
+      immu: 'M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6zM9 12l2 2 4-4',
+      env: 'M3 11l9-7 9 7M5 9.5V20h14V9.5M12 11c1.6 2 2.5 3.3 2.5 4.5a2.5 2.5 0 0 1-5 0c0-1.2.9-2.5 2.5-4.5z',
+      horm: 'M3 12a9 9 0 1 0 18 0a9 9 0 1 0-18 0M3.5 12c2.8-3 5.7-3 8.5 0s5.7 3 8.5 0'
+    };
+    const MK = {
+      ldl: { n: 'LDL cholesterol', val: '140 mg/dL', p: 74 },
+      hdl: { n: 'HDL cholesterol', val: '58 mg/dL', p: 22 },
+      k: { n: 'Potassium', val: '6.8 mmol/L', p: 97, urgent: true },
+      a1c: { n: 'HbA1c', val: '5.5 %', p: 46 },
+      ins: { n: 'Fasting insulin', val: '12 µIU/mL', p: 52 },
+      vitd: { n: 'Vitamin D', val: '24 ng/mL', p: 68 },
+      crp: { n: 'hs-CRP', val: '3.4 mg/L', p: 72 },
+      nlr: { n: 'White-cell balance (NLR)', val: '2.1', plain: true },
+      ldh: { n: 'LDH', val: '180 U/L', plain: true }
+    };
+    const A = [
+      ['heart', 'Heart Health', 7, 'Cholesterol, heart health and circulation', 'You’re active 2–3 days a week and like to cook at home.', ['ldl', 'hdl', 'k'], '', 'Regular activity and a diet rich in vegetables, fruit and fiber are linked with better heart health.', 'American Heart Association'],
+      ['infl', 'Inflammation', 5, 'Your body’s overall level of ongoing inflammation', 'You eat 1–2 servings of vegetables on most days.', ['crp'], '', 'Eating patterns rich in vegetables, fruit and whole grains are linked with lower markers of inflammation.', '[Pubrica to confirm source]'],
+      ['nutr', 'Nutrient Status', 6, 'Whether your body has enough key vitamins and minerals', 'You don’t take any supplements right now.', ['vitd'], '', 'A varied diet is the best way to meet most vitamin and mineral needs.', 'Dietary Guidelines for Americans'],
+      ['metab', 'Metabolic Signals', 6, 'Insulin, growth signaling and blood sugar control', 'You’re active 2–3 days a week.', ['a1c', 'ins'], '', 'Fiber, regular activity and short walks after meals may help support healthy blood sugar.', 'Dietary Guidelines for Americans; Sports Medicine, 2022'],
+      ['gut', 'Gut Health', 6, 'Digestive health and comfort', 'You rarely eat fermented foods, and you’ve had bloating sometimes.', [], 'Not measured in blood. This area comes from your health story.', 'Fiber and fermented foods support a healthy, diverse gut.', '[Pubrica to confirm source]'],
+      ['energy', 'Mitochondrial Health', 7, 'The energy your body runs on, day to day', 'You’ve sometimes felt tired after light activity.', ['ldh'], '', 'Regular physical activity supports how your cells make energy.', '[Pubrica to confirm source]'],
+      ['mind', 'Mental Wellbeing', 7, 'Mood, focus, stress and how rested you feel', 'You sleep under 6 hours 1–2 nights a week, and sometimes feel overwhelmed.', [], 'Not measured in blood. This area comes from your health story.', 'Adults should aim for 7 or more hours of sleep, which supports mood and focus.', 'American Academy of Sleep Medicine'],
+      ['immu', 'Immune Defense', 8, 'How well your immune system detects and responds', 'You sleep under 6 hours 1–2 nights a week.', ['nlr'], '', 'Sleep, activity and a balanced diet support normal immune function.', '[Pubrica to confirm source]'],
+      ['env', 'Toxin Load', 8, 'Everyday exposures and your body’s ability to clear them', 'You drink filtered tap water, and your DNA shows you process alcohol slowly.', [], 'Not measured in blood. This area comes from your health story and DNA.', 'Filtering drinking water and limiting chemical exposure at home can reduce everyday exposures.', '[Pubrica to confirm source]'],
+      ['horm', 'Hormone Balance', 8, 'Balance of sex, thyroid and stress hormones', 'You’re after menopause, with hot flashes sometimes, and sleep under 6 hours 1–2 nights a week.', [], 'Not measured in this panel. This area comes from your health story.', 'Sleep, activity and body weight all influence hormone balance.', '[Pubrica to confirm source]']
+    ];
+    const ACTS = [
+      { id: 'h1', t: 'Build up to 150 minutes of activity a week', week: true, line: 'Your plan: After work, I’ll take a brisk walk 3 times this week.', areas: ['heart', 'metab', 'mind', 'energy'] },
+      { id: 'h2', t: 'Fill half your plate with vegetables', week: true, line: 'Your plan: At lunch and dinner, 5 days this week.', areas: ['infl', 'gut', 'nutr', 'heart'] },
+      { id: 'h5', t: 'Eat salmon or sardines twice a week', week: true, line: 'Your plan: When I plan my meals, for two meals this week.', areas: ['nutr', 'heart', 'infl'] },
+      { id: 'h3', t: 'Add 10 g of fiber a day', week: false, line: 'Oats with berries at breakfast, lentil soup at lunch, a bean side at dinner.', areas: ['gut', 'metab', 'heart'] },
+      { id: 'h4', t: 'Walk after dinner', week: false, line: 'Build up to 20 minutes, within an hour of finishing your meal.', areas: ['metab', 'heart'] },
+      { id: 'h6', t: 'Aim for 7 or more hours of sleep', week: false, line: 'Keep the same wake-up time every day, weekends too.', areas: ['mind', 'metab', 'immu', 'horm'] },
+      { id: 'p1', t: 'Skip alcohol', week: false, personal: true, line: 'Try sparkling water, kombucha or alcohol-free options.', areas: ['env', 'mind'] }
+    ];
+    const st = this.state;
+    const focusId = st.hov || st.sel;
+    const actOn = st.act ? ACTS.find(x => x.id === st.act) : null;
+    const cx = 380, cy = 270, R = 222;
+    const nameOf = id => A.find(r => r[0] === id)[1];
+    const areas = A.map(([id, name, s0, desc, told, mks, noMk, claim, src], i) => {
+      const s = full ? 10 : s0;
+      const deg = i * 36, t = deg * Math.PI / 180, sn = Math.sin(t);
+      const on = focusId === id;
+      const dim = (focusId && !on) || (actOn && !actOn.areas.includes(id));
+      const lit = on || (actOn && actOn.areas.includes(id));
+      const k = pre ? '#C0CCFF' : col(s);
+      const len = pre ? 0 : Math.round(s * 11.4);
+      const lx = Math.round(cx + R * sn), ly = Math.round(cy - R * Math.cos(t));
+      return {
+        id, name, s, desc, told, mks, noMk, claim, src, icon: I[id], color: col(s),
+        deg, len, vein: Math.max(0, len - 26),
+        petalD: 'M0,0 C 24,-16 34,-60 29,-98 C 25,-123 12,-138 0,-140 C -12,-138 -25,-123 -29,-98 C -34,-60 -24,-16 0,0 Z', k: pre ? 0 : s / 10, gid: 'pg-' + id + (pre ? '-pre' : ''),
+        c0: k + '73', c1: k, gfill: 'url(#pg-' + id + (pre ? '-pre' : '') + ')',
+        veinD: pre ? 'M0,0 L0,0' : 'M0,-8 L0,' + (-Math.round(s * 12.4)),
+        trk: pre ? '#F8F8F9' : col(s) + '1A',
+        tstroke: lit ? '#0432FF' : (pre ? '#C0CCFF' : 'none'), sw: lit ? 3 : 1.5, dash: pre && !lit ? '5 5' : 'none',
+        scale: on ? 1.06 : 1,
+        track: pre ? '#F8F8F9' : col(s) + '1A',
+        trackBorder: pre ? '1.5px dashed #C0CCFF' : '0',
+        fill: 'linear-gradient(to top, ' + k + '66 0%, ' + k + ' 70%)',
+        opacity: dim ? 0.3 : 1,
+        glow: lit ? '0 0 0 3px #FFFFFF, 0 0 0 5px #0432FF' : 'none',
+        lx, ly,
+        ix: Math.round(240 + 214 * Math.sin(t) - 19),
+        iy: Math.round(240 - 214 * Math.cos(t) - 19),
+        ringBg: pre ? '#EEF1FA' : col(s) + '2E',
+        ringBorder: lit ? '2px solid #0432FF' : '1px solid #FFFFFF',
+        rowBg: lit ? '#F3F5FF' : '#FFFFFF',
+        rowBorder: lit ? '1.5px solid #C0CCFF' : '1.5px solid transparent',
+        dot: pre ? '#C0CCFF' : col(s),
+        scoreLabel: pre ? 'Soon' : s + '/10',
+        scoreInk: pre ? '#595978' : '#22222B',
+        scoreSize: pre ? 13 : 15,
+        lt: sn > 0.3 ? 'translate(0, -50%)' : sn < -0.3 ? 'translate(-100%, -50%)' : 'translate(-50%, -50%)',
+        pillBg: st.sel === id ? '#0432FF' : '#FFFFFF',
+        pillInk: st.sel === id ? '#FFFFFF' : '#22222B',
+        pillBorder: st.sel === id ? '1px solid #0432FF' : (lit ? '1.5px solid #0432FF' : '1px solid #E6E6EA'),
+        chipBg: st.sel === id ? 'rgba(255,255,255,0.18)' : (pre ? '#EEF1FA' : col(s) + '26'),
+        chipInk: st.sel === id ? '#FFFFFF' : '#16358B',
+        delay: pre ? 0 : (i * 0.08).toFixed(2),
+        rvDelay: (0.35 + i * 0.11).toFixed(2), rvVein: (1.2 + i * 0.11).toFixed(2), rvIcon: (0.5 + i * 0.11).toFixed(2),
+        aria: pre ? name + ', fills in after your blood draw' : name + ', ' + s + ' out of 10. Open details',
+        open: () => { if (pre) return; this.setState({ sel: id, act: null, hov: null, seen: { ...st.seen, [id]: true } }); },
+        hover: () => { if (pre) return; this.setState({ hov: id }); },
+        cursor: pre ? 'default' : 'pointer', dis: pre ? 'true' : 'false'
+      };
+    });
+    const selA = st.sel ? areas.find(a => a.id === st.sel) : null;
+    const hovA = st.hov ? areas.find(a => a.id === st.hov) : null;
+    const center = hovA
+      ? { top: pre ? 'Fills in soon' : hovA.s + '/10', main: hovA.name, sub: 'Click to open', size: hovA.name.length > 14 ? 13 : 15, aria: 'Open ' + hovA.name }
+      : actOn
+        ? { top: 'This action reaches', main: actOn.areas.length + ' areas', sub: 'of your ten', size: 22, aria: 'Show the whole flower' }
+        : { top: '', main: pre ? '—' : String(score), sub: 'Your Kibo Score', size: 40, aria: 'Your Kibo Score' };
+    const empty = { name: '', s: 0, color: '#FFFFFF', desc: '', icon: '', claim: '', src: '', chipBg: '#FFFFFF', chipInk: '#16358B', isHeart: false, told: '', bloodLabel: '', markers: [], noMarkers: false, noMarkerText: '', planTitle: '', plan: [], kicker: '', cells: [] };
+    let sel = empty;
+    if (selA) {
+      const plan = ACTS.filter(x => x.areas.includes(selA.id)).sort((a, b) => (b.week ? 1 : 0) - (a.week ? 1 : 0)).map(x => ({
+        t: x.t, line: x.line,
+        tag: x.week ? 'This week' : (x.personal ? 'Personal to you' : 'When you’re ready'),
+        tagBg: x.week ? '#E6EBFF' : '#F1F1F3', tagInk: x.week ? '#0432FF' : '#595978',
+        border: x.week ? '1.5px solid #C0CCFF' : '1px solid #E6E6EA',
+        reach: 'Also supports: ' + x.areas.filter(a => a !== selA.id).map(nameOf).join(', ')
+      }));
+      sel = {
+        name: selA.name, s: selA.s, color: selA.color, desc: selA.desc, icon: selA.icon, claim: selA.claim, src: selA.src,
+        chipBg: pre ? '#EEF1FA' : selA.color + '26', chipInk: '#16358B',
+        isHeart: selA.id === 'heart' && !pre,
+        told: selA.told,
+        kicker: pre ? 'Your area · fills in after your draw' : 'Your area',
+        bloodLabel: pre ? 'Coming with your blood work' : 'From your blood work',
+        markers: pre ? [] : selA.mks.map(id => { const m = MK[id]; return { n: m.n, val: m.val, p: m.p || 0, scaled: !m.plain, plain: !!m.plain, urgent: !!m.urgent }; }),
+        noMarkers: pre || selA.mks.length === 0,
+        noMarkerText: pre ? (selA.mks.length ? selA.mks.map(id => MK[id].n).join(' · ') : selA.noMk) : selA.noMk,
+        planTitle: 'Your plan for ' + selA.name,
+        plan,
+        cells: Array.from({ length: 10 }, (_, i) => ({ bg: i < selA.s ? selA.color : '#F1F1F3' }))
+      };
+    }
+    const seenN = Object.keys(st.seen).length;
+    const actions = ACTS.filter(x => x.week).map(x => ({
+      t: x.t, reach: 'Reaches ' + x.areas.length,
+      pressed: st.act === x.id ? 'true' : 'false',
+      border: st.act === x.id ? '2px solid #0432FF' : '1px solid #E6E6EA',
+      bg: st.act === x.id ? '#F3F5FF' : '#FFFFFF',
+      pick: () => this.setState({ act: st.act === x.id ? null : x.id, sel: null, hov: null })
+    }));
+    const DAYS = [['Tue', '13', 'Tuesday'], ['Wed', '14', 'Wednesday'], ['Thu', '15', 'Thursday'], ['Fri', '16', 'Friday']];
+    const TIMES = ['7:00 am', '8:30 am', '10:00 am'];
+    const bkd = st.booked;
+    const hsA = (() => { try { return JSON.parse(window.localStorage.getItem('kibo-hs') || '{}'); } catch (e) { return {}; } })();
+    const canBook = st.day !== null && st.time !== null;
+    const segOn = v => st.where === v;
+    const bk = {
+      picking: !st.bkDone, done: !!st.bkDone,
+      home: () => this.setState({ where: 'home' }), lab: () => this.setState({ where: 'lab' }),
+      homeOn: segOn('home') ? 'true' : 'false', labOn: segOn('lab') ? 'true' : 'false',
+      homeBg: segOn('home') ? '#FFFFFF' : 'transparent', labBg: segOn('lab') ? '#FFFFFF' : 'transparent',
+      homeSh: segOn('home') ? '0 1px 4px rgba(20,22,40,0.12)' : 'none', labSh: segOn('lab') ? '0 1px 4px rgba(20,22,40,0.12)' : 'none',
+      days: DAYS.map((d, i) => ({ dow: d[0], n: d[1], on: st.day === i ? 'true' : 'false', bg: st.day === i ? '#F3F5FF' : '#FFFFFF', border: st.day === i ? '2px solid #0432FF' : '1px solid #E6E6EA', pick: () => this.setState({ day: i }) })),
+      times: TIMES.map((t, i) => ({ l: t, on: st.time === i ? 'true' : 'false', bg: st.time === i ? '#F3F5FF' : '#FFFFFF', border: st.time === i ? '2px solid #0432FF' : '1px solid #E6E6EA', pick: () => this.setState({ time: i }) })),
+      dna: hsA.dna === 2,
+      disabled: canBook ? 'false' : 'true', op: canBook ? 1 : 0.35,
+      confirm: () => { if (!canBook) return; const d = DAYS[st.day]; this.setState({ bkDone: true, booked: { short: d[0] + ', Oct ' + d[1] + ' · ' + TIMES[st.time], when: d[2] + ', October ' + d[1] + ' at ' + TIMES[st.time], whereShort: st.where === 'home' ? 'At home' : 'At a lab nearby', where: st.where } }); },
+      doneAct: () => this.setState({ bookOpen: false }),
+      prep: !!st.prepOnly, toBooked: !st.prepOnly,
+      goBooked: () => { this.ls('kibo-draw-at', String(Date.now())); setTimeout(() => this.setState(this.initState(this.props)), 400); },
+      when: bkd ? bkd.when : '', whereShort: bkd ? bkd.whereShort : '',
+      whereText: bkd ? (bkd.where === 'home' ? 'A phlebotomist will come to your home. We’ll send you a reminder the day before.' : 'We’ll send you the lab address and a reminder the day before.') : ''
+    };
+    const ln = (() => { try { return window.localStorage.getItem('kibo-ca-ln') || ''; } catch (e) { return ''; } })();
+    const fullName = [nm, ln].filter(Boolean).join(' ');
+    return {
+      navOpen: !this.state.navCollapsed, navClosed: !!this.state.navCollapsed,
+      toggleNav: () => this.setState({ navCollapsed: !this.state.navCollapsed }),
+      userName: fullName, userInitial: (nm || 'K').trim().charAt(0).toUpperCase(),
+      pre, post: !pre, areas, sel, center, actions,
+      drawer: !!selA,
+      scoreText: pre ? '—' : String(score),
+      scoreNum: score,
+      avgText: 'You’re at ' + score + '. Kibo members average 60.',
+      scoreSub: pre ? 'Appears after your blood draw' : 'Built from your ten areas',
+      greeting: pre ? 'Welcome, ' + nm : 'Good morning, ' + nm,
+      headline: pre ? (st.ready ? 'Your results are ready.' : bkd ? 'You’re all set for your draw.' : 'You’re one step away.') : nm + ', this is your Kibo flower',
+      shared: ['About you', 'Your cancer diagnosis', 'Your treatment and medicines', 'Your genetics', 'Lifestyle and environment'],
+      flowerPill: bkd ? 'Fills in a few days after your draw' : 'Fills in after your blood draw',
+      drawCard: st.ready
+        ? { kicker: 'New results', kickInk: '#0432FF', title: 'Your results are ready', sub: 'From your draw on ' + bkd.short.split(' · ')[0], cta: 'See my results', aria: 'Your results are ready. See my results' }
+        : bkd
+        ? { kicker: 'Booked', kickInk: '#1F9D63', title: 'Blood draw booked', sub: bkd.short, cta: 'See how to prepare', aria: 'Blood draw booked for ' + bkd.when + '. See how to prepare' }
+        : { kicker: 'Next step', kickInk: '#0432FF', title: 'Book your blood draw', sub: 'At home or at a lab nearby', cta: 'Choose a time', aria: 'Next step: book your blood draw' },
+      tl: {
+        t1: bkd ? 'Your draw is booked' : 'Book your draw', s1: bkd ? bkd.when + ' · ' + bkd.whereShort : 'At home or at a lab nearby',
+        bg1: bkd ? '#39C684' : '#0432FF', ink1: '#FFFFFF', ring1: bkd ? 'none' : '0 0 0 6px #E6EBFF', pb1: 26,
+        bg2: bkd ? '#0432FF' : '#F3F5FF', ink2: bkd ? '#FFFFFF' : '#16358B', ring2: bkd ? '0 0 0 6px #E6EBFF' : 'none', pb2: 26,
+        bg3: '#F3F5FF', ink3: '#16358B', ring3: 'none', pb3: 0
+      },
+      colDisp: pre ? 'none' : 'flex',
+      fcard: pre
+        ? { pad: '0', dir: 'row', gap: '0', lpad: '48px 40px 40px', box: 500, scale: 500 / 480, discSize: 12 }
+        : { pad: '24px', dir: 'column', gap: '16px', lpad: '0', box: 624, scale: 1.3, discSize: 13 },
+      panel: st.ready
+        ? { kicker: 'New results are in', title: 'Your results are ready', body: 'Your blood work from ' + bkd.when.split(' at ')[0] + ' is back. Answer one quick question, then see your flower and plan.', cta: 'See my results', list: false }
+        : bkd
+        ? { kicker: 'You’re booked', title: 'See you ' + bkd.when.split(' at ')[0].split(', ')[0], body: bkd.when + ' · ' + bkd.whereShort + '. Your flower fills in a few days after your draw.', cta: 'See how to prepare', list: false }
+        : { kicker: 'Next step', list: true, title: 'Book your first blood draw', body: 'At home or at a lab nearby. Your results complete your picture across all ten areas, and your first actions follow.', cta: 'Book my draw' },
+      notReady: !st.ready, ready: !!st.ready,
+      goReadyRef: (el) => { this.goReadyEl = el; },
+      stepAct: () => st.ready ? this.setState({ ciOpen: true }) : this.setState({ bookOpen: true, bkDone: !!st.booked, prepOnly: !!st.booked }),
+      panelAct: () => st.ready ? this.setState({ ciOpen: true }) : this.setState({ bookOpen: true, bkDone: !!st.booked, prepOnly: !!st.booked }),
+      card3sub: st.ready ? 'Ready to see now' : 'Ready a few days after your draw',
+      rtoast: !!st.rtoast,
+      ciOpen: !!st.ciOpen,
+      closeCi: () => this.setState({ ciOpen: false }),
+      ci: (() => {
+        const canSave = !!st.ci && (st.ci !== 'mt' || st.mtNow !== null);
+        const o = (on, l, pick) => ({ l, pick, on: on ? 'true' : 'false', border: on ? '2px solid #0432FF' : '1px solid #E6E6EA', bg: on ? '#F3F5FF' : '#FFFFFF', ring: on ? '#0432FF' : '#B9BCCB', dot: on ? '#0432FF' : 'transparent' });
+        return {
+          opts: [['none', 'No changes'], ['active', 'I’ve started active treatment again, such as chemotherapy, radiation or surgery'], ['mt', 'I started or stopped ongoing cancer medicine']]
+            .map(([id, l]) => o(st.ci === id, l, () => this.setState({ ci: id, mtNow: id === 'mt' ? st.mtNow : null }))),
+          mtShow: st.ci === 'mt',
+          mtOpts: [[true, 'Yes'], [false, 'No']].map(([v, l]) => o(st.mtNow === v, l, () => this.setState({ mtNow: v }))),
+          disabled: canSave ? 'false' : 'true', op: canSave ? 1 : 0.35,
+          can: canSave, cannot: !canSave,
+          save: () => { this.ls('kibo-live', '1'); this.ls('kibo-live-st', null); this.ls('kibo-meals', null); this.ls('kibo-ci', st.ci === 'active' ? 'active' : st.ci === 'mt' ? (st.mtNow ? 'mtYes' : 'mtNo') : 'none'); this.ls('kibo-reveal-go', '1'); setTimeout(() => this.setState({ ci: null, mtNow: null }), 400); }
+        };
+      })(),
+      note: (() => {
+        const pause = 'M12 3l9 16H3zM12 10v4M12 17.2v.1', info = 'M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18M12 11v5M12 7.8v.1', ok = 'M5 12.5l4.5 4.5L19 7.5';
+        const N = {
+          active: { bg: '#FFF7EB', border: '#F3D9A4', ink: '#9A5B00', icon: pause, title: 'Supplement and fasting guidance paused', body: 'Because your treatment has changed, we’ve paused supplement and fasting guidance. Please talk with your oncology team before continuing any supplements or fasting. Your everyday actions continue.' },
+          mtYes: { bg: '#F3F5FF', border: '#C0CCFF', ink: '#0432FF', icon: info, title: 'Ask your oncology team about supplements', body: 'Because you take ongoing cancer medicine, your plan won’t suggest supplement doses. Ask your oncology team whether a supplement is right for you. Your everyday actions continue.' },
+          mtNo: { bg: '#F3F5FF', border: '#C0CCFF', ink: '#0432FF', icon: info, title: 'Supplement guidance updated', body: 'You’ve stopped ongoing cancer medicine, so your supplement guidance includes standard ranges again. Check with your physician before starting any supplement.' },
+          none: { bg: '#EFF5F2', border: '#96D9BA', ink: '#278157', icon: ok, title: 'Your plan is up to date', body: 'No changes to your treatment, so your plan is built from your new results as usual.' }
+        };
+        const pn = this.props.ci && this.props.ci !== 'saved' ? this.props.ci : this.ls('kibo-ci'); const n = !pre && pn && N[pn] ? N[pn] : null;
+        return n ? Object.assign({ show: true }, n) : { show: false };
+      })(),
+      rv: (() => {
+        const hs = (() => { try { return JSON.parse(this.ls('kibo-hs') || 'null'); } catch (e) { return null; } })();
+        const CAN = ['breast cancer', 'prostate cancer', 'colorectal cancer', 'lung cancer', 'ovarian cancer', 'kidney cancer', 'thyroid cancer', 'cervical cancer', 'pancreatic cancer', 'lymphoma', 'leukemia', 'melanoma'];
+        const MON = { Jan: 'January', Feb: 'February', Mar: 'March', Apr: 'April', May: 'May', Jun: 'June', Jul: 'July', Aug: 'August', Sep: 'September', Oct: 'October', Nov: 'November', Dec: 'December' };
+        const sample = !hs;
+        const h = hs || { type: 0, fin_m: 'Mar', fin_y: '2023' };
+        const t = Number(h.type);
+        const cancer = h.type === undefined || h.type === null || h.type === '' ? 'your cancer' : t === 12 ? ((h.type_other || '').trim() ? (h.type_other || '').trim() : 'your cancer') : (CAN[t] || 'your cancer');
+        const fin = h.fin_m && h.fin_y ? (MON[h.fin_m] || h.fin_m) + ' ' + h.fin_y : '';
+        const join = xs => xs.length < 2 ? xs.join('') : xs.slice(0, -1).join(', ') + ' and ' + xs[xs.length - 1];
+        const strong = areas.filter(a => a.s >= 8).map(a => a.name);
+        const low = areas.slice().sort((a, b) => a.s - b.s)[0];
+        const pn = this.props.ci && this.props.ci !== 'saved' ? this.props.ci : this.ls('kibo-ci');
+        const PN = {
+          active: 'Because your treatment has changed, we’ve paused supplement and fasting guidance in your plan for now. Your everyday actions continue.',
+          mtYes: 'Because you take ongoing cancer medicine, your plan checks with your oncology team before any supplement.',
+          mtNo: 'Now that you’ve stopped ongoing cancer medicine, your supplement guidance is updated too.'
+        };
+        return {
+          on: !!st.rvOn, off: !st.rvOn, score: String(st.rvN || 0), kicker: 'Your results are in, ' + nm,
+          story: 'This flower is yours. It grew from your blood work and everything you shared with us: your ' + cancer + ', your treatment, and how you live today.' + (fin ? ' You finished treatment in ' + fin + '. This is about what comes next.' : ''),
+          strongT: join(strong) + (strong.length > 1 ? ' are' : ' is') + ' already at 8 out of 10 or higher. Keep doing what you’re doing.',
+          lowT: low.name + ', at ' + low.s + ' out of 10. Your first actions were chosen with it in mind.',
+          note: pn && PN[pn] ? PN[pn] : '', hasNote: !!(pn && PN[pn]),
+          goNone: !pn || !PN[pn], goActive: pn === 'active', goYes: pn === 'mtYes', goNo: pn === 'mtNo',
+          go: () => this.ls('kibo-plan-toast', pn && PN[pn] ? pn : 'none'),
+          replay: () => this.playReveal()
+        };
+      })(),
+      bookOpen: !!st.bookOpen,
+      openBook: () => this.setState({ bookOpen: true, bkDone: !!st.booked, prepOnly: !!st.booked }),
+      changeBook: () => this.setState({ bkDone: false }),
+      closeBook: () => this.setState({ bookOpen: false }),
+      showResults: () => this.setState({ bookOpen: false, resultsIn: true }),
+      bk,
+      intro: pre
+        ? { kicker: 'Your health story is in', title: 'Every area already has your answers behind it', body: 'Click any area to see what you told us and what your blood work will add. Your flower fills in a few days after your draw.' }
+        : { kicker: 'Your ten areas, one system', title: 'Each area is shaped by your own story', body: 'Your flower brings together your blood work, health story and DNA. Click any area to see what shapes it and your plan for it.' },
+      unhover: () => this.setState({ hov: null }),
+      close: () => this.setState({ sel: null }),
+      openFocus: () => this.setState({ sel: 'heart', act: null, seen: { ...st.seen, heart: true } }),
+      centerCursor: pre ? 'default' : 'pointer',
+      centerAct: () => { if (pre) return; if (st.hov) { this.setState({ sel: st.hov, seen: { ...st.seen, [st.hov]: true } }); } else { this.setState({ act: null, sel: null }); } }
+    };
+  }
+}
+
+return Component;
+})();</script>
+<script src="kibo-extras.js"></script>
+</body>
+</html>

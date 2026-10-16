@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Health story — Lifestyle & environment · question 13</title>
+<link rel="icon" href="assets/31ab7d337ef4e9aaa04f6a3f352fa0d7.png">
+<style>html:not(.dc-ready) body{visibility:hidden}</style>
+<script src="kibo-runtime.js"></script>
+</head>
+<body>
+<template id="dc-tpl">
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600&amp;family=Montserrat:wght@300;400&amp;display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'Coolvetica';src:url('assets/c7e1abd965315a39fe1d300a4e97a8e3.woff2') format('woff2');font-weight:200;font-style:normal;font-display:swap}
+@font-face{font-family:'Coolvetica';src:url('assets/654425c7b27c5cc2f38fa329cb5d17c3.woff2') format('woff2');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'Coolvetica';src:url('assets/ea0d9ab126027978416ea277f45193bb.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Coolvetica';src:url('assets/37f1af1b8c27ad26029ed3c809859265.woff2') format('woff2');font-weight:500 700;font-style:normal;font-display:swap}
+:root{--blue:#0432FF;--blue-hover:#0329D6;--ink:#1A1A2E;--ink2:#3A3F58;--muted:#7A7F99;--bg:#F8F9FD;--line:#E4E7F0;--tint:#E6EBFF;
+  --head:'Coolvetica',Montserrat,'Helvetica Neue',Arial,sans-serif;--body:'Fira Sans','Helvetica Neue',Arial,sans-serif;color-scheme:light}
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;background:var(--bg)}
+body{color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:var(--blue)}
+.hs{position:relative;min-height:100vh;overflow:hidden;background:var(--bg);padding-bottom:72px}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55;pointer-events:none}
+.b1{width:620px;height:620px;left:-260px;top:-160px;background:#DCE3FF}
+.b2{width:560px;height:560px;right:-220px;top:80px;background:#E8E2FF}
+.b3{width:760px;height:760px;left:50%;bottom:-520px;transform:translateX(-50%);background:#DDE4FF}
+.nav{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;height:80px;padding:0 72px}
+.nav img{height:30px;width:auto;display:block}
+.nav .lbl{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#6E7393}
+.col{position:relative;z-index:1;width:min(640px,calc(100% - 32px));margin:0 auto}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin:0}
+h1{font-family:var(--head);font-weight:300;font-size:40px;line-height:1.15;letter-spacing:-.01em;margin:10px 0 0;color:var(--ink)}
+.lede{font-size:17px;line-height:1.6;color:var(--ink2);margin:14px 0 0}
+.btn{display:flex;align-items:center;justify-content:center;height:52px;border-radius:999px;background:var(--blue);color:#fff;font-weight:500;font-size:16px;text-decoration:none;transition:background .15s}
+.btn:hover{background:var(--blue-hover)}
+.btn:focus-visible,.later:focus-visible,.back:focus-visible{outline:none;box-shadow:0 0 0 3px #fff,0 0 0 5px var(--blue)}
+.later{display:block;width:max-content;margin:18px auto 0;font-size:15px;color:var(--blue);text-decoration:underline;text-underline-offset:3px}
+/* overview */
+.ov-hero{display:flex;flex-direction:column;align-items:center;text-align:center;padding-top:40px}
+.ov-badge{position:relative;width:96px;height:96px;border-radius:28px;background:linear-gradient(145deg,#2C55FF,#0432FF);display:grid;place-items:center;color:#fff;box-shadow:0 18px 40px rgba(4,50,255,.22)}
+.ov-badge svg{width:46px;height:46px}
+.ov-meta{display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:7px 14px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:14px;color:var(--ink2)}
+.ov-meta svg{color:var(--blue)}
+.list{list-style:none;margin:36px 0 0;padding:8px 0;background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:0 10px 30px rgba(26,26,46,.05)}
+.list li{display:grid;grid-template-columns:52px 1fr auto;gap:18px;align-items:center;padding:18px 26px}
+.list li + li{border-top:1px solid var(--line)}
+.tile{width:52px;height:52px;border-radius:16px;background:var(--tint);color:var(--blue);display:grid;place-items:center}
+.list h3{font-family:var(--head);font-weight:400;font-size:20px;line-height:1.25;margin:0;color:var(--ink)}
+.list p{margin:4px 0 0;font-size:15px;line-height:1.5;color:var(--muted)}
+.mins{font-size:13px;color:var(--muted);white-space:nowrap}
+.note{display:flex;gap:12px;align-items:flex-start;margin:22px 4px 0;font-size:14px;line-height:1.55;color:var(--muted)}
+.note svg{flex:none;color:var(--ink2);margin-top:1px}
+.cta{margin-top:30px}
+/* category intro */
+.ci{display:flex;flex-direction:column;align-items:center;text-align:center;padding-top:12px}
+.steps{display:flex;gap:6px;width:100%;max-width:420px;margin:0 auto}
+.steps span{flex:1;height:6px;border-radius:99px;background:#DDE2F3}
+.steps span.on{background:var(--blue)}
+.steps span.now{background:linear-gradient(90deg,var(--blue) 18%,#DDE2F3 18%)}
+.ci-top{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:420px;margin:14px auto 0;font-size:14px;color:var(--muted)}
+.back{display:inline-flex;align-items:center;gap:6px;color:var(--ink2);text-decoration:none}
+.back:hover{color:var(--blue)}
+.ph{width:440px;height:440px;max-width:86vw;max-height:86vw;margin-top:28px;border-radius:50%;background-size:cover;
+  -webkit-mask-image:radial-gradient(circle at 50% 50%,#000 48%,rgba(0,0,0,.6) 60%,transparent 70%);
+  mask-image:radial-gradient(circle at 50% 50%,#000 48%,rgba(0,0,0,.6) 60%,transparent 70%);
+  animation:ph-in .9s cubic-bezier(.2,.7,.2,1) both}
+@keyframes ph-in{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
+.ci .tile{margin-top:-6px;width:44px;height:44px;border-radius:14px}
+.ci h1{margin-top:16px}
+.ci .lede{max-width:480px}
+.ci .cta{width:100%;max-width:420px}
+@media (max-width:900px){
+  .nav{padding:0 16px;height:64px}.nav img{height:24px}
+  h1{font-size:30px}.ov-hero{padding-top:20px}
+  .list li{grid-template-columns:44px 1fr;gap:14px;padding:16px 18px}.list .tile{width:44px;height:44px;border-radius:14px}
+  .mins{grid-column:2;margin-top:-6px}
+  .ph{width:300px;height:300px}
+}
+@media (prefers-reduced-motion:reduce){.ph{animation:none}}
+
+.qwrap{position:relative;z-index:1;width:min(630px,calc(100% - 32px));margin:24px auto 0}
+.card{background:#fff;border:1px solid #ECEEF6;border-radius:20px;box-shadow:0 12px 34px rgba(26,26,46,.06);padding:32px 24px 0;max-height:975px;display:flex;flex-direction:column}
+.card > .bar,.card > .qtop{flex:none}
+.card-in{padding:0 0 26px;display:flex;flex-direction:column;flex:1 1 auto;min-height:0}
+.bar{height:8px;border-radius:99px;background:#E8EAF6;overflow:hidden}
+.bar span{display:block;height:100%;border-radius:99px;background:var(--blue);transition:width .4s ease}
+.qtop{display:flex;align-items:center;justify-content:space-between;margin-top:16px;min-height:24px}
+.qback{display:inline-flex;align-items:center;gap:6px;background:none;border:0;padding:0;font:inherit;font-size:16px;color:#6E7393;cursor:pointer;text-decoration:none}
+.qback:hover{color:var(--blue)}
+.qpart{font-size:14px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
+.qbody{margin:27px -17px 0 -3px;padding:3px 10px 3px 3px;scrollbar-gutter:stable;flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain}
+.qbody::-webkit-scrollbar{width:7px}
+.qbody::-webkit-scrollbar-thumb{background:#C9CCDA;border-radius:99px}
+.qbody::-webkit-scrollbar-track{background:transparent}
+.qbody.anim{animation:qin .35s ease both}
+@keyframes qin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.qt{font-family:var(--head);font-weight:300;font-size:26px;line-height:1.25;color:var(--ink);margin:0}
+.qt em{font-style:normal;color:#8D92AA}
+.qh{font-size:14px;line-height:1.55;color:var(--muted);margin:8px 0 0}
+.opts{display:flex;flex-direction:column;gap:12px;margin-top:20px}
+.opt{display:flex;align-items:center;gap:12px;width:100%;min-height:56px;padding:12px 20px;border:1px solid #DCDFEA;border-radius:20px;background:#fff;font:inherit;font-size:16px;color:var(--ink2);text-align:left;cursor:pointer;transition:background .15s,border-color .15s}
+.opt:hover{border-color:#B9C2DE}
+.opt[aria-pressed="true"],.opt[aria-checked="true"]{background:#ECEEF8;border-color:var(--blue);color:var(--ink)}
+.opt:focus-visible,.seg button:focus-visible,.qback:focus-visible,.qbtn:focus-visible,.info:focus-visible{outline:none;box-shadow:0 0 0 3px rgba(4,50,255,.25)}
+.cb{flex:none;width:22px;height:22px;border-radius:7px;border:1.5px solid #A3A8C3;background:#fff;display:grid;place-items:center}
+.rd{flex:none;width:22px;height:22px;border-radius:50%;border:1.5px solid #A3A8C3;background:#fff;display:grid;place-items:center}
+.opt[aria-pressed="true"] .rd{border-color:var(--blue)}
+.opt[aria-pressed="true"] .rd::after{content:"";width:11px;height:11px;border-radius:50%;background:var(--blue)}
+.qnext{display:block;width:max-content;margin:18px auto 0;font-size:15px;color:var(--blue);text-decoration:underline;text-underline-offset:3px}
+.opt[aria-checked="true"] .cb{background:var(--blue);border-color:var(--blue)}
+.opt[aria-checked="true"] .cb::after{content:"";width:6px;height:11px;border:solid #fff;border-width:0 2px 2px 0;transform:translateY(-1px) rotate(45deg)}
+.sub{margin-top:24px}
+.sub .qt{font-size:22px}
+.lbl{display:block;font-size:15px;color:var(--ink);margin:18px 0 8px}
+.lbl em{font-style:normal;color:var(--muted)}
+.inp{display:block;width:100%;height:56px;padding:0 20px;border:1px solid #DCDFEA;border-radius:20px;background:#fff;font:inherit;font-size:16px;color:var(--ink);outline:none}
+.inp:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(4,50,255,.12)}
+.inp::placeholder{color:#8D92AA}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+select.inp{appearance:none;-webkit-appearance:none;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%237A7F99' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 18px center;padding-right:44px;cursor:pointer}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.seg button{height:52px;border:1px solid #DCDFEA;border-radius:20px;background:#fff;font:inherit;font-size:16px;color:var(--ink2);cursor:pointer}
+.seg button[aria-pressed="true"]{background:#ECEEF8;border-color:var(--blue);color:var(--ink)}
+.panel{border:1px solid var(--blue);background:#F4F6FF;border-radius:24px;padding:4px 18px 20px}
+.panel > .opt{border:0;background:transparent;padding:12px 2px;min-height:52px}
+.panel .lbl:first-of-type{margin-top:6px}
+.sa{position:relative}
+.sa-list{position:absolute;left:0;right:0;top:calc(100% + 6px);z-index:5;background:#fff;border:1px solid #DCDFEA;border-radius:16px;box-shadow:0 14px 30px rgba(26,26,46,.12);padding:6px;max-height:260px;overflow:auto}
+.sa-list button{display:block;width:100%;text-align:left;padding:10px 14px;border:0;border-radius:10px;background:none;font:inherit;font-size:15px;color:var(--ink);cursor:pointer}
+.sa-list button:hover,.sa-list button.hi{background:#ECEEF8}
+.sa-list .add{color:var(--blue);font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 8px 0 14px;border-radius:999px;background:#fff;border:1px solid #C9D2FF;font-size:14px;color:var(--ink)}
+.chip button{width:22px;height:22px;border:0;border-radius:50%;background:#ECEEF8;color:var(--ink2);cursor:pointer;font-size:14px;line-height:1}
+.upl-or{display:flex;align-items:center;gap:12px;margin:18px 0 14px;color:var(--muted);font-size:14px}
+.upl-or::before,.upl-or::after{content:"";flex:1;height:1px;background:#ECEEF6}
+.upl{position:relative;display:flex;align-items:center;gap:14px;padding:16px 20px;border:1.5px dashed #B9C2DE;border-radius:20px;background:#F8F9FD;cursor:pointer;transition:border-color .15s,background .15s}
+.upl:hover{border-color:var(--blue);background:#F4F6FF}
+.upl input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.upl:focus-within{box-shadow:0 0 0 3px rgba(4,50,255,.2)}
+.upl-ic{flex:none;width:44px;height:44px;border-radius:14px;background:#E6EBFF;color:var(--blue);display:grid;place-items:center}
+.upl strong{display:block;font-weight:500;font-size:15px;color:var(--ink)}
+.upl-sub{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+.upl-done{display:flex;align-items:center;gap:12px;padding:14px 16px 14px 20px;border:1px solid var(--blue);border-radius:20px;background:#ECEEF8;color:var(--blue);font-size:15px}
+.upl-done span{flex:1;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.upl-done button{width:28px;height:28px;border:0;border-radius:50%;background:#fff;color:var(--ink2);cursor:pointer;font-size:16px}
+.dna-info{display:flex;flex-direction:column;gap:4px;margin-top:20px;padding:14px 16px;border-radius:16px;background:#F4F6FF;font-size:14px;color:var(--ink2)}
+.dna-info strong{color:var(--ink);font-weight:500}
+.dna-row{display:flex;flex-direction:column;gap:12px;margin-top:14px;padding:16px 18px;border:1px solid #DCDFEA;border-radius:20px}
+.dna-row strong{display:block;font-weight:500;font-size:16px;color:var(--ink)}
+.dna-row span{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+.dna-chips{display:flex;flex-wrap:wrap;gap:8px}
+.dna-chips button{min-width:64px;height:40px;padding:0 16px;border:1px solid #DCDFEA;border-radius:999px;background:#fff;font:inherit;font-size:15px;color:var(--ink2);cursor:pointer}
+.dna-chips button[aria-pressed="true"]{background:#ECEEF8;border-color:var(--blue);color:var(--ink)}
+.dna-bill{display:flex;flex-direction:column;gap:6px;margin-top:20px;padding:18px 20px;border:1px solid #DCDFEA;border-radius:20px;font-size:14px;color:var(--muted)}
+.dna-bill-row{display:flex;justify-content:space-between;align-items:baseline;font-size:16px;color:var(--ink)}
+.dna-bill-row strong{font-weight:500}
+.dna-sep{border-top:1px solid #ECEEF6;padding-top:10px;margin-top:6px;color:var(--ink2)}
+.dna-card{margin:14px 0 0;font-size:14px;color:var(--ink2)}
+.dna-card span{color:var(--muted)}
+.dna-paid{display:flex;align-items:center;gap:10px;margin-top:14px;padding:12px 16px;border-radius:16px;background:#E8F5EE;font-size:14px;color:#1F5A3A}
+.dna-paid em{font-style:normal;color:var(--muted)}
+.pm{width:min(560px,100%);max-height:calc(100vh - 32px);overflow:auto}
+.pm-sum{display:flex;justify-content:space-between;margin-top:16px;padding:14px 16px;border-radius:16px;background:#F4F6FF;font-size:15px;color:var(--ink2)}
+.pm-sum strong{color:var(--ink);font-weight:500}
+.pm-opt{align-items:center}
+.pm-opt strong{display:block;font-weight:500;color:var(--ink)}
+.pm-opt em{display:block;font-style:normal;font-size:13px;color:var(--muted)}
+.pm-brand{flex:none;width:44px;height:30px;border-radius:6px;background:#1A1F71;color:#fff;font-size:11px;font-weight:700;font-style:italic;display:grid;place-items:center}
+.pm-plus{flex:none;width:44px;height:30px;border-radius:6px;border:1.5px dashed #A3A8C3;color:var(--ink2);display:grid;place-items:center;font-size:18px}
+.pm-new{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.pm-go{margin-top:20px}
+.pm-go.busy{background:#8DA2EC;pointer-events:none;gap:10px}
+.spin{width:18px;height:18px;border-radius:50%;border:2.5px solid rgba(255,255,255,.45);border-top-color:#fff;animation:sp .8s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.pm-note{margin:10px 0 0;text-align:center;font-size:13px;color:var(--muted)}
+.info{display:inline-flex;align-items:center;gap:6px;margin-top:12px;background:none;border:0;padding:0;font:inherit;font-size:14px;color:var(--blue);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.unit{display:inline-grid;grid-template-columns:1fr 1fr;border-radius:999px;background:#ECEEF8;padding:3px;margin-top:18px}
+.unit button{min-width:64px;height:34px;border:0;border-radius:999px;background:none;font:inherit;font-size:14px;color:var(--ink2);cursor:pointer}
+.unit button[aria-pressed="true"]{background:var(--blue);color:#fff}
+.suffix{position:relative}
+.suffix span{position:absolute;right:20px;top:50%;transform:translateY(-50%);color:var(--muted)}
+.foot{flex:none;margin:24px -24px 0;padding:22px 24px 0;border-top:1px solid #ECEEF6}
+.qbtn{display:flex;align-items:center;justify-content:center;width:100%;height:52px;border:0;border-radius:999px;background:var(--blue);color:#fff;font:inherit;font-size:16px;font-weight:500;cursor:pointer;text-decoration:none}
+.qbtn:hover{background:var(--blue-hover)}
+.qbtn[aria-disabled="true"]{background:#C2CAEC;pointer-events:none;cursor:default}
+.skipnote{margin:10px 0 0;text-align:center;font-size:13px;color:var(--muted)}
+.modal-bg{position:fixed;inset:0;z-index:20;background:rgba(26,26,46,.35);display:grid;place-items:center;padding:16px}
+.modal{width:min(520px,100%);background:#fff;border-radius:22px;padding:26px 26px 22px;box-shadow:0 24px 60px rgba(26,26,46,.25)}
+.modal-h{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.modal h2{font-family:var(--head);font-weight:400;font-size:22px;margin:0}
+.modal p,.modal li{font-size:15px;line-height:1.6;color:var(--ink2)}
+.modal ol{padding-left:20px;margin:14px 0 0}
+.modal .x{width:34px;height:34px;border:0;border-radius:50%;background:#F1F2F8;cursor:pointer;font-size:18px;color:var(--ink2)}
+.modal .ok{margin:20px 0 0 auto;width:auto;padding:0 28px}
+/* transition screens */
+.tr{display:flex;flex-direction:column;align-items:center;text-align:center}
+.stack3{display:flex;flex-direction:column;gap:6px;width:150px;margin:6px auto 0}
+.stack3 span{height:22px;border-radius:12px}
+.stack3 span:nth-child(1){background:#DDE3FF;width:70%;margin:0 auto}
+.stack3 span:nth-child(2){background:#8FA3F5;width:85%;margin:0 auto}
+.stack3 span:nth-child(3){background:var(--blue);height:30px;display:grid;place-items:center}
+.stepper{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:22px;font-size:15px}
+.stepper .s{display:inline-flex;align-items:center;gap:8px}
+.stepper .done{color:#2F8F5B}.stepper .cur{color:var(--blue)}
+.stepper .ln{width:46px;height:1px;background:#C9CEE0}
+.dot-ok{width:22px;height:22px;border-radius:50%;background:#2FA36B;display:grid;place-items:center}
+.dot-cur{width:22px;height:22px;border-radius:50%;border:2px solid var(--blue);display:grid;place-items:center}
+.dot-cur::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--blue)}
+.cap{font-size:13px;color:var(--muted);margin:10px 0 0}
+@media (max-width:600px){.card{padding:24px 16px 0}.foot{margin:24px -16px 0;padding:18px 16px 22px}.qt{font-size:23px}.two{grid-template-columns:1fr}}
+
+
+.kp-menu{position:fixed;right:16px;bottom:16px;z-index:2147483000;font-family:"Fira Sans","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.kp-menu>summary{list-style:none;display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px;border-radius:20px;background:#FFFFFF;color:#1A1A2E;font-size:14px;font-weight:600;cursor:pointer;border:1px solid #E3E6EF;box-shadow:0 6px 20px rgba(20,22,60,.14);user-select:none}
+.kp-menu>summary::-webkit-details-marker{display:none}
+.kp-menu>summary:hover{border-color:#C0CCFF}
+.kp-menu>summary:focus-visible{outline:2px solid #0432FF;outline-offset:2px}
+.kp-menu[open]>summary{background:#1A1A2E;color:#FFFFFF;border-color:#1A1A2E}
+.kp-panel{position:absolute;right:0;bottom:52px;width:288px;max-height:min(640px,calc(100vh - 96px));overflow:auto;box-sizing:border-box;padding:8px;border-radius:18px;background:#FFFFFF;border:1px solid #E3E6EF;box-shadow:0 24px 60px -12px rgba(20,22,60,.28)}
+.kp-h{display:flex;align-items:center;justify-content:space-between;padding:10px 12px 8px;font-size:14px;color:#1A1A2E}
+.kp-h span{font-size:13px;color:#8A8FA8}
+.kp-g{margin:8px 12px 4px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#8A8FA8}
+.kp-panel a{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:36px;padding:0 12px;border-radius:10px;font-size:14px;color:#22222B!important;text-decoration:none!important}
+.kp-panel a:hover{background:#F3F5FF;color:#0432FF!important}
+.kp-panel a.on{background:#E6EBFF;color:#0432FF!important;font-weight:600}
+.kp-panel a.on::after{content:"";width:6px;height:6px;border-radius:3px;background:#0432FF}
+.kp-panel a.kp-all{margin-top:6px;border-top:1px solid #ECEEF4;border-radius:0 0 10px 10px;color:#0432FF!important;font-weight:600}
+
+.card>.qtop{margin:0 0 16px}
+.qcount{display:flex;justify-content:flex-end;margin-top:12px;font-size:14px;line-height:20px;color:#6E7393;font-variant-numeric:tabular-nums}
+</style>
+</helmet>
+<div class="hs"><span class="blob b1" aria-hidden="true"></span><span class="blob b2" aria-hidden="true"></span><span class="blob b3" aria-hidden="true"></span>
+<header class="nav"><a href="LandingB.dc.html" aria-label="kibo.health home"><img src="assets/31ab7d337ef4e9aaa04f6a3f352fa0d7.png" alt="kibo.health"></a><span class="lbl">Your health story</span></header>
+<main class="qwrap"><div id="qroot"></div></main>
+</div>
+</template>
+<script>window.__DCProps = "{\"$preview\":{\"width\":1440,\"height\":1228}}";
+window.__DCComponent = (function () {
+
+class Component extends DCLogic {
+  constructor(props) { super(props); this.timers = []; }
+  componentDidMount() {
+    const START = 12, SLUG = "Lifestyle";
+    const PART = 4, PARTNAME = "Lifestyle & environment", PREV = "HealthStoryLifestyle.dc.html", NEXT = "Dashboard.dc.html";
+    const QS = [
+  {id:'gut', k:'one', t:'In the past 4 weeks, how often have you had bloating, gas, or abdominal discomfort?', o:["Never", "Occasionally", "Often", "Daily"]},
+  {id:'infect', k:'one', t:'Over the past 12 months, how would you describe your infections (colds, flu, sinus infections, etc.)?', o:['Rare (0–1 times per year)','Occasional (2–3 times per year)','Frequent (4–5 times per year) or slow to resolve','Very frequent (6+ times per year) or regularly needing 2+ weeks or antibiotics']},
+  {id:'hot', k:'one', t:'Over the past 4 weeks, how often have you experienced hot flashes or night sweats?', o:['Never','Occasionally','Frequently (several times a week)','Daily']},
+  {id:'act', k:'one', t:'How many days a week do you get at least 30 minutes of physical activity?', o:['0–1 days','2–3 days','4–5 days','6–7 days']},
+  {id:'recover', k:'one', t:'After mild-to-moderate physical activity (a short walk, light chores), how would you describe your recovery?', o:['Quick recovery, minimal fatigue','Somewhat tired but recovers within an hour','Noticeably fatigued for several hours','Exhausted for the rest of the day or into the next']},
+  {id:'sleepq', k:'one', t:'Over the past 4 weeks, how would you rate your sleep quality?', o:['Good','Fair','Poor','Very poor']},
+  {id:'sleep6', k:'one', t:'In a typical week, how many nights do you sleep less than 6 hours?', o:['None','1–2 nights','3–4 nights','5 or more']},
+  {id:'memory', k:'one', t:'Over the past 4 weeks, how often have you noticed memory lapses, difficulty concentrating, or trouble finding the right words?', o:["Never", "Occasionally", "Often", "Daily"]},
+  {id:'bounce', k:'one', t:'Over the past 4 weeks, how often have you felt unable to bounce back or recover after a stressful day or event?', o:["Never", "Occasionally", "Often", "Daily"]},
+  {id:'overwhelm', k:'one', t:'Over the past 4 weeks, how often have you felt overwhelmed by everyday demands or responsibilities?', o:["Never", "Occasionally", "Often", "Daily"]},
+  {id:'diet', k:'one', t:'Which best describes your diet?', o:['I eat everything, including meat (Omnivore)','Mostly plants, but I still eat fish or seafood (Pescatarian)','No meat or fish, but I eat dairy and/or eggs (Vegetarian)','No animal products at all (Vegan)']},
+  {id:'veg', k:'one', t:'How many servings of vegetables do you eat on most days?', o:['None','1–2','3–4','5 or more']},
+  {id:'ferm', k:'one', t:'How often do you eat fermented foods, like yogurt or kimchi?', o:['Rarely','Once a week','A few times a week','Daily']},
+  {id:'fats', k:'one', t:'Which best describes the fats and oils you typically use for cooking and eating?', o:['Primarily olive oil, avocado oil, or butter, avoiding seed oils','Mostly healthy fats, occasional seed oil','Mixed pattern, regular seed oil use','Mostly or always seed oils (canola, sunflower, corn, soybean, vegetable oil)']},
+  {id:'carbs', k:'one', t:'How often do you eat refined carbohydrates or added sugar (white bread, pastries, sugary drinks, candy)?', o:['Rarely/never','A few times a week','Daily','Multiple times daily']},
+  {id:'alc', k:'one', t:'How many alcoholic drinks do you have in a typical week?', o:['None','1–3','4–7','8 or more']},
+  {id:'plastic', k:'one', t:'How often do you eat or drink from plastic containers, or heat food in plastic?', o:['Rarely/never','Occasionally','Regularly','Daily, including hot food/drinks']},
+  {id:'chem', k:'one', t:'Does your job or a regular hobby involve chemicals, solvents, pesticides or metals?', o:['No','Sometimes','Often']},
+  {id:'water', k:'one', t:'What do you mostly drink at home?', o:['Filtered tap water','Unfiltered tap water','Bottled water','Well water']},
+  {id:'mold', k:'one', t:'Have you had mold or water damage at home in the past year?', o:['No','Yes','Not sure']},
+  {id:'waist', k:'waist', t:'What’s your waist measurement?'}
+ ];
+    const TX = [{"n": "Radiation", "k": "rad", "f": [{"type": "date", "k": "last", "t": "When was the last radiation you had?"}, {"type": "sa", "k": "areas", "t": "Which parts of your body have you had radiation?", "ph": "Search body areas\u2026", "list": ["Breast", "Chest wall", "Lymph nodes", "Brain", "Head and neck", "Thyroid", "Lung", "Liver", "Stomach", "Abdomen", "Pelvis", "Spine", "Hip", "Skin"], "help": "Add every area that was treated. Can\u2019t find it? Type its name and choose \u201cAdd.\u201d Not sure? Leave blank."}, {"type": "yn", "k": "plan", "t": "Do you have any future radiation planned?"}]}, {"n": "Chemotherapy", "k": "chemo", "f": [{"type": "sa", "k": "drugs", "t": "Which chemotherapy drugs?", "ph": "Search chemo drugs\u2026", "list": ["Cisplatin", "Carboplatin", "Oxaliplatin", "FOLFOX", "FOLFIRI", "FOLFIRINOX", "Doxorubicin (Adriamycin)", "Epirubicin", "Cyclophosphamide", "Paclitaxel (Taxol)", "Docetaxel (Taxotere)", "5-Fluorouracil (5-FU)", "Capecitabine (Xeloda)", "Gemcitabine", "Irinotecan", "Etoposide", "Vincristine", "Methotrexate", "Pemetrexed (Alimta)", "Bleomycin"], "help": "Different drugs affect the body differently, so we ask by name. Add all that apply. Combination therapy is common. Can\u2019t find a drug? Type its name and choose \u201cAdd.\u201d Not sure? Leave blank."}, {"type": "date", "k": "last", "t": "When was the last chemotherapy you had?"}, {"type": "yn", "k": "plan", "t": "Do you have any future chemotherapy planned?"}]}, {"n": "Surgery", "k": "surg", "f": [{"type": "date", "k": "last", "t": "When was the last surgery you had?"}, {"type": "sa", "k": "areas", "t": "Which parts of your body have you had surgery?", "ph": "Search body areas\u2026", "list": ["Breast", "Chest wall", "Lymph nodes", "Brain", "Head and neck", "Thyroid", "Lung", "Liver", "Stomach", "Abdomen", "Pelvis", "Spine", "Hip", "Skin"], "help": "Add every area that was treated. Can\u2019t find it? Type its name and choose \u201cAdd.\u201d Not sure? Leave blank."}, {"type": "yn", "k": "plan", "t": "Do you have any future surgery planned?"}]}, {"n": "Immunotherapy", "k": "immuno", "f": [{"type": "date", "k": "last", "t": "When was the last immunotherapy you had?"}, {"type": "yn", "k": "plan", "t": "Do you have any future immunotherapy planned?"}]}, {"n": "Hormone therapy", "k": "hormone", "f": [{"type": "date", "k": "last", "t": "When was the last hormone therapy you had?"}, {"type": "yn", "k": "plan", "t": "Do you have any future hormone therapy planned?"}]}, {"n": "Clinical trial", "k": "trial", "f": [{"type": "yn", "k": "in", "t": "Are you part of a clinical trial?"}]}, {"n": "Something else", "k": "other", "f": [{"type": "text", "k": "what", "t": "What other treatment?", "ph": "Type the treatment"}]}, {"n": "Nothing right now", "k": "none"}]; const TX_EXCL = [7];
+    const DNA_GENES = [['caf','Caffeine processing','CYP1A2 · rs762551',['AA','AC','CC']],['alc','Alcohol processing','ALDH2 · rs671',['GG','GA','AA']],['iron','Iron storage','HFE · rs1800562',['GG','GA','AA']],['fol','Folate processing','MTHFR · rs1801133',['GG','GA','AA']]];
+const WAIST_HELP = {title:'How to measure your waist', body:'<ol><li>Stand up and wrap a soft tape measure around your bare waist.</li><li>Position it level with your belly button, midway between your lowest rib and hip bone.</li><li>Breathe out normally, then read the number where the tape meets snug, not squeezing.</li></ol>'};
+
+    const root = document.getElementById('qroot');
+    if (!root) return;
+    const K = 'kibo-hs';
+    const load = () => { try { return JSON.parse(window.localStorage.getItem(K) || '{}'); } catch (e) { return {}; } };
+    const A = load();
+    const save = () => { try { window.localStorage.setItem(K, JSON.stringify(A)); } catch (e) {} };
+    const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    const visible = () => QS.filter((q) => !q.when || q.when(A));
+    const i = START;
+    const FILE = (k) => 'HealthStory' + SLUG + 'Q' + (k + 1) + '.dc.html';
+    const RET = (() => { try { return window.localStorage.getItem('kibo-hs-return') === '1'; } catch (e) { return false; } })();
+    const nextFile = () => { if (RET) return 'DashboardStory.dc.html'; for (let k = START + 1; k < QS.length; k++) if (!QS[k].when || QS[k].when(A)) return FILE(k); return NEXT; };
+    const prevFile = () => { if (RET) return 'DashboardStory.dc.html'; for (let k = START - 1; k >= 0; k--) if (!QS[k].when || QS[k].when(A)) return FILE(k); return PREV; };
+    const leave = (ms) => this.timers.push(setTimeout(() => {
+      const a = document.createElement('a'); a.href = nextFile(); a.hidden = true; a.setAttribute('aria-hidden', 'true');
+      root.appendChild(a); a.click();
+    }, ms));
+    const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const YEARS = []; for (let y = new Date().getFullYear(); y >= 1990; y--) YEARS.push(y);
+    const sel = (key, val, ph, list) => '<select class="inp" data-k="' + key + '" aria-label="' + ph + '"><option value="">' + ph + '</option>' +
+      list.map((v) => '<option' + (String(val) === String(v) ? ' selected' : '') + '>' + v + '</option>').join('') + '</select>';
+    const getp = (path) => path.split('.').reduce((o, k) => (o == null ? undefined : o[k]), A);
+    const setp = (path, v) => { const ks = path.split('.'); let o = A; ks.slice(0, -1).forEach((k) => { if (typeof o[k] !== 'object' || o[k] === null) o[k] = {}; o = o[k]; }); o[ks[ks.length - 1]] = v; save(); };
+    const pill = (attrs, label, on, multi) => '<button type="button" class="opt" ' + attrs + (multi ? ' role="checkbox" aria-checked="' + !!on + '"' : ' aria-pressed="' + !!on + '"') + '>' + (multi ? '<span class="cb" aria-hidden="true"></span>' : '<span class="rd" aria-hidden="true"></span>') + '<span>' + esc(label) + '</span></button>';
+    const yesno = (key) => '<div class="seg">' + ['Yes', 'No'].map((v) => '<button type="button" data-yn="' + key + '" data-v="' + v + '" aria-pressed="' + (getp(key) === v) + '">' + v + '</button>').join('') + '</div>';
+    const searchAdd = (key, ph, list, help) => {
+      const chosen = getp(key) || [];
+      return '<div class="sa" data-sa="' + key + '"><input class="inp" placeholder="' + ph + '" autocomplete="off" data-sain="' + key + '"><div class="sa-list" hidden></div></div>' +
+        (help ? '<p class="qh">' + help + '</p>' : '') +
+        '<div class="chips">' + chosen.map((c, n) => '<span class="chip">' + esc(c) + '<button type="button" aria-label="Remove ' + esc(c) + '" data-rm="' + key + '" data-n="' + n + '">×</button></span>').join('') + '</div>';
+    };
+    const SALIST = {};
+    const ok = (q) => {
+      const v = A[q.id];
+      if (q.k === 'one') return v != null;
+      if (q.k === 'pick') {
+        if (q.optional) return true;
+        if (v == null) return false;
+        if (q.other != null && v === q.other && !(A[q.id + '_other'] || '').trim()) return false;
+        if (q.follow && q.follow.when(A) && A[q.follow.id] == null) return false;
+        return true;
+      }
+      if (q.k === 'multi') return q.optional || (Array.isArray(v) && v.length > 0) || !!A[q.id + '_file'];
+      if (q.k === 'dates') return q.items.every((it) => A[it.id + '_m'] && A[it.id + '_y']);
+      if (q.k === 'waist') return +A.waist > 0;
+      if (q.k === 'tx') return Array.isArray(A.tx) && A.tx.length > 0;
+      if (q.k === 'dnaupload') return A.dnaSrc != null && !!A.dna_file;
+      if (q.k === 'dnaself') return true;
+      if (q.k === 'dnapay') return A.dnaPay === 'later' || (A.dnaPay === 'now' && !!A.dnaPaid);
+      return true;
+    };
+    const progress = () => Math.round(((PART + (START / QS.length)) / 5) * 100);
+
+    const body = (q) => {
+      let h = '<h1 class="qt" id="qt">' + q.t + '</h1>' + (q.h ? '<p class="qh">' + q.h + '</p>' : '');
+      const v = A[q.id];
+      if (q.k === 'one' || q.k === 'pick') {
+        h += '<div class="opts" role="radiogroup" aria-labelledby="qt">' + q.o.map((o, n) => pill('data-one="' + n + '"', o, v === n)).join('') + '</div>';
+        if (q.other != null && v === q.other) h += '<label class="lbl" for="oth">' + q.otherLabel + '</label><input class="inp" id="oth" data-txt="' + q.id + '_other" placeholder="' + q.otherPh + '" value="' + esc(A[q.id + '_other']) + '">';
+        if (q.follow && q.follow.when(A)) {
+          const f = q.follow, fv = A[f.id];
+          h += '<div class="sub"><h2 class="qt" id="qt2">' + f.t + '</h2><div class="opts" role="radiogroup" aria-labelledby="qt2">' + f.o.map((o, n) => pill('data-fol="' + n + '"', o, fv === n)).join('') + '</div></div>';
+        }
+      }
+      if (q.k === 'multi') {
+        const arr = Array.isArray(v) ? v : [];
+        h += '<div class="opts" role="group" aria-labelledby="qt">' + q.o.map((o, n) => pill('data-multi="' + n + '"', o, arr.includes(n), true)).join('') + '</div>';
+        if (q.other != null && arr.includes(q.other)) h += '<label class="lbl" for="oth">' + q.otherLabel + '</label><input class="inp" id="oth" data-txt="' + q.id + '_other" placeholder="' + q.otherPh + '" value="' + esc(A[q.id + '_other']) + '">';
+        if (q.upload) {
+          const fname = A[q.id + '_file'];
+          h += '<div class="upl-or"><span>or</span></div>' + (fname
+            ? '<div class="upl-done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg><span>' + esc(fname) + '</span><button type="button" data-rmfile="1" aria-label="Remove file">\u00d7</button></div>'
+            : '<label class="upl"><input type="file" accept="image/*,.pdf" data-file="' + q.id + '"><span class="upl-ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg></span><span><strong>' + q.upload.label + '</strong><span class="upl-sub">' + q.upload.hint + '</span></span></label>');
+        }
+        if (q.info) h += '<button type="button" class="info" data-info="1"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01" stroke-linecap="round"/></svg>' + q.info.link + '</button>';
+      }
+      if (q.k === 'dates') {
+        q.items.forEach((it) => { h += '<span class="lbl">' + it.t + '</span><div class="two">' + sel(it.id + '_m', A[it.id + '_m'], 'Month', MONTHS) + sel(it.id + '_y', A[it.id + '_y'], 'Year', YEARS) + '</div>'; });
+      }
+      if (q.k === 'waist') {
+        const u = A.waistUnit || 'in';
+        h += '<div class="unit" role="group" aria-label="Unit">' + ['in', 'cm'].map((x) => '<button type="button" data-unit="' + x + '" aria-pressed="' + (u === x) + '">' + x + '</button>').join('') + '</div>' +
+          '<div class="suffix" style="margin-top:14px"><input class="inp" inputmode="decimal" data-num="waist" placeholder="Enter waist measurement e.g ' + (u === 'in' ? '34' : '86') + '" value="' + esc(A.waist) + '" aria-label="Waist measurement"><span>' + u + '</span></div>' +
+          '<button type="button" class="info" data-info="1"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01" stroke-linecap="round"/></svg>How to measure</button>';
+      }
+      if (q.k === 'dnaupload') {
+        h += '<span class="lbl" style="margin-top:22px">Where are your results from?</span><div class="opts" role="radiogroup" style="margin-top:0">' +
+          ['23andMe', 'AncestryDNA', 'Other DNA service'].map((o, n) => pill('data-src="' + n + '"', o, A.dnaSrc === n)).join('') + '</div>';
+        h += '<span class="lbl" style="margin-top:22px">Your results file</span>' + (A.dna_file
+          ? '<div class="upl-done"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg><span>' + esc(A.dna_file) + '</span><button type="button" data-rmdna="1" aria-label="Remove file">\u00d7</button></div>'
+          : '<label class="upl"><input type="file" accept=".txt,.csv,.zip,.pdf" data-file="dna"><span class="upl-ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg></span><span><strong>Upload your raw data or report</strong><span class="upl-sub">TXT, CSV, ZIP or PDF from a consumer DNA service.</span></span></label>');
+      }
+      if (q.k === 'dnaself') {
+        const sv = A.dnaSelf || {};
+        h += '<div class="dna-info"><strong>Where to find these</strong><span>In your DNA service\u2019s raw data or health reports. Search for the code shown under each name, such as rs671.</span></div>';
+        h += DNA_GENES.map((g) => '<div class="dna-row"><div><strong>' + g[1] + '</strong><span>' + g[2] + '</span></div><div class="dna-chips" role="radiogroup" aria-label="' + g[1] + '">' +
+          g[3].concat(['Don\u2019t know']).map((x) => '<button type="button" data-gene="' + g[0] + '" data-val="' + x + '" aria-pressed="' + (sv[g[0]] === x) + '">' + x + '</button>').join('') + '</div></div>').join('');
+        h += '<p class="qh" style="margin-top:16px">Results you enter are marked as entered by you, since Kibo can\u2019t verify them.</p>';
+      }
+      if (q.k === 'dnapay') {
+        const pv = A.dnaPay;
+        h += '<div class="dna-bill"><div class="dna-bill-row"><strong>One-time DNA test</strong><strong class="fee">[FEE]</strong></div><span>Run on your first blood draw, so there\u2019s no extra visit.</span>' +
+          '<span class="dna-sep">Billed separately from your membership and your blood draw.</span></div>';
+        h += '<span class="lbl" style="margin-top:22px">When would you like to pay?</span><div class="opts" role="radiogroup" style="margin-top:0">' +
+          [['now', 'Pay now'], ['later', 'Pay later, when I book my blood draw']].map(([v, l]) => pill('data-pay="' + v + '"', l, pv === v)).join('') + '</div>';
+        const card = A.dnaCard || 'Visa ending 4242';
+        if (pv === 'now' && A.dnaPaid) h += '<div class="dna-paid"><span class="dot-ok" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span>Paid with ' + esc(card) + '. <em>Test mode, no real charge.</em></span></div>';
+        else if (pv === 'now') h += '<p class="dna-card"><button type="button" class="info" data-paym="pay" style="margin:0">Choose how to pay</button></p>';
+        else if (pv === 'later') h += '<p class="dna-card">We\u2019ll charge ' + esc(card) + ' when you book your blood draw. <button type="button" class="info" data-paym="save" style="margin:0 0 0 4px">Change card</button></p>';
+      }
+      if (q.k === 'tx') {
+        const arr = Array.isArray(A.tx) ? A.tx : [];
+        h += '<div class="opts" role="group" aria-labelledby="qt">';
+        TX.forEach((t, n) => {
+          const on = arr.includes(n), row = pill('data-multi="' + n + '"', t.n, on, true);
+          if (!on || !t.f) { h += row; return; }
+          let p = '<div class="panel">' + row;
+          t.f.forEach((f) => {
+            const key = 'txd.' + t.k + '.' + f.k;
+            if (f.type === 'date') p += '<span class="lbl">' + f.t + '</span><div class="two">' + sel(key + '_m', getp(key + '_m'), 'Month', MONTHS) + sel(key + '_y', getp(key + '_y'), 'Year', YEARS) + '</div>';
+            if (f.type === 'yn') p += '<span class="lbl">' + f.t + '</span>' + yesno(key);
+            if (f.type === 'sa') { SALIST[key] = f.list; p += '<span class="lbl">' + f.t + ' <em>(select all you know)</em></span>' + searchAdd(key, f.ph, f.list, f.help); }
+            if (f.type === 'text') p += '<label class="lbl">' + f.t + '</label><input class="inp" data-txt="' + key + '" placeholder="' + f.ph + '" value="' + esc(getp(key)) + '">';
+          });
+          h += p + '</div>';
+        });
+        h += '</div>';
+      }
+      return h;
+    };
+
+    const render = (focusSel) => {
+      const q = QS[START];
+      const back = '<a class="qback" href="' + prevFile() + '">', backEnd = '</a>';
+      const auto = q.k === 'one' || q.auto;
+      let foot = '';
+      if (!auto || (q.other != null && A[q.id] === q.other)) {
+        const can = ok(q);
+        foot = '<div class="foot">' + '<a class="qbtn" href="' + nextFile() + '" aria-disabled="' + !can + '">Continue</a>' +
+          (q.optional ? '<p class="skipnote">Optional. You can continue without answering.</p>' : '') + '</div>';
+      }
+      root.innerHTML = '<div class="card"><div class="qtop">' + back + '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>Back' + backEnd + '<span class="qpart">' + PARTNAME + '</span></div>' + '<div class="bar" role="progressbar" aria-label="Health story progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="' + progress() + '"><span style="width:' + Math.max(progress(), 4) + '%"></span></div>' +
+        '<div class="qcount" aria-live="polite">' + (() => { const v = visible(); let n = v.indexOf(QS[START]); if (n < 0) n = START; return 'Question ' + (n + 1) + ' of ' + Math.max(v.length, n + 1); })() + '</div>' +
+        '<div class="card-in"><div class="qbody' + (i !== this.lastStep ? ' anim' : '') + '" data-step="' + i + '">' + body(q) + '</div>' + foot + '</div></div>';
+      this.lastStep = i;
+      if (focusSel) { const el = root.querySelector(focusSel); if (el) { el.focus({ preventScroll: true }); if (el.setSelectionRange) { const n = el.value.length; el.setSelectionRange(n, n); } } }
+    };
+    const rerender = (focusSel) => {
+      // Keep the reader where they were: remember the card's inner scroll and the page scroll
+      const y = window.scrollY, ob = root.querySelector('.qbody'), st = ob ? ob.scrollTop : 0;
+      render(focusSel);
+      const nb = root.querySelector('.qbody'); if (nb) nb.scrollTop = st;
+      window.scrollTo(0, y);
+      if (focusSel) { const el = root.querySelector(focusSel); if (el && el.scrollIntoView) el.scrollIntoView({ block: 'nearest' }); }
+    };
+    const refreshFoot = () => { const q = QS[START], b = root.querySelector('.qbtn'); if (b) b.setAttribute('aria-disabled', String(!ok(q))); };
+    const go = (d) => { i += d; render(); const c = root.querySelector('.card'); if (c && c.getBoundingClientRect().top < 0) window.scrollTo({ top: 0, behavior: 'smooth' }); };
+    const modal = (q) => {
+      const m = q.k === 'waist' ? WAIST_HELP : q.info;
+      const bg = document.createElement('div'); bg.className = 'modal-bg';
+      bg.innerHTML = '<div class="modal" role="dialog" aria-modal="true" aria-labelledby="mh"><div class="modal-h"><h2 id="mh">' + m.title + '</h2><button type="button" class="x" aria-label="Close">×</button></div>' + m.body + '<button type="button" class="qbtn ok">Got it</button></div>';
+      const close = () => bg.remove();
+      bg.addEventListener('click', (e) => { if (e.target === bg || e.target.closest('.x') || e.target.closest('.ok')) close(); });
+      document.body.appendChild(bg); bg.querySelector('.ok').focus();
+    };
+
+    const payModal = (mode) => {
+      let pick = 'saved', busy = false;
+      const bg = document.createElement('div'); bg.className = 'modal-bg';
+      const draw = () => {
+        const nc = pick === 'new';
+        bg.innerHTML = '<div class="modal pm" role="dialog" aria-modal="true" aria-labelledby="pmh"><div class="modal-h"><h2 id="pmh">' + (mode === 'pay' ? 'How would you like to pay?' : 'Choose a card') + '</h2><button type="button" class="x" aria-label="Close">\u00d7</button></div>' +
+          '<div class="pm-sum"><span>One-time DNA test</span><strong>[FEE]</strong></div>' +
+          '<div class="opts" role="radiogroup" style="margin-top:16px">' +
+          '<button type="button" class="opt pm-opt" data-pick="saved" aria-pressed="' + (pick === 'saved') + '"><span class="rd" aria-hidden="true"></span><span class="pm-brand">VISA</span><span><strong>Visa ending 4242</strong><em>Used for your membership \u00b7 Expires 12/28</em></span></button>' +
+          '<button type="button" class="opt pm-opt" data-pick="new" aria-pressed="' + nc + '"><span class="rd" aria-hidden="true"></span><span class="pm-plus" aria-hidden="true">+</span><span><strong>Use a new card</strong><em>Credit or debit card</em></span></button></div>' +
+          (nc ? '<div class="pm-new"><input class="inp" id="pm-num" inputmode="numeric" placeholder="Card number" autocomplete="cc-number" aria-label="Card number">' +
+            '<div class="two"><input class="inp" id="pm-exp" inputmode="numeric" placeholder="MM / YY" autocomplete="cc-exp" aria-label="Expiry date"><input class="inp" id="pm-cvc" inputmode="numeric" maxlength="4" placeholder="Security code" autocomplete="cc-csc" aria-label="Security code"></div>' +
+            '<input class="inp" id="pm-zip" inputmode="numeric" maxlength="5" placeholder="ZIP code" autocomplete="postal-code" aria-label="ZIP code">' +
+            '<button type="button" class="info" data-test="1" style="margin:2px 0 0">Use a test card</button></div>' : '') +
+          '<button type="button" class="qbtn pm-go" aria-disabled="' + (nc ? 'true' : 'false') + '">' + (mode === 'pay' ? 'Pay [FEE]' : 'Save card') + '</button>' +
+          '<p class="pm-note">Payments are processed securely by Stripe. Test mode, no real charge.</p></div>';
+        if (nc) {
+          const num = bg.querySelector('#pm-num'), exp = bg.querySelector('#pm-exp'), cvc = bg.querySelector('#pm-cvc'), zip = bg.querySelector('#pm-zip'), go = bg.querySelector('.pm-go');
+          const valid = () => num.value.replace(/\D/g, '').length >= 15 && /^\d{2} \/ \d{2}$/.test(exp.value) && /^\d{3,4}$/.test(cvc.value) && /^\d{5}$/.test(zip.value);
+          const upd = () => go.setAttribute('aria-disabled', String(!valid()));
+          num.addEventListener('input', () => { num.value = num.value.replace(/\D/g, '').slice(0, 16).replace(/(\d{4})(?=\d)/g, '$1 '); upd(); });
+          exp.addEventListener('input', () => { const d = exp.value.replace(/\D/g, '').slice(0, 4); exp.value = d.length > 2 ? d.slice(0, 2) + ' / ' + d.slice(2) : d; upd(); });
+          [cvc, zip].forEach((x) => x.addEventListener('input', () => { x.value = x.value.replace(/\D/g, ''); upd(); }));
+          num.focus();
+        }
+      };
+      const close = () => bg.remove();
+      bg.addEventListener('click', (e) => {
+        const t = e.target;
+        if (t === bg || t.closest('.x')) return close();
+        const p = t.closest('[data-pick]'); if (p) { pick = p.dataset.pick; return draw(); }
+        if (t.closest('[data-test]')) {
+          bg.querySelector('#pm-num').value = '4000 0566 5566 5556'; bg.querySelector('#pm-exp').value = '10 / 29'; bg.querySelector('#pm-cvc').value = '123'; bg.querySelector('#pm-zip').value = '10001';
+          bg.querySelector('.pm-go').setAttribute('aria-disabled', 'false'); return;
+        }
+        const go = t.closest('.pm-go');
+        if (go && go.getAttribute('aria-disabled') !== 'true' && !busy) {
+          busy = true;
+          const label = pick === 'new' ? 'Visa ending ' + bg.querySelector('#pm-num').value.replace(/\D/g, '').slice(-4) : 'Visa ending 4242';
+          go.innerHTML = '<span>' + (mode === 'pay' ? 'Processing' : 'Saving') + '</span><span class="spin" aria-hidden="true"></span>'; go.classList.add('busy');
+          this.timers.push(setTimeout(() => { A.dnaCard = label; if (mode === 'pay') { A.dnaPaid = true; A.dnaPay = 'now'; } save(); close(); rerender(); }, 1100));
+        }
+      });
+      document.body.appendChild(bg); draw();
+    };
+    root.addEventListener('click', (e) => {
+      const q = QS[START], t = e.target;
+      const b = t.closest('button, a'); if (!b) { return; }
+      if (b.dataset.back) return go(-1);
+      if (b.dataset.next) { if (ok(q)) go(1); return; }
+      if (b.dataset.info) return modal(q);
+      if (b.dataset.rmfile) { delete A[q.id + '_file']; save(); return rerender(); }
+      const autoPick = () => {
+        if (!q.auto || !ok(q) || (q.other != null && A[q.id] === q.other)) return;
+        leave(380);
+      };
+      if (b.dataset.one != null) {
+        A[q.id] = +b.dataset.one; save();
+        if (q.k === 'one') {
+          rerender();
+          leave(380);
+        } else { rerender(q.other != null && A[q.id] === q.other ? '#oth' : null); autoPick(); }
+        return;
+      }
+      if (b.dataset.fol != null) { A[q.follow.id] = +b.dataset.fol; save(); rerender(); return autoPick(); }
+      if (b.dataset.multi != null) {
+        const n = +b.dataset.multi, key = q.k === 'tx' ? 'tx' : q.id, ex = q.k === 'tx' ? TX_EXCL : (q.excl || []);
+        let arr = Array.isArray(A[key]) ? A[key].slice() : [];
+        if (arr.includes(n)) arr = arr.filter((x) => x !== n);
+        else { arr = ex.includes(n) ? [n] : arr.filter((x) => !ex.includes(x)).concat(n); }
+        A[key] = arr; save();
+        rerender(q.other != null && n === q.other && arr.includes(n) ? '#oth' : null);
+        if (q.k === 'tx') {
+          // Bring the tapped treatment (and its follow-up questions) into view and keep focus on it
+          const btn = root.querySelector('[data-multi="' + n + '"]'), box = root.querySelector('.qbody');
+          if (btn && box) {
+            const target = btn.closest('.panel') || btn;
+            const top = target.getBoundingClientRect().top - box.getBoundingClientRect().top + box.scrollTop - 6;
+            box.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+            btn.focus({ preventScroll: true });
+          }
+        }
+        return;
+      }
+      if (b.dataset.yn) { setp(b.dataset.yn, b.dataset.v); return rerender(); }
+      if (b.dataset.src != null) { A.dnaSrc = +b.dataset.src; save(); return rerender(); }
+      if (b.dataset.rmdna) { delete A.dna_file; save(); return rerender(); }
+      if (b.dataset.gene) { const sv = Object.assign({}, A.dnaSelf || {}); sv[b.dataset.gene] = b.dataset.val; A.dnaSelf = sv; save(); return rerender(); }
+      if (b.dataset.pay) { A.dnaPay = b.dataset.pay; if (b.dataset.pay === 'later') A.dnaPaid = false; save(); rerender(); if (b.dataset.pay === 'now' && !A.dnaPaid) payModal('pay'); return; }
+      if (b.dataset.paym) return payModal(b.dataset.paym);
+      if (b.dataset.unit) { A.waistUnit = b.dataset.unit; save(); return rerender('[data-num]'); }
+      if (b.dataset.rm) { const arr = (getp(b.dataset.rm) || []).slice(); arr.splice(+b.dataset.n, 1); setp(b.dataset.rm, arr); return rerender(); }
+      if (b.dataset.pick) { const key = b.dataset.key, arr = (getp(key) || []).slice(); if (!arr.includes(b.dataset.pick)) arr.push(b.dataset.pick); setp(key, arr); return rerender('[data-sain="' + key + '"]'); }
+    });
+    const saOpen = (input) => {
+      const key = input.dataset.sain, box = input.parentNode.querySelector('.sa-list'), qv = input.value.trim().toLowerCase();
+      const chosen = getp(key) || [], list = (SALIST[key] || []).filter((x) => !chosen.includes(x) && (!qv || x.toLowerCase().includes(qv))).slice(0, 7);
+      let h = list.map((x, n) => '<button type="button" data-pick="' + esc(x) + '" data-key="' + key + '"' + (n === 0 ? ' class="hi"' : '') + '>' + esc(x) + '</button>').join('');
+      const raw = input.value.trim();
+      if (raw && !(SALIST[key] || []).some((x) => x.toLowerCase() === raw.toLowerCase())) h += '<button type="button" class="add" data-pick="' + esc(raw) + '" data-key="' + key + '">Add “' + esc(raw) + '”</button>';
+      box.innerHTML = h; box.hidden = !h;
+    };
+    root.addEventListener('input', (e) => {
+      const t = e.target, q = QS[START];
+      if (t.dataset.txt) { setp(t.dataset.txt, t.value); refreshFoot(); }
+      if (t.dataset.num) { A.waist = t.value.replace(/[^0-9.]/g, ''); if (t.value !== A.waist) t.value = A.waist; save(); refreshFoot(); }
+      if (t.dataset.sain) saOpen(t);
+    });
+    root.addEventListener('change', (e) => { const t = e.target; if (t.dataset.k) { setp(t.dataset.k, t.value); refreshFoot(); } if (t.dataset.file && t.files && t.files[0]) { A[t.dataset.file + '_file'] = t.files[0].name; save(); rerender(); } });
+    root.addEventListener('mousedown', (e) => { const t = e.target; if (t.dataset && t.dataset.sain) saOpen(t); });
+    root.addEventListener('focusout', (e) => { const t = e.target; if (t.dataset && t.dataset.sain) this.timers.push(setTimeout(() => { const box = t.parentNode && t.parentNode.querySelector('.sa-list'); if (box && !box.contains(document.activeElement)) box.hidden = true; }, 180)); });
+    root.addEventListener('keydown', (e) => {
+      const t = e.target;
+      if (t.dataset && t.dataset.sain && e.key === 'Escape') { const box = t.parentNode.querySelector('.sa-list'); if (box) box.hidden = true; }
+      if (t.dataset && t.dataset.sain && e.key === 'ArrowDown') { e.preventDefault(); saOpen(t); }
+      if (t.dataset && t.dataset.sain && e.key === 'Enter') { e.preventDefault(); const f = t.parentNode.querySelector('.sa-list button'); if (f) f.click(); }
+    });
+    render();
+    // Pick up resets and answers from other screens (e.g. a new play-through clears everything)
+    this.syncIv = setInterval(() => {
+      const fresh = load();
+      if (JSON.stringify(fresh) !== JSON.stringify(A)) { Object.keys(A).forEach((k) => delete A[k]); Object.assign(A, fresh); const f = document.activeElement; if (!(f && root.contains(f) && f.tagName === 'INPUT')) rerender(); }
+    }, 500);
+
+  }
+  componentWillUnmount() { clearInterval(this.iv); clearInterval(this.syncIv); (this.timers || []).forEach(clearTimeout); }
+  renderVals() { return {}; }
+}
+
+return Component;
+})();</script>
+<script src="kibo-extras.js"></script>
+</body>
+</html>
